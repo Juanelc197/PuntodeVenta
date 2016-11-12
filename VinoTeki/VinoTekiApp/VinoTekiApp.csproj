@@ -59,6 +59,18 @@
     <Compile Include="Interface_Venta\Buscar.Designer.cs">
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface_Venta\Cambio de Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface_Venta\Cambio de Ticket.Designer.cs">
+      <DependentUpon>Cambio de Ticket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface_Venta\TicketPendiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface_Venta\TicketPendiente.Designer.cs">
+      <DependentUpon>TicketPendiente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface_Venta\Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +103,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Login\Efectivo_Inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Efectivo_Inicial.Designer.cs">
+      <DependentUpon>Efectivo_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Valor del Dolar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Valor del Dolar.Designer.cs">
+      <DependentUpon>Valor del Dolar.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Interface_Venta\Borrar.resx">
       <DependentUpon>Borrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface_Venta\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface_Venta\Cambio de Ticket.resx">
+      <DependentUpon>Cambio de Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface_Venta\TicketPendiente.resx">
+      <DependentUpon>TicketPendiente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface_Venta\Venta.resx">
       <DependentUpon>Venta.cs</DependentUpon>
@@ -121,6 +157,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Login\Efectivo_Inicial.resx">
+      <DependentUpon>Efectivo_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Valor del Dolar.resx">
+      <DependentUpon>Valor del Dolar.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
