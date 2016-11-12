@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VinoTekiApp.Usuario
+namespace VinoTekiApp
 {
-    public partial class Usuario : Form
+    public partial class Salir : Form
     {
-        public Usuario()
+        public Salir()
         {
             InitializeComponent();
-        }
-
-        private void Usuario_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

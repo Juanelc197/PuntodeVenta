@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VinoTekiApp.Usuario
+namespace VinoTekiApp.Salir
 {
-    public partial class Usuario : Form
+    public partial class Cerrar_Turno : Form
     {
-        public Usuario()
+        public Cerrar_Turno()
         {
             InitializeComponent();
-        }
-
-        private void Usuario_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
