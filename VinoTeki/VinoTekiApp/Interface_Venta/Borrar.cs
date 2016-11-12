@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VinoTekiApp
+namespace VinoTekiApp.Interface_Venta
 {
-    public partial class Form1 : Form
+    public partial class Borrar : Form
     {
-        public Form1()
+        public Borrar()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

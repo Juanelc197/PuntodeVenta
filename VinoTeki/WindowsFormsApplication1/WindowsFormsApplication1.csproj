@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9A1D4085-717A-4461-BABD-F2428660241F}</ProjectGuid>
+    <ProjectGuid>{CEB81D4D-F16F-4D44-84DC-7F15A76BCE36}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VinoTekiApp</RootNamespace>
-    <AssemblyName>VinoTekiApp</AssemblyName>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,71 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface_Venta\Borrar.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface_Venta\Borrar.Designer.cs">
-      <DependentUpon>Borrar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Venta\Buscar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Venta\Buscar.Designer.cs">
-      <DependentUpon>Buscar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Venta\Venta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Venta\Venta.Designer.cs">
-      <DependentUpon>Venta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Venta\Producto Comun.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Venta\Producto Comun.Designer.cs">
-      <DependentUpon>Producto Comun.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Venta\Registro de Entrada de Efectivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Venta\Registro de Entrada de Efectivo.Designer.cs">
-      <DependentUpon>Registro de Entrada de Efectivo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Venta\Registro de Salida de Dinero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Venta\Registro de Salida de Dinero.Designer.cs">
-      <DependentUpon>Registro de Salida de Dinero.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Venta\Varios Productos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Venta\Varios Productos.Designer.cs">
-      <DependentUpon>Varios Productos.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Interface_Venta\Borrar.resx">
-      <DependentUpon>Borrar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Venta\Buscar.resx">
-      <DependentUpon>Buscar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Venta\Venta.resx">
-      <DependentUpon>Venta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Venta\Producto Comun.resx">
-      <DependentUpon>Producto Comun.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Venta\Registro de Entrada de Efectivo.resx">
-      <DependentUpon>Registro de Entrada de Efectivo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Venta\Registro de Salida de Dinero.resx">
-      <DependentUpon>Registro de Salida de Dinero.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Venta\Varios Productos.resx">
-      <DependentUpon>Varios Productos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
