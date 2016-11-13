@@ -21,5 +21,14 @@ namespace VinoTekiApp.Usuario
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Pagos agregar = new Pagos();
+            agregar.ShowDialog();
+            if (agregar.DialogResult == DialogResult.Yes)
+            {
+            }
+        }
     }
 }

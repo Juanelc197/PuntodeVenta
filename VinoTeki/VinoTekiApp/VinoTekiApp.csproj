@@ -47,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credito.designer.cs">
+      <DependentUpon>Credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dolares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dolares.Designer.cs">
+      <DependentUpon>dolares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Efectivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Efectivo.designer.cs">
+      <DependentUpon>Efectivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface_Producto\Departamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +185,18 @@
     <Compile Include="Inventario\Reporte de Movimientos.Designer.cs">
       <DependentUpon>Reporte de Movimientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mixto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mixto.designer.cs">
+      <DependentUpon>Mixto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login\Efectivo_Inicial.cs">
@@ -187,6 +217,21 @@
     <Compile Include="Login\Valor del Dolar.Designer.cs">
       <DependentUpon>Valor del Dolar.cs</DependentUpon>
     </Compile>
+    <Compile Include="tarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tarjeta.designer.cs">
+      <DependentUpon>tarjeta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Credito.resx">
+      <DependentUpon>Credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dolares.resx">
+      <DependentUpon>dolares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Efectivo.resx">
+      <DependentUpon>Efectivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface_Producto\Eliminar.resx">
       <DependentUpon>Eliminar.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +289,12 @@
     <EmbeddedResource Include="Inventario\Reporte de Movimientos.resx">
       <DependentUpon>Reporte de Movimientos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mixto.resx">
+      <DependentUpon>Mixto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -262,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Valor del Dolar.resx">
       <DependentUpon>Valor del Dolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tarjeta.resx">
+      <DependentUpon>tarjeta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
