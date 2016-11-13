@@ -47,6 +47,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface_Producto\Departamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface_Producto\Departamentos.Designer.cs">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface_Producto\Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface_Producto\Eliminar.Designer.cs">
+      <DependentUpon>Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface_Producto\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface_Producto\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface_Producto\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface_Producto\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface_Producto\Promociones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface_Producto\Promociones.Designer.cs">
+      <DependentUpon>Promociones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface_Producto\VentasPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface_Producto\VentasPeriodo.Designer.cs">
+      <DependentUpon>VentasPeriodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface_Venta\Borrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,18 +157,21 @@
     <Compile Include="Login\Valor del Dolar.Designer.cs">
       <DependentUpon>Valor del Dolar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Salir\Cerrar Turno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Salir\Cerrar Turno.Designer.cs">
-      <DependentUpon>Cerrar Turno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Salir\Salir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Salir\Salir.Designer.cs">
-      <DependentUpon>Salir.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Interface_Producto\Eliminar.resx">
+      <DependentUpon>Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface_Producto\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface_Producto\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface_Producto\Promociones.resx">
+      <DependentUpon>Promociones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface_Producto\VentasPeriodo.resx">
+      <DependentUpon>VentasPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface_Venta\Borrar.resx">
       <DependentUpon>Borrar.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,8 +201,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="Login\Efectivo_Inicial.resx">
       <DependentUpon>Efectivo_Inicial.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,12 +217,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Valor del Dolar.resx">
       <DependentUpon>Valor del Dolar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Salir\Cerrar Turno.resx">
-      <DependentUpon>Cerrar Turno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Salir\Salir.resx">
-      <DependentUpon>Salir.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -191,6 +230,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_2713%280%29_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_e729%280%29_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e10d%280%29_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f02f%280%29_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
