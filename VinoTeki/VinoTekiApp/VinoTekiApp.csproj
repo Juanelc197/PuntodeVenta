@@ -70,42 +70,6 @@
     <Compile Include="Efectivo.designer.cs">
       <DependentUpon>Efectivo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface_Producto\Departamentos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Producto\Departamentos.Designer.cs">
-      <DependentUpon>Departamentos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Producto\Eliminar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Producto\Eliminar.Designer.cs">
-      <DependentUpon>Eliminar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Producto\Modificar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Producto\Modificar.Designer.cs">
-      <DependentUpon>Modificar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Producto\Nuevo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Producto\Nuevo.Designer.cs">
-      <DependentUpon>Nuevo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Producto\Promociones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Producto\Promociones.Designer.cs">
-      <DependentUpon>Promociones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface_Producto\VentasPeriodo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface_Producto\VentasPeriodo.Designer.cs">
-      <DependentUpon>VentasPeriodo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interface_Venta\Borrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,21 +200,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Efectivo.resx">
       <DependentUpon>Efectivo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Producto\Eliminar.resx">
-      <DependentUpon>Eliminar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Producto\Modificar.resx">
-      <DependentUpon>Modificar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Producto\Nuevo.resx">
-      <DependentUpon>Nuevo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Producto\Promociones.resx">
-      <DependentUpon>Promociones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface_Producto\VentasPeriodo.resx">
-      <DependentUpon>VentasPeriodo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface_Venta\Borrar.resx">
       <DependentUpon>Borrar.cs</DependentUpon>
