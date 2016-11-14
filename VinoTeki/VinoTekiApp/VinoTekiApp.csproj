@@ -70,6 +70,12 @@
     <Compile Include="Efectivo.designer.cs">
       <DependentUpon>Efectivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface_Producto\Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface_Producto\Producto.designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface_Venta\Borrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Efectivo.resx">
       <DependentUpon>Efectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface_Producto\Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface_Venta\Borrar.resx">
       <DependentUpon>Borrar.cs</DependentUpon>
