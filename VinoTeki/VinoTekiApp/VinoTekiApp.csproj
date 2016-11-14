@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDkyubiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDkyubiDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Credito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +322,17 @@
     <EmbeddedResource Include="tarjeta.resx">
       <DependentUpon>tarjeta.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BDkyubiDataSet.xsc">
+      <DependentUpon>BDkyubiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDkyubiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDkyubiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDkyubiDataSet.xss">
+      <DependentUpon>BDkyubiDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
