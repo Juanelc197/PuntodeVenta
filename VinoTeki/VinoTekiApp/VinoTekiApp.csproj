@@ -316,6 +316,16 @@
   <ItemGroup>
     <None Include="Resources\FontAwesome_f02f%280%29_32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BussinesEntities\BussinesEntities.csproj">
+      <Project>{471498da-8bfe-4755-a0c8-41ff773f6daf}</Project>
+      <Name>BussinesEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BussinesLogic\BussinesLogic.csproj">
+      <Project>{1e5e07fc-d9f6-41c5-a68c-46dd0b0a0b34}</Project>
+      <Name>BussinesLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
