@@ -19,7 +19,7 @@ namespace VinoTekiApp.Usuario
 
         private void Usuario_Load(object sender, EventArgs e)
         {
-
+            panel1.BackColor = Color.FromArgb(75, Color.Black);
         }
 
         private void button1_Click(object sender, EventArgs e)

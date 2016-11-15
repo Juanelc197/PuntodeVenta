@@ -16,5 +16,10 @@ namespace VinoTekiApp.Usuario
         {
             InitializeComponent();
         }
+
+        private void Valor_del_Dolar_Load(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(75, Color.Black);
+        }
     }
 }

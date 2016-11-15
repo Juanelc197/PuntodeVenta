@@ -16,5 +16,10 @@ namespace VinoTekiApp.Usuario
         {
             InitializeComponent();
         }
+
+        private void Efectivo_Inicial_Load(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(75, Color.Black);
+        }
     }
 }
