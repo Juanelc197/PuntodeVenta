@@ -89,7 +89,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "Valor_del_Dolar";
-            this.Text = "Tipo de Cambio";
+            this.Text = "Valor del Dolar";
             this.Load += new System.EventHandler(this.Valor_del_Dolar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
