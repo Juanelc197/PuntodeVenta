@@ -169,6 +169,12 @@
     <Compile Include="Inventario\Reporte de Movimientos.Designer.cs">
       <DependentUpon>Reporte de Movimientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="MdiParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MdiParent.Designer.cs">
+      <DependentUpon>MdiParent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mixto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,9 @@
     <EmbeddedResource Include="Inventario\Reporte de Movimientos.resx">
       <DependentUpon>Reporte de Movimientos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MdiParent.resx">
+      <DependentUpon>MdiParent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mixto.resx">
       <DependentUpon>Mixto.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +344,9 @@
       <Project>{1e5e07fc-d9f6-41c5-a68c-46dd0b0a0b34}</Project>
       <Name>BussinesLogic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f07a%280%29_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

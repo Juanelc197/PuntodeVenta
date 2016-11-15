@@ -93,6 +93,16 @@ namespace VinoTekiApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FontAwesome_f07a_0__32 {
+            get {
+                object obj = ResourceManager.GetObject("FontAwesome_f07a(0)_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Typicons_e10d_0__32 {
             get {
                 object obj = ResourceManager.GetObject("Typicons_e10d(0)_32", resourceCulture);
