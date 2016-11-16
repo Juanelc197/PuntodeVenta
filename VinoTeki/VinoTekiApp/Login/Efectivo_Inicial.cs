@@ -21,5 +21,14 @@ namespace VinoTekiApp.Usuario
         {
             panel1.BackColor = Color.FromArgb(75, Color.Black);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Valor_del_Dolar agregar = new Valor_del_Dolar();
+            agregar.ShowDialog();
+            if (agregar.DialogResult == DialogResult.Yes)
+            {
+            }
+        }
     }
 }

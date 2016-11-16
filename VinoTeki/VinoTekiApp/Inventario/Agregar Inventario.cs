@@ -31,5 +31,14 @@ namespace VinoTekiApp.Inventario
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ajustes agregar = new Ajustes();
+            agregar.ShowDialog();
+            if (agregar.DialogResult == DialogResult.Yes)
+            {
+            }
+        }
     }
 }

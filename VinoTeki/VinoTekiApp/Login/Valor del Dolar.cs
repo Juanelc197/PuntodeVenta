@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VinoTekiApp.Interface_Producto;
 
 namespace VinoTekiApp.Usuario
 {
@@ -20,6 +21,15 @@ namespace VinoTekiApp.Usuario
         private void Valor_del_Dolar_Load(object sender, EventArgs e)
         {
             panel1.BackColor = Color.FromArgb(75, Color.Black);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Producto agregar = new Producto();
+            agregar.ShowDialog();
+            if (agregar.DialogResult == DialogResult.Yes)
+            {
+            }
         }
     }
 }

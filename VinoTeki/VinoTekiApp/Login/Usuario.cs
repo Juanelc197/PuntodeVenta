@@ -24,7 +24,7 @@ namespace VinoTekiApp.Usuario
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Pagos agregar = new Pagos();
+            Efectivo_Inicial agregar = new Efectivo_Inicial();
             agregar.ShowDialog();
             if (agregar.DialogResult == DialogResult.Yes)
             {

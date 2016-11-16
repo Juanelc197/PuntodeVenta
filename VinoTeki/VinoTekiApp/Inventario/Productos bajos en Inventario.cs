@@ -26,5 +26,14 @@ namespace VinoTekiApp.Inventario
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reporte_de_Inventario agregar = new Reporte_de_Inventario();
+            agregar.ShowDialog();
+            if (agregar.DialogResult == DialogResult.Yes)
+            {
+            }
+        }
     }
 }
