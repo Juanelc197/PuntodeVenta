@@ -145,11 +145,29 @@
     <Compile Include="Inventario\Agregar Inventario.Designer.cs">
       <DependentUpon>Agregar Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventario\AgregarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\AgregarInventario.Designer.cs">
+      <DependentUpon>AgregarInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario\Ajustes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventario\Ajustes.Designer.cs">
       <DependentUpon>Ajustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Confirmar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Confirmar.Designer.cs">
+      <DependentUpon>Confirmar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\EleventaPuntoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\EleventaPuntoVenta.Designer.cs">
+      <DependentUpon>EleventaPuntoVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventario\Productos bajos en Inventario.cs">
       <SubType>Form</SubType>
@@ -168,6 +186,12 @@
     </Compile>
     <Compile Include="Inventario\Reporte de Movimientos.Designer.cs">
       <DependentUpon>Reporte de Movimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\SistemadePuntodeVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\SistemadePuntodeVenta.Designer.cs">
+      <DependentUpon>SistemadePuntodeVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="MdiParent.cs">
       <SubType>Form</SubType>
@@ -255,8 +279,17 @@
     <EmbeddedResource Include="Inventario\Agregar Inventario.resx">
       <DependentUpon>Agregar Inventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\AgregarInventario.resx">
+      <DependentUpon>AgregarInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Ajustes.resx">
       <DependentUpon>Ajustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Confirmar.resx">
+      <DependentUpon>Confirmar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\EleventaPuntoVenta.resx">
+      <DependentUpon>EleventaPuntoVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Productos bajos en Inventario.resx">
       <DependentUpon>Productos bajos en Inventario.cs</DependentUpon>
@@ -266,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Reporte de Movimientos.resx">
       <DependentUpon>Reporte de Movimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\SistemadePuntodeVenta.resx">
+      <DependentUpon>SistemadePuntodeVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MdiParent.resx">
       <DependentUpon>MdiParent.cs</DependentUpon>
