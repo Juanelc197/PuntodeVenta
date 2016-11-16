@@ -60,45 +60,46 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 16);
+            this.label2.Size = new System.Drawing.Size(154, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Codigo del Producto";
+            this.label2.Text = "Codigo del Producto:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 131);
+            this.label3.Location = new System.Drawing.Point(9, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 16);
+            this.label3.Size = new System.Drawing.Size(95, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Descripción";
+            this.label3.Text = "Descripción:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 190);
+            this.label4.Location = new System.Drawing.Point(9, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 16);
+            this.label4.Size = new System.Drawing.Size(121, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Cantidad Actual";
+            this.label4.Text = "Cantidad Actual:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 233);
+            this.label5.Location = new System.Drawing.Point(12, 233);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 16);
+            this.label5.Size = new System.Drawing.Size(74, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Cantidad";
+            this.label5.Text = "Cantidad:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // CodigoBar
             // 
             this.CodigoBar.AccessibleName = "codigo";
             this.CodigoBar.ForeColor = System.Drawing.Color.White;
-            this.CodigoBar.Location = new System.Drawing.Point(179, 70);
+            this.CodigoBar.Location = new System.Drawing.Point(168, 70);
             this.CodigoBar.Name = "CodigoBar";
             this.CodigoBar.Size = new System.Drawing.Size(214, 23);
             this.CodigoBar.TabIndex = 5;
@@ -110,7 +111,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(143, 233);
+            this.textBox1.Location = new System.Drawing.Point(88, 230);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 6;
@@ -119,8 +120,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(254, 280);
+            this.button1.Location = new System.Drawing.Point(106, 280);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(199, 43);
             this.button1.TabIndex = 7;
@@ -130,7 +134,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(198, 177);
+            this.textBox2.Location = new System.Drawing.Point(132, 177);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(78, 29);
@@ -141,7 +145,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(176, 128);
+            this.textBox3.Location = new System.Drawing.Point(106, 125);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 12;
@@ -153,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(725, 335);
+            this.ClientSize = new System.Drawing.Size(411, 335);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
@@ -165,7 +169,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Agregar_Inventario";
-            this.Text = "Agregar_Inventario";
+            this.Text = "Agregar Inventario";
             this.Load += new System.EventHandler(this.Agregar_Inventario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
