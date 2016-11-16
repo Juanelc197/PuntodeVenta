@@ -50,7 +50,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(277, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 24);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 33);
+            this.label2.Location = new System.Drawing.Point(5, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(610, 16);
             this.label2.TabIndex = 1;
@@ -70,9 +70,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 52);
+            this.textBox1.Location = new System.Drawing.Point(8, 67);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(607, 20);
+            this.textBox1.Size = new System.Drawing.Size(244, 20);
             this.textBox1.TabIndex = 2;
             // 
             // dataGridView1
@@ -83,9 +83,9 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(8, 78);
+            this.dataGridView1.Location = new System.Drawing.Point(89, 93);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(607, 260);
+            this.dataGridView1.Size = new System.Drawing.Size(446, 260);
             this.dataGridView1.TabIndex = 3;
             // 
             // Column1
@@ -110,10 +110,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(8, 332);
+            this.groupBox1.Location = new System.Drawing.Point(8, 359);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(607, 62);
             this.groupBox1.TabIndex = 4;
@@ -121,6 +122,10 @@
             // 
             // button3
             // 
+            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gainsboro;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(467, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 23);
@@ -130,6 +135,10 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(223, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 23);
@@ -139,6 +148,10 @@
             // 
             // button1
             // 
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gainsboro;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(19, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 23);
@@ -148,7 +161,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(43, 426);
+            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(12, 439);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(95, 35);
             this.button4.TabIndex = 5;
@@ -157,7 +174,11 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(492, 427);
+            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(525, 440);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(86, 34);
             this.button5.TabIndex = 6;
@@ -168,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 486);
+            this.ClientSize = new System.Drawing.Size(623, 486);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox1);

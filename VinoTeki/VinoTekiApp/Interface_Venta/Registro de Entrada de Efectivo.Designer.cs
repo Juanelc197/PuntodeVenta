@@ -84,6 +84,9 @@
             // 
             // button1
             // 
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(311, 47);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 41);
@@ -93,6 +96,9 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(311, 107);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 42);
@@ -113,7 +119,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Registro_de_Entrada_de_Efectivo";
-            this.Text = "Registro_de_Entrada_de_Efectivo";
+            this.Text = "Registro de Entrada de Efectivo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

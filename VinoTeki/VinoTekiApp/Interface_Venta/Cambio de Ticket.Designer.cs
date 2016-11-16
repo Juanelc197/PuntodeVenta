@@ -45,16 +45,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(43, 36);
+            this.textBox1.Location = new System.Drawing.Point(43, 59);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(145, 20);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(33, 142);
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(43, 142);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 38);
+            this.button1.Size = new System.Drawing.Size(145, 38);
             this.button1.TabIndex = 2;
             this.button1.Text = "ENTER- Cambiar ticket";
             this.button1.UseVisualStyleBackColor = true;
@@ -68,7 +71,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Cambio_de_Ticket";
-            this.Text = "Cambio_de_Ticket";
+            this.Text = "Cambio de Ticket";
             this.ResumeLayout(false);
             this.PerformLayout();
 
