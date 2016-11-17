@@ -17,7 +17,7 @@ namespace VinoTekiApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pagos());
+            Application.Run(new Varios_Productos());
         }
     }
 }

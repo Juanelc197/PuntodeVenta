@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VinoTekiApp
 {
-    public partial class Pagos : Form
+    public partial class Varios_Productos : Form
     {
-        public Pagos()
+        public Varios_Productos()
         {
             InitializeComponent();
         }
