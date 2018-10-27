@@ -49,6 +49,7 @@
             this.panel_barraT.Name = "panel_barraT";
             this.panel_barraT.Size = new System.Drawing.Size(1300, 38);
             this.panel_barraT.TabIndex = 0;
+            this.panel_barraT.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_barraT_MouseDown);
             // 
             // panel_Contenedor
             // 
@@ -134,7 +135,9 @@
             this.Controls.Add(this.panel_barraT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_menu";
+            this.Opacity = 0.98D;
             this.Text = "Menú";
+            this.Load += new System.EventHandler(this.Form_menu_Load);
             this.panel_barraT.ResumeLayout(false);
             this.ResumeLayout(false);
 
