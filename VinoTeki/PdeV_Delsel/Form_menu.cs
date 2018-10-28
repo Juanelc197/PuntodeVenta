@@ -30,6 +30,7 @@ namespace PdeV_Delsel
             btn_restaurar.Visible = true;
             lbl_hora.Font = new Font("Murtuza", 72);
             lbl_fecha.Font = new Font("Murtuza", 48);
+            
 
 
         }
