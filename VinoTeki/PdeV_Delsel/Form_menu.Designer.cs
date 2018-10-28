@@ -146,11 +146,11 @@
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.Font = new System.Drawing.Font("Consolas", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lbl_fecha.Location = new System.Drawing.Point(0, 484);
+            this.lbl_fecha.Location = new System.Drawing.Point(0, 481);
             this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(748, 55);
+            this.lbl_fecha.Size = new System.Drawing.Size(804, 56);
             this.lbl_fecha.TabIndex = 10;
             this.lbl_fecha.Text = "domingo, 28 de octubre de 2018";
             // 
@@ -159,11 +159,11 @@
             this.lbl_hora.AutoSize = true;
             this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
             this.lbl_hora.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.Font = new System.Drawing.Font("Consolas", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.lbl_hora.Location = new System.Drawing.Point(0, 539);
+            this.lbl_hora.Location = new System.Drawing.Point(0, 537);
             this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(475, 73);
+            this.lbl_hora.Size = new System.Drawing.Size(557, 75);
             this.lbl_hora.TabIndex = 9;
             this.lbl_hora.Text = "01:07:09 a. m. ";
             // 
