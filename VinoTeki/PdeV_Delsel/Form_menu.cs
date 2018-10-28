@@ -44,8 +44,26 @@ namespace PdeV_Delsel
 
         private void Form_menu_Load(object sender, EventArgs e)
         {
+            //pictureBox_galeria.Image = Properties.Resources.fondo1delsel;
+            //pictureBox_galeria.SizeMode = PictureBoxSizeMode.Zoom;
+            //Timer tm = new Timer();
+            //tm.Interval = 400;
+            //tm.Tick += new EventHandler(changeimage);
+            //tm.Start();
 
         }
+
+        //private void changeimage(object sender, EventArgs e)
+        //{
+        //    List<Bitmap> b1 = new List<Bitmap>();
+        //    b1.Add(Properties.Resources.fondo1delsel);
+        //    b1.Add(Properties.Resources.fondo2delsel);
+        //    b1.Add(Properties.Resources.fondo3delsel);
+        //    b1.Add(Properties.Resources.fondo4delsel);
+        //    int index = DateTime.Now.Second % b1.Count;
+        //    pictureBox_galeria.Image = b1[index];
+        //}
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 
         private extern static void ReleaseCapture();
@@ -58,6 +76,13 @@ namespace PdeV_Delsel
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void timer_horafecha_Tick(object sender, EventArgs e)
+        {
+            lbl_hora.Text = DateTime.Now.ToString("hh:mm:ss");
+
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

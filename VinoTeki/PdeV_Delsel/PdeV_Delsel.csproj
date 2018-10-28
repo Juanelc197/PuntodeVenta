@@ -107,5 +107,23 @@
   <ItemGroup>
     <None Include="Resources\cotizacion mini.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1delsel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2delsel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo3delsel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo4delsel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mi películagif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
