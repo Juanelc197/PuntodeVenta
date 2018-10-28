@@ -92,5 +92,20 @@
   <ItemGroup>
     <None Include="Resources\ocultar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cotizacion mini.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

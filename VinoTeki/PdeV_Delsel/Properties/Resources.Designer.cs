@@ -63,6 +63,26 @@ namespace PdeV_Delsel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cliente_mini {
+            get {
+                object obj = ResourceManager.GetObject("cliente mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cotizacion_mini {
+            get {
+                object obj = ResourceManager.GetObject("cotizacion mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maximisar {
             get {
                 object obj = ResourceManager.GetObject("maximisar", resourceCulture);
@@ -86,6 +106,36 @@ namespace PdeV_Delsel.Properties {
         internal static System.Drawing.Bitmap ocultar {
             get {
                 object obj = ResourceManager.GetObject("ocultar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap producto {
+            get {
+                object obj = ResourceManager.GetObject("producto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap producto_mini {
+            get {
+                object obj = ResourceManager.GetObject("producto_mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap venta_mini {
+            get {
+                object obj = ResourceManager.GetObject("venta_mini", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
