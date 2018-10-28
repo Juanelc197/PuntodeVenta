@@ -140,5 +140,41 @@
   <ItemGroup>
     <None Include="Resources\botonmenu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo%28delsel%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo%28delsel%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo producto mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\altaproductomini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\altaproductomasperomasmini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Altaproductosupersupersupermini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estesiesalta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cotizacion mini1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultar super mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha atras super mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha atras super mini1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha atras super mini blanca.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

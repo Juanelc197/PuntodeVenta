@@ -92,5 +92,12 @@ namespace PdeV_Delsel
 
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void btn_productos_Click(object sender, EventArgs e)
+        {
+            Form_menu_productos form_Menu_Productos = new Form_menu_productos();
+            this.Hide();
+            form_Menu_Productos.Show();
+        }
     }
 }

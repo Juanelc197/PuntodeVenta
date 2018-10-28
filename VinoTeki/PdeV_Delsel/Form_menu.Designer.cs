@@ -298,6 +298,7 @@
             this.btn_productos.TabIndex = 0;
             this.btn_productos.Text = "Productos";
             this.btn_productos.UseVisualStyleBackColor = true;
+            this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
             // 
             // btn_restaurar
             // 
