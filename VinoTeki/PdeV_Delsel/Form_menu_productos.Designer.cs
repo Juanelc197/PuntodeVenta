@@ -29,25 +29,31 @@
         private void InitializeComponent()
         {
             this.panel_opciones = new System.Windows.Forms.Panel();
-            this.panel_opcionestop = new System.Windows.Forms.Panel();
-            this.panel_contenedor = new System.Windows.Forms.Panel();
+            this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
+            this.btn_consulta = new System.Windows.Forms.Button();
+            this.btn_Agregar = new System.Windows.Forms.Button();
+            this.picturebox_logo = new System.Windows.Forms.PictureBox();
+            this.panel_opcionestop = new System.Windows.Forms.Panel();
             this.btn_menuboton = new System.Windows.Forms.Button();
             this.btn_restaurar = new System.Windows.Forms.Button();
             this.btn_minimisar = new System.Windows.Forms.Button();
             this.btn_maximisar = new System.Windows.Forms.Button();
-            this.btn_regresar = new System.Windows.Forms.Button();
-            this.btn_consulta = new System.Windows.Forms.Button();
-            this.btn_Agregar = new System.Windows.Forms.Button();
-            this.picturebox_logo = new System.Windows.Forms.PictureBox();
+            this.panel_contenedor = new System.Windows.Forms.Panel();
+            this.panel_agregar = new System.Windows.Forms.Panel();
+            this.panel_consulta = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel_opciones.SuspendLayout();
-            this.panel_opcionestop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).BeginInit();
+            this.panel_opcionestop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_opciones
             // 
             this.panel_opciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel_opciones.Controls.Add(this.panel1);
+            this.panel_opciones.Controls.Add(this.panel_consulta);
+            this.panel_opciones.Controls.Add(this.panel_agregar);
             this.panel_opciones.Controls.Add(this.btn_regresar);
             this.panel_opciones.Controls.Add(this.lbl_titulo);
             this.panel_opciones.Controls.Add(this.btn_consulta);
@@ -58,6 +64,80 @@
             this.panel_opciones.Name = "panel_opciones";
             this.panel_opciones.Size = new System.Drawing.Size(250, 650);
             this.panel_opciones.TabIndex = 2;
+            // 
+            // btn_regresar
+            // 
+            this.btn_regresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_regresar.FlatAppearance.BorderSize = 0;
+            this.btn_regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_regresar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_regresar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_regresar.Image = global::PdeV_Delsel.Properties.Resources.flecha_atras_super_mini_blanca;
+            this.btn_regresar.Location = new System.Drawing.Point(12, 581);
+            this.btn_regresar.Name = "btn_regresar";
+            this.btn_regresar.Size = new System.Drawing.Size(92, 57);
+            this.btn_regresar.TabIndex = 3;
+            this.btn_regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Lithos Pro Regular", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_titulo.Location = new System.Drawing.Point(74, 106);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(170, 35);
+            this.lbl_titulo.TabIndex = 2;
+            this.lbl_titulo.Text = "Producto";
+            // 
+            // btn_consulta
+            // 
+            this.btn_consulta.FlatAppearance.BorderSize = 0;
+            this.btn_consulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_consulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_consulta.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_consulta.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_consulta.Image = global::PdeV_Delsel.Properties.Resources.consultar_super_mini;
+            this.btn_consulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_consulta.Location = new System.Drawing.Point(21, 292);
+            this.btn_consulta.Name = "btn_consulta";
+            this.btn_consulta.Size = new System.Drawing.Size(223, 57);
+            this.btn_consulta.TabIndex = 1;
+            this.btn_consulta.Text = "Consulta";
+            this.btn_consulta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_consulta.UseVisualStyleBackColor = true;
+            // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.FlatAppearance.BorderSize = 0;
+            this.btn_Agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Agregar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_Agregar.Image = global::PdeV_Delsel.Properties.Resources.estesiesalta;
+            this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Agregar.Location = new System.Drawing.Point(21, 189);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(223, 57);
+            this.btn_Agregar.TabIndex = 0;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Agregar.UseVisualStyleBackColor = true;
+            // 
+            // picturebox_logo
+            // 
+            this.picturebox_logo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picturebox_logo.Image = global::PdeV_Delsel.Properties.Resources.Logo_delsel_1;
+            this.picturebox_logo.Location = new System.Drawing.Point(3, 3);
+            this.picturebox_logo.Name = "picturebox_logo";
+            this.picturebox_logo.Size = new System.Drawing.Size(241, 100);
+            this.picturebox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebox_logo.TabIndex = 0;
+            this.picturebox_logo.TabStop = false;
+            this.picturebox_logo.Click += new System.EventHandler(this.picturebox_logo_Click);
             // 
             // panel_opcionestop
             // 
@@ -72,26 +152,6 @@
             this.panel_opcionestop.Size = new System.Drawing.Size(1050, 38);
             this.panel_opcionestop.TabIndex = 3;
             this.panel_opcionestop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_opcionestop_MouseDown);
-            // 
-            // panel_contenedor
-            // 
-            this.panel_contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_contenedor.Location = new System.Drawing.Point(250, 38);
-            this.panel_contenedor.Name = "panel_contenedor";
-            this.panel_contenedor.Size = new System.Drawing.Size(1050, 612);
-            this.panel_contenedor.TabIndex = 4;
-            // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Lithos Pro Regular", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_titulo.Location = new System.Drawing.Point(74, 106);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(170, 35);
-            this.lbl_titulo.TabIndex = 2;
-            this.lbl_titulo.Text = "Producto";
             // 
             // btn_menuboton
             // 
@@ -158,67 +218,41 @@
             this.btn_maximisar.UseVisualStyleBackColor = true;
             this.btn_maximisar.Click += new System.EventHandler(this.btn_maximisar_Click);
             // 
-            // btn_regresar
+            // panel_contenedor
             // 
-            this.btn_regresar.FlatAppearance.BorderSize = 0;
-            this.btn_regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_regresar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_regresar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_regresar.Image = global::PdeV_Delsel.Properties.Resources.flecha_atras_super_mini_blanca;
-            this.btn_regresar.Location = new System.Drawing.Point(12, 581);
-            this.btn_regresar.Name = "btn_regresar";
-            this.btn_regresar.Size = new System.Drawing.Size(53, 57);
-            this.btn_regresar.TabIndex = 3;
-            this.btn_regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_regresar.UseVisualStyleBackColor = true;
-            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            this.panel_contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_contenedor.Location = new System.Drawing.Point(250, 38);
+            this.panel_contenedor.Name = "panel_contenedor";
+            this.panel_contenedor.Size = new System.Drawing.Size(1050, 612);
+            this.panel_contenedor.TabIndex = 4;
             // 
-            // btn_consulta
+            // panel_agregar
             // 
-            this.btn_consulta.FlatAppearance.BorderSize = 0;
-            this.btn_consulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_consulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_consulta.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_consulta.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_consulta.Image = global::PdeV_Delsel.Properties.Resources.consultar_super_mini;
-            this.btn_consulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_consulta.Location = new System.Drawing.Point(21, 292);
-            this.btn_consulta.Name = "btn_consulta";
-            this.btn_consulta.Size = new System.Drawing.Size(223, 57);
-            this.btn_consulta.TabIndex = 1;
-            this.btn_consulta.Text = "Consulta";
-            this.btn_consulta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_consulta.UseVisualStyleBackColor = true;
+            this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_agregar.Location = new System.Drawing.Point(236, 189);
+            this.panel_agregar.Name = "panel_agregar";
+            this.panel_agregar.Size = new System.Drawing.Size(8, 57);
+            this.panel_agregar.TabIndex = 5;
             // 
-            // btn_Agregar
+            // panel_consulta
             // 
-            this.btn_Agregar.FlatAppearance.BorderSize = 0;
-            this.btn_Agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Agregar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_Agregar.Image = global::PdeV_Delsel.Properties.Resources.estesiesalta;
-            this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Agregar.Location = new System.Drawing.Point(21, 189);
-            this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(223, 57);
-            this.btn_Agregar.TabIndex = 0;
-            this.btn_Agregar.Text = "Agregar";
-            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.panel_consulta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_consulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_consulta.Location = new System.Drawing.Point(236, 292);
+            this.panel_consulta.Name = "panel_consulta";
+            this.panel_consulta.Size = new System.Drawing.Size(8, 57);
+            this.panel_consulta.TabIndex = 6;
             // 
-            // picturebox_logo
+            // panel1
             // 
-            this.picturebox_logo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picturebox_logo.Image = global::PdeV_Delsel.Properties.Resources.Logo_delsel_1;
-            this.picturebox_logo.Location = new System.Drawing.Point(3, 3);
-            this.picturebox_logo.Name = "picturebox_logo";
-            this.picturebox_logo.Size = new System.Drawing.Size(241, 100);
-            this.picturebox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picturebox_logo.TabIndex = 0;
-            this.picturebox_logo.TabStop = false;
-            this.picturebox_logo.Click += new System.EventHandler(this.picturebox_logo_Click);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel1.Location = new System.Drawing.Point(96, 581);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(8, 57);
+            this.panel1.TabIndex = 6;
             // 
             // Form_menu_productos
             // 
@@ -233,8 +267,8 @@
             this.Text = "Form_menu_productos";
             this.panel_opciones.ResumeLayout(false);
             this.panel_opciones.PerformLayout();
-            this.panel_opcionestop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).EndInit();
+            this.panel_opcionestop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -253,5 +287,8 @@
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.Button btn_consulta;
         private System.Windows.Forms.Button btn_regresar;
+        private System.Windows.Forms.Panel panel_agregar;
+        private System.Windows.Forms.Panel panel_consulta;
+        private System.Windows.Forms.Panel panel1;
     }
 }

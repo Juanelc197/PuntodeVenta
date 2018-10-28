@@ -51,7 +51,7 @@ namespace PdeV_Delsel
 
         private void Form_menu_Load(object sender, EventArgs e)
         {
-            
+            //galeria de imagen
             //pictureBox_galeria.Image = Properties.Resources.fondo1delsel;
             //pictureBox_galeria.SizeMode = PictureBoxSizeMode.Zoom;
             //Timer tm = new Timer();
@@ -60,7 +60,7 @@ namespace PdeV_Delsel
             //tm.Start();
 
         }
-
+        //galeria de imagen
         //private void changeimage(object sender, EventArgs e)
         //{
         //    List<Bitmap> b1 = new List<Bitmap>();
