@@ -28,6 +28,10 @@ namespace PdeV_Delsel
             this.WindowState = FormWindowState.Maximized;
             btn_maximisar.Visible = false;
             btn_restaurar.Visible = true;
+            lbl_hora.Font = new Font("Murtuza", 72);
+            lbl_fecha.Font = new Font("Murtuza", 48);
+
+
         }
 
         private void btn_restaurar_Click(object sender, EventArgs e)
@@ -35,6 +39,8 @@ namespace PdeV_Delsel
             this.WindowState = FormWindowState.Normal;
             btn_restaurar.Visible = false;
             btn_maximisar.Visible = true;
+            lbl_hora.Font = new Font("Murtuza", 48);
+            lbl_fecha.Font = new Font("Murtuza", 36);
         }
 
         private void btn_minimisar_Click(object sender, EventArgs e)
@@ -44,6 +50,7 @@ namespace PdeV_Delsel
 
         private void Form_menu_Load(object sender, EventArgs e)
         {
+            
             //pictureBox_galeria.Image = Properties.Resources.fondo1delsel;
             //pictureBox_galeria.SizeMode = PictureBoxSizeMode.Zoom;
             //Timer tm = new Timer();
@@ -80,7 +87,7 @@ namespace PdeV_Delsel
 
         private void timer_horafecha_Tick(object sender, EventArgs e)
         {
-            lbl_hora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lbl_hora.Text = DateTime.Now.ToLongTimeString();
 
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }

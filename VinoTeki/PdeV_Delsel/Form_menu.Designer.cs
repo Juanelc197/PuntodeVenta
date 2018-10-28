@@ -91,32 +91,36 @@
             // 
             // panel_productos
             // 
+            this.panel_productos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_productos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_productos.Location = new System.Drawing.Point(382, 138);
+            this.panel_productos.Location = new System.Drawing.Point(386, 113);
             this.panel_productos.Name = "panel_productos";
             this.panel_productos.Size = new System.Drawing.Size(8, 65);
             this.panel_productos.TabIndex = 4;
             // 
             // panel_cliente
             // 
+            this.panel_cliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_cliente.Location = new System.Drawing.Point(382, 209);
+            this.panel_cliente.Location = new System.Drawing.Point(386, 184);
             this.panel_cliente.Name = "panel_cliente";
             this.panel_cliente.Size = new System.Drawing.Size(8, 65);
             this.panel_cliente.TabIndex = 5;
             // 
             // panel_ventas
             // 
+            this.panel_ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_ventas.Location = new System.Drawing.Point(382, 280);
+            this.panel_ventas.Location = new System.Drawing.Point(386, 255);
             this.panel_ventas.Name = "panel_ventas";
             this.panel_ventas.Size = new System.Drawing.Size(8, 65);
             this.panel_ventas.TabIndex = 6;
             // 
             // panel_cotizacion
             // 
+            this.panel_cotizacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_cotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_cotizacion.Location = new System.Drawing.Point(382, 351);
+            this.panel_cotizacion.Location = new System.Drawing.Point(386, 326);
             this.panel_cotizacion.Name = "panel_cotizacion";
             this.panel_cotizacion.Size = new System.Drawing.Size(8, 65);
             this.panel_cotizacion.TabIndex = 7;
@@ -134,22 +138,28 @@
             // lbl_hora
             // 
             this.lbl_hora.AutoSize = true;
-            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hora.Location = new System.Drawing.Point(412, 481);
+            this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_hora.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.lbl_hora.Location = new System.Drawing.Point(0, 539);
             this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(76, 25);
+            this.lbl_hora.Size = new System.Drawing.Size(475, 73);
             this.lbl_hora.TabIndex = 9;
-            this.lbl_hora.Text = "label1";
+            this.lbl_hora.Text = "01:07:09 a. m. ";
             // 
             // lbl_fecha
             // 
             this.lbl_fecha.AutoSize = true;
-            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha.Location = new System.Drawing.Point(412, 553);
+            this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lbl_fecha.Location = new System.Drawing.Point(0, 484);
             this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(76, 25);
+            this.lbl_fecha.Size = new System.Drawing.Size(748, 55);
             this.lbl_fecha.TabIndex = 10;
-            this.lbl_fecha.Text = "label1";
+            this.lbl_fecha.Text = "domingo, 28 de octubre de 2018";
             // 
             // timer_horafecha
             // 
@@ -158,6 +168,7 @@
             // 
             // pictureBox_galeria
             // 
+            this.pictureBox_galeria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_galeria.Image = global::PdeV_Delsel.Properties.Resources.fondo;
             this.pictureBox_galeria.Location = new System.Drawing.Point(884, 297);
             this.pictureBox_galeria.Name = "pictureBox_galeria";
@@ -168,6 +179,7 @@
             // 
             // btn_cotisar
             // 
+            this.btn_cotisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_cotisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_cotisar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
             this.btn_cotisar.FlatAppearance.BorderSize = 0;
@@ -177,7 +189,7 @@
             this.btn_cotisar.ForeColor = System.Drawing.Color.White;
             this.btn_cotisar.Image = global::PdeV_Delsel.Properties.Resources.cotizacion_mini;
             this.btn_cotisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cotisar.Location = new System.Drawing.Point(12, 351);
+            this.btn_cotisar.Location = new System.Drawing.Point(16, 326);
             this.btn_cotisar.Name = "btn_cotisar";
             this.btn_cotisar.Size = new System.Drawing.Size(378, 65);
             this.btn_cotisar.TabIndex = 3;
@@ -186,6 +198,7 @@
             // 
             // btn_venta
             // 
+            this.btn_venta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_venta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_venta.FlatAppearance.BorderSize = 0;
             this.btn_venta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
@@ -194,7 +207,7 @@
             this.btn_venta.ForeColor = System.Drawing.Color.White;
             this.btn_venta.Image = global::PdeV_Delsel.Properties.Resources.venta_mini;
             this.btn_venta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_venta.Location = new System.Drawing.Point(12, 280);
+            this.btn_venta.Location = new System.Drawing.Point(16, 255);
             this.btn_venta.Name = "btn_venta";
             this.btn_venta.Size = new System.Drawing.Size(378, 65);
             this.btn_venta.TabIndex = 2;
@@ -203,6 +216,7 @@
             // 
             // btn_cliente
             // 
+            this.btn_cliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_cliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_cliente.FlatAppearance.BorderSize = 0;
             this.btn_cliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
@@ -211,7 +225,7 @@
             this.btn_cliente.ForeColor = System.Drawing.Color.White;
             this.btn_cliente.Image = global::PdeV_Delsel.Properties.Resources.cliente_mini;
             this.btn_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cliente.Location = new System.Drawing.Point(12, 209);
+            this.btn_cliente.Location = new System.Drawing.Point(16, 184);
             this.btn_cliente.Name = "btn_cliente";
             this.btn_cliente.Size = new System.Drawing.Size(378, 65);
             this.btn_cliente.TabIndex = 1;
@@ -220,6 +234,7 @@
             // 
             // btn_productos
             // 
+            this.btn_productos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_productos.FlatAppearance.BorderSize = 0;
             this.btn_productos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
@@ -228,7 +243,7 @@
             this.btn_productos.ForeColor = System.Drawing.Color.White;
             this.btn_productos.Image = global::PdeV_Delsel.Properties.Resources.producto_mini;
             this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_productos.Location = new System.Drawing.Point(12, 138);
+            this.btn_productos.Location = new System.Drawing.Point(16, 113);
             this.btn_productos.Name = "btn_productos";
             this.btn_productos.Size = new System.Drawing.Size(378, 65);
             this.btn_productos.TabIndex = 0;
