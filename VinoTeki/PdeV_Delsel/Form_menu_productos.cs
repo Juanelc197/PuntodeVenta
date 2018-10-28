@@ -72,5 +72,22 @@ namespace PdeV_Delsel
             this.Close();
             form_Menu.Show();
         }
+
+        private void AbrirFormInPanel(object Formson)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            Form fh = Formson as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(fh);
+            this.panel_contenedor.Tag = fh;
+            fh.Show();
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Form_Altaproductos());
+        }
     }
 }
