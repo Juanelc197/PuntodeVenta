@@ -30,16 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel_barraT = new System.Windows.Forms.Panel();
-            this.panel_Contenedor = new System.Windows.Forms.Panel();
-            this.panel_productos = new System.Windows.Forms.Panel();
-            this.panel_cliente = new System.Windows.Forms.Panel();
-            this.panel_ventas = new System.Windows.Forms.Panel();
-            this.panel_cotizacion = new System.Windows.Forms.Panel();
             this.lbl_menu = new System.Windows.Forms.Label();
-            this.lbl_hora = new System.Windows.Forms.Label();
-            this.lbl_fecha = new System.Windows.Forms.Label();
-            this.timer_horafecha = new System.Windows.Forms.Timer(this.components);
+            this.panel_Contenedor = new System.Windows.Forms.Panel();
+            this.lbl_delsel = new System.Windows.Forms.Label();
+            this.lbl_a = new System.Windows.Forms.Label();
             this.lbl_titulo = new System.Windows.Forms.Label();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.panel_cotizacion = new System.Windows.Forms.Panel();
+            this.panel_ventas = new System.Windows.Forms.Panel();
+            this.panel_cliente = new System.Windows.Forms.Panel();
+            this.panel_productos = new System.Windows.Forms.Panel();
+            this.timer_horafecha = new System.Windows.Forms.Timer(this.components);
             this.pictureBox_galeria = new System.Windows.Forms.PictureBox();
             this.btn_cotisar = new System.Windows.Forms.Button();
             this.btn_venta = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@
             this.btn_minimisar = new System.Windows.Forms.Button();
             this.btn_maximisar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.lbl_a = new System.Windows.Forms.Label();
-            this.lbl_delsel = new System.Windows.Forms.Label();
             this.panel_barraT.SuspendLayout();
             this.panel_Contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_galeria)).BeginInit();
@@ -71,9 +71,19 @@
             this.panel_barraT.TabIndex = 0;
             this.panel_barraT.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_barraT_MouseDown);
             // 
+            // lbl_menu
+            // 
+            this.lbl_menu.AutoSize = true;
+            this.lbl_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_menu.Location = new System.Drawing.Point(12, 9);
+            this.lbl_menu.Name = "lbl_menu";
+            this.lbl_menu.Size = new System.Drawing.Size(63, 24);
+            this.lbl_menu.TabIndex = 9;
+            this.lbl_menu.Text = "Menu";
+            // 
             // panel_Contenedor
             // 
-            this.panel_Contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.panel_Contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel_Contenedor.Controls.Add(this.lbl_delsel);
             this.panel_Contenedor.Controls.Add(this.lbl_a);
             this.panel_Contenedor.Controls.Add(this.lbl_titulo);
@@ -95,68 +105,41 @@
             this.panel_Contenedor.Size = new System.Drawing.Size(1300, 612);
             this.panel_Contenedor.TabIndex = 1;
             // 
-            // panel_productos
+            // lbl_delsel
             // 
-            this.panel_productos.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel_productos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel_productos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_productos.Location = new System.Drawing.Point(380, 91);
-            this.panel_productos.Name = "panel_productos";
-            this.panel_productos.Size = new System.Drawing.Size(8, 65);
-            this.panel_productos.TabIndex = 4;
+            this.lbl_delsel.AutoSize = true;
+            this.lbl_delsel.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_delsel.Font = new System.Drawing.Font("Lithos Pro Regular", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_delsel.ForeColor = System.Drawing.Color.White;
+            this.lbl_delsel.Location = new System.Drawing.Point(853, 157);
+            this.lbl_delsel.Name = "lbl_delsel";
+            this.lbl_delsel.Size = new System.Drawing.Size(152, 48);
+            this.lbl_delsel.TabIndex = 13;
+            this.lbl_delsel.Text = "Delsel";
             // 
-            // panel_cliente
+            // lbl_a
             // 
-            this.panel_cliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel_cliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_cliente.Location = new System.Drawing.Point(380, 192);
-            this.panel_cliente.Name = "panel_cliente";
-            this.panel_cliente.Size = new System.Drawing.Size(8, 65);
-            this.panel_cliente.TabIndex = 5;
+            this.lbl_a.AutoSize = true;
+            this.lbl_a.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_a.Font = new System.Drawing.Font("Lithos Pro Regular", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_a.ForeColor = System.Drawing.Color.White;
+            this.lbl_a.Location = new System.Drawing.Point(901, 106);
+            this.lbl_a.Name = "lbl_a";
+            this.lbl_a.Size = new System.Drawing.Size(64, 62);
+            this.lbl_a.TabIndex = 12;
+            this.lbl_a.Text = "a";
             // 
-            // panel_ventas
+            // lbl_titulo
             // 
-            this.panel_ventas.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel_ventas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel_ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_ventas.Location = new System.Drawing.Point(380, 297);
-            this.panel_ventas.Name = "panel_ventas";
-            this.panel_ventas.Size = new System.Drawing.Size(8, 65);
-            this.panel_ventas.TabIndex = 6;
-            // 
-            // panel_cotizacion
-            // 
-            this.panel_cotizacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel_cotizacion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel_cotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_cotizacion.Location = new System.Drawing.Point(380, 398);
-            this.panel_cotizacion.Name = "panel_cotizacion";
-            this.panel_cotizacion.Size = new System.Drawing.Size(8, 65);
-            this.panel_cotizacion.TabIndex = 7;
-            // 
-            // lbl_menu
-            // 
-            this.lbl_menu.AutoSize = true;
-            this.lbl_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_menu.Location = new System.Drawing.Point(12, 9);
-            this.lbl_menu.Name = "lbl_menu";
-            this.lbl_menu.Size = new System.Drawing.Size(63, 24);
-            this.lbl_menu.TabIndex = 9;
-            this.lbl_menu.Text = "Menu";
-            // 
-            // lbl_hora
-            // 
-            this.lbl_hora.AutoSize = true;
-            this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_hora.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.lbl_hora.Location = new System.Drawing.Point(0, 539);
-            this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(475, 73);
-            this.lbl_hora.TabIndex = 9;
-            this.lbl_hora.Text = "01:07:09 a. m. ";
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_titulo.Font = new System.Drawing.Font("Lithos Pro Regular", 71.99999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_titulo.Location = new System.Drawing.Point(564, 3);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(733, 124);
+            this.lbl_titulo.TabIndex = 11;
+            this.lbl_titulo.Text = "Bienvenidos";
             // 
             // lbl_fecha
             // 
@@ -171,20 +154,63 @@
             this.lbl_fecha.TabIndex = 10;
             this.lbl_fecha.Text = "domingo, 28 de octubre de 2018";
             // 
+            // lbl_hora
+            // 
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_hora.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.lbl_hora.Location = new System.Drawing.Point(0, 539);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(475, 73);
+            this.lbl_hora.TabIndex = 9;
+            this.lbl_hora.Text = "01:07:09 a. m. ";
+            // 
+            // panel_cotizacion
+            // 
+            this.panel_cotizacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel_cotizacion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_cotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_cotizacion.Location = new System.Drawing.Point(380, 398);
+            this.panel_cotizacion.Name = "panel_cotizacion";
+            this.panel_cotizacion.Size = new System.Drawing.Size(8, 65);
+            this.panel_cotizacion.TabIndex = 7;
+            // 
+            // panel_ventas
+            // 
+            this.panel_ventas.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel_ventas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_ventas.Location = new System.Drawing.Point(380, 297);
+            this.panel_ventas.Name = "panel_ventas";
+            this.panel_ventas.Size = new System.Drawing.Size(8, 65);
+            this.panel_ventas.TabIndex = 6;
+            // 
+            // panel_cliente
+            // 
+            this.panel_cliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel_cliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_cliente.Location = new System.Drawing.Point(380, 192);
+            this.panel_cliente.Name = "panel_cliente";
+            this.panel_cliente.Size = new System.Drawing.Size(8, 65);
+            this.panel_cliente.TabIndex = 5;
+            // 
+            // panel_productos
+            // 
+            this.panel_productos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel_productos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_productos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_productos.Location = new System.Drawing.Point(380, 91);
+            this.panel_productos.Name = "panel_productos";
+            this.panel_productos.Size = new System.Drawing.Size(8, 65);
+            this.panel_productos.TabIndex = 4;
+            // 
             // timer_horafecha
             // 
             this.timer_horafecha.Enabled = true;
             this.timer_horafecha.Tick += new System.EventHandler(this.timer_horafecha_Tick);
-            // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Lithos Pro Regular", 71.99999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.Location = new System.Drawing.Point(564, 3);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(733, 124);
-            this.lbl_titulo.TabIndex = 11;
-            this.lbl_titulo.Text = "Bienvenidos";
             // 
             // pictureBox_galeria
             // 
@@ -282,7 +308,7 @@
             this.btn_restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
             this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_restaurar.Location = new System.Drawing.Point(1232, 7);
+            this.btn_restaurar.Location = new System.Drawing.Point(1232, 8);
             this.btn_restaurar.Name = "btn_restaurar";
             this.btn_restaurar.Size = new System.Drawing.Size(25, 25);
             this.btn_restaurar.TabIndex = 1;
@@ -337,26 +363,6 @@
             this.btn_cerrar.TabIndex = 0;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
-            // lbl_a
-            // 
-            this.lbl_a.AutoSize = true;
-            this.lbl_a.Font = new System.Drawing.Font("Lithos Pro Regular", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_a.Location = new System.Drawing.Point(901, 106);
-            this.lbl_a.Name = "lbl_a";
-            this.lbl_a.Size = new System.Drawing.Size(64, 62);
-            this.lbl_a.TabIndex = 12;
-            this.lbl_a.Text = "a";
-            // 
-            // lbl_delsel
-            // 
-            this.lbl_delsel.AutoSize = true;
-            this.lbl_delsel.Font = new System.Drawing.Font("Lithos Pro Regular", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_delsel.Location = new System.Drawing.Point(853, 157);
-            this.lbl_delsel.Name = "lbl_delsel";
-            this.lbl_delsel.Size = new System.Drawing.Size(152, 48);
-            this.lbl_delsel.TabIndex = 13;
-            this.lbl_delsel.Text = "Delsel";
             // 
             // Form_menu
             // 

@@ -63,6 +63,16 @@ namespace PdeV_Delsel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botonmenu {
+            get {
+                object obj = ResourceManager.GetObject("botonmenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cliente_mini {
             get {
                 object obj = ResourceManager.GetObject("cliente mini", resourceCulture);

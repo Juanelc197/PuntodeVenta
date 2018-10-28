@@ -52,10 +52,19 @@
     <Compile Include="Form_menu.Designer.cs">
       <DependentUpon>Form_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_menu_productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_menu_productos.Designer.cs">
+      <DependentUpon>Form_menu_productos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_menu.resx">
       <DependentUpon>Form_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_menu_productos.resx">
+      <DependentUpon>Form_menu_productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,6 +136,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DELSEL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonmenu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
