@@ -243,6 +243,16 @@ namespace PdeV_Delsel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap guardar_super_mini {
+            get {
+                object obj = ResourceManager.GetObject("guardar super mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_delsel_ {
             get {
                 object obj = ResourceManager.GetObject("Logo(delsel)", resourceCulture);

@@ -28,199 +28,248 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tableLayoutPanel_Titulo = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_titulo = new System.Windows.Forms.Label();
-            this.lbl_nombreP = new System.Windows.Forms.Label();
-            this.lbl_cantidadP = new System.Windows.Forms.Label();
-            this.lbl_precioP = new System.Windows.Forms.Label();
-            this.lbl_costoP = new System.Windows.Forms.Label();
-            this.comboBox_consultaP = new System.Windows.Forms.ComboBox();
-            this.lbl_consultaP = new System.Windows.Forms.Label();
-            this.btn_modificar = new System.Windows.Forms.Button();
+            this.tableLayoutPanel_ContenedorGlobal = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Producto = new System.Windows.Forms.Label();
+            this.lbl_tipo = new System.Windows.Forms.Label();
+            this.lbl_marca = new System.Windows.Forms.Label();
+            this.lbl_modelo = new System.Windows.Forms.Label();
+            this.lbl_descripcion = new System.Windows.Forms.Label();
+            this.lbl_cantidad = new System.Windows.Forms.Label();
+            this.lbl_costo = new System.Windows.Forms.Label();
+            this.lbl_presio = new System.Windows.Forms.Label();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.txt_cantidad = new System.Windows.Forms.TextBox();
-            this.txt_costo = new System.Windows.Forms.TextBox();
-            this.txt_precio = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.panel_agregar = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel_Titulo.SuspendLayout();
+            this.tableLayoutPanel_ContenedorGlobal.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanel_Titulo
+            // 
+            this.tableLayoutPanel_Titulo.ColumnCount = 1;
+            this.tableLayoutPanel_Titulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel_Titulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel_Titulo.Controls.Add(this.lbl_titulo, 0, 0);
+            this.tableLayoutPanel_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel_Titulo.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel_Titulo.Name = "tableLayoutPanel_Titulo";
+            this.tableLayoutPanel_Titulo.RowCount = 1;
+            this.tableLayoutPanel_Titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel_Titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel_Titulo.Size = new System.Drawing.Size(1300, 62);
+            this.tableLayoutPanel_Titulo.TabIndex = 1;
             // 
             // lbl_titulo
             // 
+            this.lbl_titulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.Location = new System.Drawing.Point(485, 99);
+            this.lbl_titulo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_titulo.Font = new System.Drawing.Font("Lithos Pro Regular", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.Black;
+            this.lbl_titulo.Location = new System.Drawing.Point(427, 0);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(118, 29);
-            this.lbl_titulo.TabIndex = 0;
-            this.lbl_titulo.Text = "Producto";
+            this.lbl_titulo.Size = new System.Drawing.Size(446, 62);
+            this.lbl_titulo.TabIndex = 2;
+            this.lbl_titulo.Text = "Alta Producto";
             // 
-            // lbl_nombreP
+            // tableLayoutPanel_ContenedorGlobal
             // 
-            this.lbl_nombreP.AutoSize = true;
-            this.lbl_nombreP.Location = new System.Drawing.Point(3, 62);
-            this.lbl_nombreP.Name = "lbl_nombreP";
-            this.lbl_nombreP.Size = new System.Drawing.Size(50, 13);
-            this.lbl_nombreP.TabIndex = 1;
-            this.lbl_nombreP.Text = "Nombre: ";
+            this.tableLayoutPanel_ContenedorGlobal.ColumnCount = 3;
+            this.tableLayoutPanel_ContenedorGlobal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.23077F));
+            this.tableLayoutPanel_ContenedorGlobal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.69231F));
+            this.tableLayoutPanel_ContenedorGlobal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19F));
+            this.tableLayoutPanel_ContenedorGlobal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_Producto, 0, 0);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_tipo, 0, 1);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_marca, 0, 2);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_modelo, 0, 3);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_descripcion, 0, 4);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_cantidad, 0, 5);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_costo, 0, 6);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_presio, 0, 7);
+            this.tableLayoutPanel_ContenedorGlobal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel_ContenedorGlobal.Location = new System.Drawing.Point(0, 62);
+            this.tableLayoutPanel_ContenedorGlobal.Name = "tableLayoutPanel_ContenedorGlobal";
+            this.tableLayoutPanel_ContenedorGlobal.RowCount = 9;
+            this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel_ContenedorGlobal.Size = new System.Drawing.Size(1300, 588);
+            this.tableLayoutPanel_ContenedorGlobal.TabIndex = 4;
             // 
-            // lbl_cantidadP
+            // lbl_Producto
             // 
-            this.lbl_cantidadP.AutoSize = true;
-            this.lbl_cantidadP.Location = new System.Drawing.Point(3, 124);
-            this.lbl_cantidadP.Name = "lbl_cantidadP";
-            this.lbl_cantidadP.Size = new System.Drawing.Size(52, 13);
-            this.lbl_cantidadP.TabIndex = 2;
-            this.lbl_cantidadP.Text = "Cantidad:";
+            this.lbl_Producto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Producto.AutoSize = true;
+            this.lbl_Producto.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Producto.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Producto.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_Producto.Location = new System.Drawing.Point(133, 28);
+            this.lbl_Producto.Name = "lbl_Producto";
+            this.lbl_Producto.Size = new System.Drawing.Size(179, 37);
+            this.lbl_Producto.TabIndex = 4;
+            this.lbl_Producto.Text = "Producto:";
             // 
-            // lbl_precioP
+            // lbl_tipo
             // 
-            this.lbl_precioP.AutoSize = true;
-            this.lbl_precioP.Location = new System.Drawing.Point(3, 198);
-            this.lbl_precioP.Name = "lbl_precioP";
-            this.lbl_precioP.Size = new System.Drawing.Size(40, 13);
-            this.lbl_precioP.TabIndex = 3;
-            this.lbl_precioP.Text = "Precio:";
+            this.lbl_tipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_tipo.AutoSize = true;
+            this.lbl_tipo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_tipo.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tipo.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_tipo.Location = new System.Drawing.Point(205, 93);
+            this.lbl_tipo.Name = "lbl_tipo";
+            this.lbl_tipo.Size = new System.Drawing.Size(107, 37);
+            this.lbl_tipo.TabIndex = 5;
+            this.lbl_tipo.Text = "Tipo:";
             // 
-            // lbl_costoP
+            // lbl_marca
             // 
-            this.lbl_costoP.AutoSize = true;
-            this.lbl_costoP.Location = new System.Drawing.Point(3, 161);
-            this.lbl_costoP.Name = "lbl_costoP";
-            this.lbl_costoP.Size = new System.Drawing.Size(37, 13);
-            this.lbl_costoP.TabIndex = 4;
-            this.lbl_costoP.Text = "Costo:";
+            this.lbl_marca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_marca.AutoSize = true;
+            this.lbl_marca.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_marca.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_marca.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_marca.Location = new System.Drawing.Point(187, 158);
+            this.lbl_marca.Name = "lbl_marca";
+            this.lbl_marca.Size = new System.Drawing.Size(125, 37);
+            this.lbl_marca.TabIndex = 6;
+            this.lbl_marca.Text = "Marca:";
             // 
-            // comboBox_consultaP
+            // lbl_modelo
             // 
-            this.comboBox_consultaP.FormattingEnabled = true;
-            this.comboBox_consultaP.Location = new System.Drawing.Point(1090, 201);
-            this.comboBox_consultaP.Name = "comboBox_consultaP";
-            this.comboBox_consultaP.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_consultaP.TabIndex = 5;
+            this.lbl_modelo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_modelo.AutoSize = true;
+            this.lbl_modelo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_modelo.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_modelo.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_modelo.Location = new System.Drawing.Point(169, 223);
+            this.lbl_modelo.Name = "lbl_modelo";
+            this.lbl_modelo.Size = new System.Drawing.Size(143, 37);
+            this.lbl_modelo.TabIndex = 7;
+            this.lbl_modelo.Text = "Modelo:";
             // 
-            // lbl_consultaP
+            // lbl_descripcion
             // 
-            this.lbl_consultaP.AutoSize = true;
-            this.lbl_consultaP.Location = new System.Drawing.Point(1090, 161);
-            this.lbl_consultaP.Name = "lbl_consultaP";
-            this.lbl_consultaP.Size = new System.Drawing.Size(114, 13);
-            this.lbl_consultaP.TabIndex = 6;
-            this.lbl_consultaP.Text = "Consulta de Productos";
+            this.lbl_descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_descripcion.AutoSize = true;
+            this.lbl_descripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_descripcion.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_descripcion.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_descripcion.Location = new System.Drawing.Point(79, 288);
+            this.lbl_descripcion.Name = "lbl_descripcion";
+            this.lbl_descripcion.Size = new System.Drawing.Size(233, 37);
+            this.lbl_descripcion.TabIndex = 8;
+            this.lbl_descripcion.Text = "Descripción:";
             // 
-            // btn_modificar
+            // lbl_cantidad
             // 
-            this.btn_modificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_modificar.Location = new System.Drawing.Point(1198, 409);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(75, 23);
-            this.btn_modificar.TabIndex = 7;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.lbl_cantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_cantidad.AutoSize = true;
+            this.lbl_cantidad.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_cantidad.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cantidad.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_cantidad.Location = new System.Drawing.Point(133, 353);
+            this.lbl_cantidad.Name = "lbl_cantidad";
+            this.lbl_cantidad.Size = new System.Drawing.Size(179, 37);
+            this.lbl_cantidad.TabIndex = 9;
+            this.lbl_cantidad.Text = "Cantidad:";
+            // 
+            // lbl_costo
+            // 
+            this.lbl_costo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_costo.AutoSize = true;
+            this.lbl_costo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_costo.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_costo.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_costo.Location = new System.Drawing.Point(187, 418);
+            this.lbl_costo.Name = "lbl_costo";
+            this.lbl_costo.Size = new System.Drawing.Size(125, 37);
+            this.lbl_costo.TabIndex = 10;
+            this.lbl_costo.Text = "Costo:";
+            // 
+            // lbl_presio
+            // 
+            this.lbl_presio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_presio.AutoSize = true;
+            this.lbl_presio.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_presio.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_presio.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_presio.Location = new System.Drawing.Point(169, 483);
+            this.lbl_presio.Name = "lbl_presio";
+            this.lbl_presio.Size = new System.Drawing.Size(143, 37);
+            this.lbl_presio.TabIndex = 11;
+            this.lbl_presio.Text = "Precio:";
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_guardar.Location = new System.Drawing.Point(3, 409);
+            this.btn_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_guardar.Image = global::PdeV_Delsel.Properties.Resources.guardar_super_mini;
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar.Location = new System.Drawing.Point(1065, 594);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
-            this.btn_guardar.TabIndex = 8;
+            this.btn_guardar.Size = new System.Drawing.Size(223, 44);
+            this.btn_guardar.TabIndex = 1;
             this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // panel_agregar
             // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.910156F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.08984F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
-            this.tableLayoutPanel1.Controls.Add(this.comboBox_consultaP, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_consultaP, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btn_modificar, 4, 6);
-            this.tableLayoutPanel1.Controls.Add(this.txt_precio, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txt_costo, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txt_cantidad, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btn_guardar, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_nombreP, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_cantidadP, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txt_nombre, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_costoP, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_precioP, 0, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 203);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1276, 435);
-            this.tableLayoutPanel1.TabIndex = 12;
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Location = new System.Drawing.Point(84, 65);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(100, 20);
-            this.txt_nombre.TabIndex = 5;
-            // 
-            // txt_cantidad
-            // 
-            this.txt_cantidad.Location = new System.Drawing.Point(84, 127);
-            this.txt_cantidad.Name = "txt_cantidad";
-            this.txt_cantidad.Size = new System.Drawing.Size(100, 20);
-            this.txt_cantidad.TabIndex = 13;
-            // 
-            // txt_costo
-            // 
-            this.txt_costo.Location = new System.Drawing.Point(84, 164);
-            this.txt_costo.Name = "txt_costo";
-            this.txt_costo.Size = new System.Drawing.Size(100, 20);
-            this.txt_costo.TabIndex = 13;
-            // 
-            // txt_precio
-            // 
-            this.txt_precio.Location = new System.Drawing.Point(84, 201);
-            this.txt_precio.Name = "txt_precio";
-            this.txt_precio.Size = new System.Drawing.Size(100, 20);
-            this.txt_precio.TabIndex = 13;
+            this.panel_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_agregar.Location = new System.Drawing.Point(1280, 594);
+            this.panel_agregar.Name = "panel_agregar";
+            this.panel_agregar.Size = new System.Drawing.Size(8, 44);
+            this.panel_agregar.TabIndex = 6;
             // 
             // Form_Altaproductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1300, 650);
-            this.Controls.Add(this.lbl_titulo);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.panel_agregar);
+            this.Controls.Add(this.btn_guardar);
+            this.Controls.Add(this.tableLayoutPanel_ContenedorGlobal);
+            this.Controls.Add(this.tableLayoutPanel_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Altaproductos";
             this.Text = "Form_Altaproductos";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel_Titulo.ResumeLayout(false);
+            this.tableLayoutPanel_Titulo.PerformLayout();
+            this.tableLayoutPanel_ContenedorGlobal.ResumeLayout(false);
+            this.tableLayoutPanel_ContenedorGlobal.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_Titulo;
         private System.Windows.Forms.Label lbl_titulo;
-        private System.Windows.Forms.Label lbl_nombreP;
-        private System.Windows.Forms.Label lbl_cantidadP;
-        private System.Windows.Forms.Label lbl_precioP;
-        private System.Windows.Forms.Label lbl_costoP;
-        private System.Windows.Forms.ComboBox comboBox_consultaP;
-        private System.Windows.Forms.Label lbl_consultaP;
-        private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_ContenedorGlobal;
+        private System.Windows.Forms.Label lbl_Producto;
+        private System.Windows.Forms.Label lbl_tipo;
+        private System.Windows.Forms.Label lbl_marca;
+        private System.Windows.Forms.Label lbl_modelo;
+        private System.Windows.Forms.Label lbl_descripcion;
+        private System.Windows.Forms.Label lbl_cantidad;
+        private System.Windows.Forms.Label lbl_costo;
+        private System.Windows.Forms.Label lbl_presio;
         private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox txt_precio;
-        private System.Windows.Forms.TextBox txt_costo;
-        private System.Windows.Forms.TextBox txt_cantidad;
-        private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.Panel panel_agregar;
     }
 }
