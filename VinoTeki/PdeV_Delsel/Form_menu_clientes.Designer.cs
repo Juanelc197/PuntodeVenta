@@ -32,20 +32,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_consulta = new System.Windows.Forms.Panel();
             this.panel_agregar = new System.Windows.Forms.Panel();
-            this.lbl_titulo = new System.Windows.Forms.Label();
-            this.panel_opcionestop = new System.Windows.Forms.Panel();
-            this.panel_contenedor = new System.Windows.Forms.Panel();
-            this.btn_menuboton = new System.Windows.Forms.Button();
-            this.btn_restaurar = new System.Windows.Forms.Button();
-            this.btn_minimisar = new System.Windows.Forms.Button();
-            this.btn_maximisar = new System.Windows.Forms.Button();
             this.btn_regresar = new System.Windows.Forms.Button();
+            this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_consulta = new System.Windows.Forms.Button();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.picturebox_logo = new System.Windows.Forms.PictureBox();
+            this.panel_opcionestop = new System.Windows.Forms.Panel();
+            this.btn_menuboton = new System.Windows.Forms.Button();
+            this.btn_minimisar = new System.Windows.Forms.Button();
+            this.btn_maximisar = new System.Windows.Forms.Button();
+            this.btn_restaurar = new System.Windows.Forms.Button();
+            this.panel_contenedor = new System.Windows.Forms.Panel();
             this.panel_opciones.SuspendLayout();
-            this.panel_opcionestop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).BeginInit();
+            this.panel_opcionestop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_opciones
@@ -92,105 +92,6 @@
             this.panel_agregar.Size = new System.Drawing.Size(8, 57);
             this.panel_agregar.TabIndex = 5;
             // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Lithos Pro Regular", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_titulo.Location = new System.Drawing.Point(74, 106);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(125, 35);
-            this.lbl_titulo.TabIndex = 2;
-            this.lbl_titulo.Text = "Cliente";
-            // 
-            // panel_opcionestop
-            // 
-            this.panel_opcionestop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_opcionestop.Controls.Add(this.btn_restaurar);
-            this.panel_opcionestop.Controls.Add(this.btn_menuboton);
-            this.panel_opcionestop.Controls.Add(this.btn_minimisar);
-            this.panel_opcionestop.Controls.Add(this.btn_maximisar);
-            this.panel_opcionestop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_opcionestop.Location = new System.Drawing.Point(250, 0);
-            this.panel_opcionestop.Name = "panel_opcionestop";
-            this.panel_opcionestop.Size = new System.Drawing.Size(1050, 38);
-            this.panel_opcionestop.TabIndex = 4;
-            this.panel_opcionestop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_opcionestop_MouseDown);
-            // 
-            // panel_contenedor
-            // 
-            this.panel_contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_contenedor.Location = new System.Drawing.Point(250, 38);
-            this.panel_contenedor.Name = "panel_contenedor";
-            this.panel_contenedor.Size = new System.Drawing.Size(1050, 612);
-            this.panel_contenedor.TabIndex = 5;
-            // 
-            // btn_menuboton
-            // 
-            this.btn_menuboton.BackgroundImage = global::PdeV_Delsel.Properties.Resources.botonmenu;
-            this.btn_menuboton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_menuboton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_menuboton.FlatAppearance.BorderSize = 0;
-            this.btn_menuboton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
-            this.btn_menuboton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.btn_menuboton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_menuboton.Location = new System.Drawing.Point(6, 7);
-            this.btn_menuboton.Name = "btn_menuboton";
-            this.btn_menuboton.Size = new System.Drawing.Size(25, 25);
-            this.btn_menuboton.TabIndex = 6;
-            this.btn_menuboton.UseVisualStyleBackColor = true;
-            this.btn_menuboton.Click += new System.EventHandler(this.btn_menuboton_Click);
-            // 
-            // btn_restaurar
-            // 
-            this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_restaurar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.minimisar;
-            this.btn_restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_restaurar.FlatAppearance.BorderSize = 0;
-            this.btn_restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
-            this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_restaurar.Location = new System.Drawing.Point(1013, 7);
-            this.btn_restaurar.Name = "btn_restaurar";
-            this.btn_restaurar.Size = new System.Drawing.Size(25, 25);
-            this.btn_restaurar.TabIndex = 4;
-            this.btn_restaurar.UseVisualStyleBackColor = true;
-            this.btn_restaurar.Visible = false;
-            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
-            // 
-            // btn_minimisar
-            // 
-            this.btn_minimisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_minimisar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.ocultar;
-            this.btn_minimisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_minimisar.FlatAppearance.BorderSize = 0;
-            this.btn_minimisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
-            this.btn_minimisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.btn_minimisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minimisar.Location = new System.Drawing.Point(982, 7);
-            this.btn_minimisar.Name = "btn_minimisar";
-            this.btn_minimisar.Size = new System.Drawing.Size(25, 25);
-            this.btn_minimisar.TabIndex = 5;
-            this.btn_minimisar.UseVisualStyleBackColor = true;
-            this.btn_minimisar.Click += new System.EventHandler(this.btn_minimisar_Click);
-            // 
-            // btn_maximisar
-            // 
-            this.btn_maximisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_maximisar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.maximisar;
-            this.btn_maximisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_maximisar.FlatAppearance.BorderSize = 0;
-            this.btn_maximisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
-            this.btn_maximisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.btn_maximisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_maximisar.Location = new System.Drawing.Point(1013, 7);
-            this.btn_maximisar.Name = "btn_maximisar";
-            this.btn_maximisar.Size = new System.Drawing.Size(25, 25);
-            this.btn_maximisar.TabIndex = 3;
-            this.btn_maximisar.UseVisualStyleBackColor = true;
-            this.btn_maximisar.Click += new System.EventHandler(this.btn_maximisar_Click_2);
-            // 
             // btn_regresar
             // 
             this.btn_regresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -207,6 +108,17 @@
             this.btn_regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Lithos Pro Regular", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_titulo.Location = new System.Drawing.Point(74, 106);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(125, 35);
+            this.lbl_titulo.TabIndex = 2;
+            this.lbl_titulo.Text = "Cliente";
             // 
             // btn_consulta
             // 
@@ -254,6 +166,94 @@
             this.picturebox_logo.TabStop = false;
             this.picturebox_logo.Click += new System.EventHandler(this.picturebox_logo_Click);
             // 
+            // panel_opcionestop
+            // 
+            this.panel_opcionestop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_opcionestop.Controls.Add(this.btn_restaurar);
+            this.panel_opcionestop.Controls.Add(this.btn_menuboton);
+            this.panel_opcionestop.Controls.Add(this.btn_minimisar);
+            this.panel_opcionestop.Controls.Add(this.btn_maximisar);
+            this.panel_opcionestop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_opcionestop.Location = new System.Drawing.Point(250, 0);
+            this.panel_opcionestop.Name = "panel_opcionestop";
+            this.panel_opcionestop.Size = new System.Drawing.Size(1050, 38);
+            this.panel_opcionestop.TabIndex = 4;
+            this.panel_opcionestop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_opcionestop_MouseDown);
+            // 
+            // btn_menuboton
+            // 
+            this.btn_menuboton.BackgroundImage = global::PdeV_Delsel.Properties.Resources.botonmenu;
+            this.btn_menuboton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_menuboton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_menuboton.FlatAppearance.BorderSize = 0;
+            this.btn_menuboton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
+            this.btn_menuboton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.btn_menuboton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_menuboton.Location = new System.Drawing.Point(6, 7);
+            this.btn_menuboton.Name = "btn_menuboton";
+            this.btn_menuboton.Size = new System.Drawing.Size(25, 25);
+            this.btn_menuboton.TabIndex = 6;
+            this.btn_menuboton.UseVisualStyleBackColor = true;
+            this.btn_menuboton.Click += new System.EventHandler(this.btn_menuboton_Click);
+            // 
+            // btn_minimisar
+            // 
+            this.btn_minimisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimisar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.ocultar;
+            this.btn_minimisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_minimisar.FlatAppearance.BorderSize = 0;
+            this.btn_minimisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
+            this.btn_minimisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.btn_minimisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_minimisar.Location = new System.Drawing.Point(982, 7);
+            this.btn_minimisar.Name = "btn_minimisar";
+            this.btn_minimisar.Size = new System.Drawing.Size(25, 25);
+            this.btn_minimisar.TabIndex = 5;
+            this.btn_minimisar.UseVisualStyleBackColor = true;
+            this.btn_minimisar.Click += new System.EventHandler(this.btn_minimisar_Click);
+            // 
+            // btn_maximisar
+            // 
+            this.btn_maximisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_maximisar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.maximisar;
+            this.btn_maximisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_maximisar.FlatAppearance.BorderSize = 0;
+            this.btn_maximisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
+            this.btn_maximisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.btn_maximisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_maximisar.Location = new System.Drawing.Point(1013, 7);
+            this.btn_maximisar.Name = "btn_maximisar";
+            this.btn_maximisar.Size = new System.Drawing.Size(25, 25);
+            this.btn_maximisar.TabIndex = 3;
+            this.btn_maximisar.UseVisualStyleBackColor = true;
+            this.btn_maximisar.Click += new System.EventHandler(this.btn_maximisar_Click);
+            // 
+            // btn_restaurar
+            // 
+            this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_restaurar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.minimisar;
+            this.btn_restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_restaurar.FlatAppearance.BorderSize = 0;
+            this.btn_restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
+            this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_restaurar.Location = new System.Drawing.Point(1013, 7);
+            this.btn_restaurar.Name = "btn_restaurar";
+            this.btn_restaurar.Size = new System.Drawing.Size(25, 25);
+            this.btn_restaurar.TabIndex = 4;
+            this.btn_restaurar.UseVisualStyleBackColor = true;
+            this.btn_restaurar.Visible = false;
+            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
+            // 
+            // panel_contenedor
+            // 
+            this.panel_contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_contenedor.Location = new System.Drawing.Point(250, 38);
+            this.panel_contenedor.Name = "panel_contenedor";
+            this.panel_contenedor.Size = new System.Drawing.Size(1050, 612);
+            this.panel_contenedor.TabIndex = 5;
+            // 
             // Form_menu_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,8 +268,8 @@
             this.Text = "Form_menu_clientes";
             this.panel_opciones.ResumeLayout(false);
             this.panel_opciones.PerformLayout();
-            this.panel_opcionestop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).EndInit();
+            this.panel_opcionestop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

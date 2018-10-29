@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PdeV_Delsel
 {
-    public partial class Form_menu_clientes : Form
+    public partial class Form_menu_ventas : Form
     {
-        public Form_menu_clientes()
+        public Form_menu_ventas()
         {
             InitializeComponent();
         }
@@ -23,12 +23,6 @@ namespace PdeV_Delsel
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void panel_opcionestop_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btn_menuboton_Click(object sender, EventArgs e)
         {
             if (panel_opciones.Width == 250)
@@ -37,6 +31,25 @@ namespace PdeV_Delsel
             }
             else
                 panel_opciones.Width = 250;
+        }
+
+        private void btn_minimisar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_restaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btn_restaurar.Visible = false;
+            btn_maximisar.Visible = true;
+        }
+
+        private void btn_maximisar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btn_maximisar.Visible = false;
+            btn_restaurar.Visible = true;
         }
 
         private void picturebox_logo_Click(object sender, EventArgs e)
@@ -53,30 +66,10 @@ namespace PdeV_Delsel
             form_Menu.Show();
         }
 
-        private void btn_maximisar_Click(object sender, EventArgs e)
+        private void panel_opcionestop_MouseDown(object sender, MouseEventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            btn_maximisar.Visible = false;
-            btn_restaurar.Visible = true;
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void btn_minimisar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btn_restaurar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            btn_restaurar.Visible = false;
-            btn_maximisar.Visible = true;
-        }
-
-       /* private void btn_maximisar_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            btn_maximisar.Visible = false;
-            btn_restaurar.Visible = true;
-        } */
     }
 }

@@ -320,6 +320,7 @@
             this.btn_venta.TabIndex = 2;
             this.btn_venta.Text = "Ventas";
             this.btn_venta.UseVisualStyleBackColor = true;
+            this.btn_venta.Click += new System.EventHandler(this.btn_venta_Click);
             // 
             // btn_cliente
             // 

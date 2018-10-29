@@ -109,5 +109,12 @@ namespace PdeV_Delsel
             this.Hide();
             form_Menu_Clientes.Show();
         }
+
+        private void btn_venta_Click(object sender, EventArgs e)
+        {
+            Form_menu_ventas form_Menu_Ventas = new Form_menu_ventas();
+            this.Hide();
+            form_Menu_Ventas.Show();
+        }
     }
 }

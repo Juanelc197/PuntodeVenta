@@ -79,6 +79,12 @@
     <Compile Include="Form_menu_productos.Designer.cs">
       <DependentUpon>Form_menu_productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_menu_ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_menu_ventas.Designer.cs">
+      <DependentUpon>Form_menu_ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Altaproductos.resx">
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_menu_productos.resx">
       <DependentUpon>Form_menu_productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_menu_ventas.resx">
+      <DependentUpon>Form_menu_ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
