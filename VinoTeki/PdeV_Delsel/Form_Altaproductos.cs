@@ -17,6 +17,9 @@ namespace PdeV_Delsel
             InitializeComponent();
         }
 
+        //Ocultar fragmebtos de codigo #region y para cerrar #endregion y listo
+
+        #region Diseño para los combo box, que muestre info y al momento de escribir se borre
         private void txt_producto_Enter(object sender, EventArgs e)
         {
             if (txt_producto.Text == "PRODUCTO")
@@ -24,7 +27,7 @@ namespace PdeV_Delsel
                 txt_producto.Text = "";
                 txt_producto.ForeColor = Color.White;
             }
-        }
+        } 
 
         private void txt_producto_Leave(object sender, EventArgs e)
         {
@@ -160,5 +163,6 @@ namespace PdeV_Delsel
                 txt_precio.ForeColor = Color.SeaGreen;
             }
         }
+        #endregion
     }
 }
