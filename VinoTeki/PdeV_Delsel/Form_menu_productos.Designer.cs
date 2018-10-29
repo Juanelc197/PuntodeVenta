@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel_opciones = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_consulta = new System.Windows.Forms.Panel();
+            this.panel_agregar = new System.Windows.Forms.Panel();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_consulta = new System.Windows.Forms.Button();
@@ -40,9 +43,6 @@
             this.btn_minimisar = new System.Windows.Forms.Button();
             this.btn_maximisar = new System.Windows.Forms.Button();
             this.panel_contenedor = new System.Windows.Forms.Panel();
-            this.panel_agregar = new System.Windows.Forms.Panel();
-            this.panel_consulta = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel_opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).BeginInit();
             this.panel_opcionestop.SuspendLayout();
@@ -64,6 +64,33 @@
             this.panel_opciones.Name = "panel_opciones";
             this.panel_opciones.Size = new System.Drawing.Size(250, 650);
             this.panel_opciones.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel1.Location = new System.Drawing.Point(96, 581);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(8, 57);
+            this.panel1.TabIndex = 6;
+            // 
+            // panel_consulta
+            // 
+            this.panel_consulta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_consulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_consulta.Location = new System.Drawing.Point(236, 292);
+            this.panel_consulta.Name = "panel_consulta";
+            this.panel_consulta.Size = new System.Drawing.Size(8, 57);
+            this.panel_consulta.TabIndex = 6;
+            // 
+            // panel_agregar
+            // 
+            this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_agregar.Location = new System.Drawing.Point(236, 189);
+            this.panel_agregar.Name = "panel_agregar";
+            this.panel_agregar.Size = new System.Drawing.Size(8, 57);
+            this.panel_agregar.TabIndex = 5;
             // 
             // btn_regresar
             // 
@@ -228,33 +255,6 @@
             this.panel_contenedor.Size = new System.Drawing.Size(1050, 612);
             this.panel_contenedor.TabIndex = 4;
             // 
-            // panel_agregar
-            // 
-            this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_agregar.Location = new System.Drawing.Point(236, 189);
-            this.panel_agregar.Name = "panel_agregar";
-            this.panel_agregar.Size = new System.Drawing.Size(8, 57);
-            this.panel_agregar.TabIndex = 5;
-            // 
-            // panel_consulta
-            // 
-            this.panel_consulta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel_consulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_consulta.Location = new System.Drawing.Point(236, 292);
-            this.panel_consulta.Name = "panel_consulta";
-            this.panel_consulta.Size = new System.Drawing.Size(8, 57);
-            this.panel_consulta.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel1.Location = new System.Drawing.Point(96, 581);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(8, 57);
-            this.panel1.TabIndex = 6;
-            // 
             // Form_menu_productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +265,7 @@
             this.Controls.Add(this.panel_opciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_menu_productos";
+            this.Opacity = 0.98D;
             this.Text = "Form_menu_productos";
             this.panel_opciones.ResumeLayout(false);
             this.panel_opciones.PerformLayout();
