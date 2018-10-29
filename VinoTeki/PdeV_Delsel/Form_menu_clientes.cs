@@ -95,5 +95,10 @@ namespace PdeV_Delsel
         {
             AbrirFormInPanel(new Form_Altacliente());
         }
+
+        private void btn_consulta_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormConsultacliente());
+        }
     }
 }

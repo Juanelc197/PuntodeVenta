@@ -31,6 +31,7 @@
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Titulo = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_ContenedorGlobal = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_consultaP = new System.Windows.Forms.Label();
             this.lbl_Producto = new System.Windows.Forms.Label();
             this.lbl_tipo = new System.Windows.Forms.Label();
             this.lbl_marca = new System.Windows.Forms.Label();
@@ -47,10 +48,9 @@
             this.txt_cantidad = new System.Windows.Forms.TextBox();
             this.txt_costo = new System.Windows.Forms.TextBox();
             this.txt_precio = new System.Windows.Forms.TextBox();
+            this.comboBox_consulta = new System.Windows.Forms.ComboBox();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.panel_agregar = new System.Windows.Forms.Panel();
-            this.comboBox_consulta = new System.Windows.Forms.ComboBox();
-            this.lbl_consultaP = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_ContenedorGlobal.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +123,20 @@
             this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel_ContenedorGlobal.Size = new System.Drawing.Size(1300, 588);
             this.tableLayoutPanel_ContenedorGlobal.TabIndex = 10;
+            // 
+            // lbl_consultaP
+            // 
+            this.lbl_consultaP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_consultaP.AutoSize = true;
+            this.lbl_consultaP.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_consultaP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_consultaP.ForeColor = System.Drawing.Color.Black;
+            this.lbl_consultaP.Location = new System.Drawing.Point(1055, 41);
+            this.lbl_consultaP.Name = "lbl_consultaP";
+            this.lbl_consultaP.Size = new System.Drawing.Size(242, 24);
+            this.lbl_consultaP.TabIndex = 21;
+            this.lbl_consultaP.Text = "Consulta de productos";
             // 
             // lbl_Producto
             // 
@@ -356,6 +370,19 @@
             this.txt_precio.Enter += new System.EventHandler(this.txt_precio_Enter);
             this.txt_precio.Leave += new System.EventHandler(this.txt_precio_Leave);
             // 
+            // comboBox_consulta
+            // 
+            this.comboBox_consulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_consulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.comboBox_consulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_consulta.ForeColor = System.Drawing.Color.White;
+            this.comboBox_consulta.FormattingEnabled = true;
+            this.comboBox_consulta.Location = new System.Drawing.Point(1055, 68);
+            this.comboBox_consulta.Name = "comboBox_consulta";
+            this.comboBox_consulta.Size = new System.Drawing.Size(242, 28);
+            this.comboBox_consulta.TabIndex = 20;
+            // 
             // btn_modificar
             // 
             this.btn_modificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -383,32 +410,6 @@
             this.panel_agregar.Name = "panel_agregar";
             this.panel_agregar.Size = new System.Drawing.Size(8, 44);
             this.panel_agregar.TabIndex = 11;
-            // 
-            // comboBox_consulta
-            // 
-            this.comboBox_consulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_consulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.comboBox_consulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_consulta.ForeColor = System.Drawing.Color.White;
-            this.comboBox_consulta.FormattingEnabled = true;
-            this.comboBox_consulta.Location = new System.Drawing.Point(1055, 87);
-            this.comboBox_consulta.Name = "comboBox_consulta";
-            this.comboBox_consulta.Size = new System.Drawing.Size(242, 28);
-            this.comboBox_consulta.TabIndex = 20;
-            // 
-            // lbl_consultaP
-            // 
-            this.lbl_consultaP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_consultaP.AutoSize = true;
-            this.lbl_consultaP.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_consultaP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_consultaP.ForeColor = System.Drawing.Color.Black;
-            this.lbl_consultaP.Location = new System.Drawing.Point(1055, 41);
-            this.lbl_consultaP.Name = "lbl_consultaP";
-            this.lbl_consultaP.Size = new System.Drawing.Size(242, 24);
-            this.lbl_consultaP.TabIndex = 21;
-            this.lbl_consultaP.Text = "Consulta de productos";
             // 
             // Form_Consultaproductos
             // 

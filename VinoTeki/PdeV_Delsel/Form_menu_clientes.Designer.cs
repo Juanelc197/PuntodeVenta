@@ -136,6 +136,7 @@
             this.btn_consulta.Text = "Consulta";
             this.btn_consulta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_consulta.UseVisualStyleBackColor = true;
+            this.btn_consulta.Click += new System.EventHandler(this.btn_consulta_Click);
             // 
             // btn_Agregar
             // 
