@@ -38,10 +38,10 @@
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.picturebox_logo = new System.Windows.Forms.PictureBox();
             this.panel_opcionestop = new System.Windows.Forms.Panel();
+            this.btn_restaurar = new System.Windows.Forms.Button();
             this.btn_menuboton = new System.Windows.Forms.Button();
             this.btn_minimisar = new System.Windows.Forms.Button();
             this.btn_maximisar = new System.Windows.Forms.Button();
-            this.btn_restaurar = new System.Windows.Forms.Button();
             this.panel_contenedor = new System.Windows.Forms.Panel();
             this.panel_opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).BeginInit();
@@ -153,6 +153,7 @@
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // picturebox_logo
             // 
@@ -179,6 +180,23 @@
             this.panel_opcionestop.Size = new System.Drawing.Size(1050, 38);
             this.panel_opcionestop.TabIndex = 4;
             this.panel_opcionestop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_opcionestop_MouseDown);
+            // 
+            // btn_restaurar
+            // 
+            this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_restaurar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.minimisar;
+            this.btn_restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_restaurar.FlatAppearance.BorderSize = 0;
+            this.btn_restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
+            this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_restaurar.Location = new System.Drawing.Point(1013, 7);
+            this.btn_restaurar.Name = "btn_restaurar";
+            this.btn_restaurar.Size = new System.Drawing.Size(25, 25);
+            this.btn_restaurar.TabIndex = 4;
+            this.btn_restaurar.UseVisualStyleBackColor = true;
+            this.btn_restaurar.Visible = false;
+            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
             // 
             // btn_menuboton
             // 
@@ -227,23 +245,6 @@
             this.btn_maximisar.TabIndex = 3;
             this.btn_maximisar.UseVisualStyleBackColor = true;
             this.btn_maximisar.Click += new System.EventHandler(this.btn_maximisar_Click);
-            // 
-            // btn_restaurar
-            // 
-            this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_restaurar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.minimisar;
-            this.btn_restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_restaurar.FlatAppearance.BorderSize = 0;
-            this.btn_restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
-            this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_restaurar.Location = new System.Drawing.Point(1013, 7);
-            this.btn_restaurar.Name = "btn_restaurar";
-            this.btn_restaurar.Size = new System.Drawing.Size(25, 25);
-            this.btn_restaurar.TabIndex = 4;
-            this.btn_restaurar.UseVisualStyleBackColor = true;
-            this.btn_restaurar.Visible = false;
-            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
             // 
             // panel_contenedor
             // 

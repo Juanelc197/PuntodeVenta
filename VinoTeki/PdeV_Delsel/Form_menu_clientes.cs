@@ -72,11 +72,28 @@ namespace PdeV_Delsel
             btn_maximisar.Visible = true;
         }
 
-       /* private void btn_maximisar_Click_1(object sender, EventArgs e)
+        /* private void btn_maximisar_Click_1(object sender, EventArgs e)
+         {
+             this.WindowState = FormWindowState.Maximized;
+             btn_maximisar.Visible = false;
+             btn_restaurar.Visible = true;
+         } */
+
+        private void AbrirFormInPanel(object Formson)
         {
-            this.WindowState = FormWindowState.Maximized;
-            btn_maximisar.Visible = false;
-            btn_restaurar.Visible = true;
-        } */
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            Form fh = Formson as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(fh);
+            this.panel_contenedor.Tag = fh;
+            fh.Show();
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Form_Altacliente());
+        }
     }
 }
