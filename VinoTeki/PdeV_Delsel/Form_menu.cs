@@ -17,7 +17,7 @@ namespace PdeV_Delsel
         {
             InitializeComponent();
         }
-
+        #region eventos de botones de cerrar, minimisar, mazximisar y restaurar
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -48,6 +48,7 @@ namespace PdeV_Delsel
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        #endregion
 
         private void Form_menu_Load(object sender, EventArgs e)
         {
@@ -71,7 +72,7 @@ namespace PdeV_Delsel
         //    int index = DateTime.Now.Second % b1.Count;
         //    pictureBox_galeria.Image = b1[index];
         //}
-
+        #region codigo para hacer que un Form sin borde se mueva con el mouse
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 
         private extern static void ReleaseCapture();
@@ -85,19 +86,28 @@ namespace PdeV_Delsel
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        #endregion
 
+        #region codigo para poner hora y fecha actual
         private void timer_horafecha_Tick(object sender, EventArgs e)
         {
             lbl_hora.Text = DateTime.Now.ToLongTimeString();
 
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
-
+        #endregion
         private void btn_productos_Click(object sender, EventArgs e)
         {
             Form_menu_productos form_Menu_Productos = new Form_menu_productos();
             this.Hide();
             form_Menu_Productos.Show();
+        }
+
+        private void btn_cliente_Click(object sender, EventArgs e)
+        {
+            Form_menu_clientes form_Menu_Clientes = new Form_menu_clientes();
+            this.Hide();
+            form_Menu_Clientes.Show();
         }
     }
 }

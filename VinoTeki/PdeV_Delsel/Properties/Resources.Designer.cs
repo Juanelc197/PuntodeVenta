@@ -323,6 +323,16 @@ namespace PdeV_Delsel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_cliente {
+            get {
+                object obj = ResourceManager.GetObject("new cliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nuevo_producto_mini {
             get {
                 object obj = ResourceManager.GetObject("nuevo producto mini", resourceCulture);

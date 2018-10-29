@@ -215,9 +215,9 @@
             this.lbl_fecha.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbl_fecha.Location = new System.Drawing.Point(0, 519);
             this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(804, 56);
+            this.lbl_fecha.Size = new System.Drawing.Size(102, 56);
             this.lbl_fecha.TabIndex = 10;
-            this.lbl_fecha.Text = "domingo, 28 de octubre de 2018";
+            this.lbl_fecha.Text = "...";
             // 
             // lbl_hora
             // 
@@ -228,9 +228,9 @@
             this.lbl_hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
             this.lbl_hora.Location = new System.Drawing.Point(0, 575);
             this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(557, 75);
+            this.lbl_hora.Size = new System.Drawing.Size(137, 75);
             this.lbl_hora.TabIndex = 9;
-            this.lbl_hora.Text = "01:07:09 a. m. ";
+            this.lbl_hora.Text = "...";
             // 
             // pictureBox_galeria
             // 
@@ -339,6 +339,7 @@
             this.btn_cliente.TabIndex = 1;
             this.btn_cliente.Text = "Clientes";
             this.btn_cliente.UseVisualStyleBackColor = true;
+            this.btn_cliente.Click += new System.EventHandler(this.btn_cliente_Click);
             // 
             // btn_productos
             // 

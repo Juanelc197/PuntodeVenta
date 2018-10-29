@@ -67,6 +67,12 @@
     <Compile Include="Form_menu.Designer.cs">
       <DependentUpon>Form_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_menu_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_menu_clientes.Designer.cs">
+      <DependentUpon>Form_menu_clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_menu_productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_menu.resx">
       <DependentUpon>Form_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_menu_clientes.resx">
+      <DependentUpon>Form_menu_clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_menu_productos.resx">
       <DependentUpon>Form_menu_productos.cs</DependentUpon>
@@ -205,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\consultar super mini1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new cliente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

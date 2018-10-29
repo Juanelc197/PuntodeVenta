@@ -1,6 +1,6 @@
 ﻿namespace PdeV_Delsel
 {
-    partial class Form_menu_productos
+    partial class Form_menu_clientes
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,6 @@
             this.picturebox_logo = new System.Windows.Forms.PictureBox();
             this.panel_opciones.SuspendLayout();
             this.panel_opcionestop.SuspendLayout();
-            this.panel_contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +63,7 @@
             this.panel_opciones.Location = new System.Drawing.Point(0, 0);
             this.panel_opciones.Name = "panel_opciones";
             this.panel_opciones.Size = new System.Drawing.Size(250, 650);
-            this.panel_opciones.TabIndex = 2;
+            this.panel_opciones.TabIndex = 3;
             // 
             // panel1
             // 
@@ -100,13 +99,14 @@
             this.lbl_titulo.ForeColor = System.Drawing.SystemColors.Window;
             this.lbl_titulo.Location = new System.Drawing.Point(74, 106);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(170, 35);
+            this.lbl_titulo.Size = new System.Drawing.Size(125, 35);
             this.lbl_titulo.TabIndex = 2;
-            this.lbl_titulo.Text = "Producto";
+            this.lbl_titulo.Text = "Cliente";
             // 
             // panel_opcionestop
             // 
             this.panel_opcionestop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_opcionestop.Controls.Add(this.btn_restaurar);
             this.panel_opcionestop.Controls.Add(this.btn_menuboton);
             this.panel_opcionestop.Controls.Add(this.btn_minimisar);
             this.panel_opcionestop.Controls.Add(this.btn_maximisar);
@@ -114,18 +114,17 @@
             this.panel_opcionestop.Location = new System.Drawing.Point(250, 0);
             this.panel_opcionestop.Name = "panel_opcionestop";
             this.panel_opcionestop.Size = new System.Drawing.Size(1050, 38);
-            this.panel_opcionestop.TabIndex = 3;
+            this.panel_opcionestop.TabIndex = 4;
             this.panel_opcionestop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_opcionestop_MouseDown);
             // 
             // panel_contenedor
             // 
             this.panel_contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.panel_contenedor.Controls.Add(this.btn_restaurar);
             this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_contenedor.Location = new System.Drawing.Point(250, 38);
             this.panel_contenedor.Name = "panel_contenedor";
             this.panel_contenedor.Size = new System.Drawing.Size(1050, 612);
-            this.panel_contenedor.TabIndex = 4;
+            this.panel_contenedor.TabIndex = 5;
             // 
             // btn_menuboton
             // 
@@ -152,7 +151,7 @@
             this.btn_restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
             this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_restaurar.Location = new System.Drawing.Point(1013, 40);
+            this.btn_restaurar.Location = new System.Drawing.Point(1013, 7);
             this.btn_restaurar.Name = "btn_restaurar";
             this.btn_restaurar.Size = new System.Drawing.Size(25, 25);
             this.btn_restaurar.TabIndex = 4;
@@ -190,7 +189,7 @@
             this.btn_maximisar.Size = new System.Drawing.Size(25, 25);
             this.btn_maximisar.TabIndex = 3;
             this.btn_maximisar.UseVisualStyleBackColor = true;
-            this.btn_maximisar.Click += new System.EventHandler(this.btn_maximisar_Click);
+            this.btn_maximisar.Click += new System.EventHandler(this.btn_maximisar_Click_2);
             // 
             // btn_regresar
             // 
@@ -225,7 +224,6 @@
             this.btn_consulta.Text = "Consulta";
             this.btn_consulta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_consulta.UseVisualStyleBackColor = true;
-            this.btn_consulta.Click += new System.EventHandler(this.btn_consulta_Click);
             // 
             // btn_Agregar
             // 
@@ -234,7 +232,7 @@
             this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Agregar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Agregar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_Agregar.Image = global::PdeV_Delsel.Properties.Resources.estesiesalta;
+            this.btn_Agregar.Image = global::PdeV_Delsel.Properties.Resources.new_cliente;
             this.btn_Agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Agregar.Location = new System.Drawing.Point(21, 189);
             this.btn_Agregar.Name = "btn_Agregar";
@@ -243,7 +241,6 @@
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Agregar.UseVisualStyleBackColor = true;
-            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // picturebox_logo
             // 
@@ -257,7 +254,7 @@
             this.picturebox_logo.TabStop = false;
             this.picturebox_logo.Click += new System.EventHandler(this.picturebox_logo_Click);
             // 
-            // Form_menu_productos
+            // Form_menu_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,13 +263,12 @@
             this.Controls.Add(this.panel_opcionestop);
             this.Controls.Add(this.panel_opciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_menu_productos";
+            this.Name = "Form_menu_clientes";
             this.Opacity = 0.98D;
-            this.Text = "Form_menu_productos";
+            this.Text = "Form_menu_clientes";
             this.panel_opciones.ResumeLayout(false);
             this.panel_opciones.PerformLayout();
             this.panel_opcionestop.ResumeLayout(false);
-            this.panel_contenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_logo)).EndInit();
             this.ResumeLayout(false);
 
@@ -281,19 +277,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_opciones;
-        private System.Windows.Forms.Panel panel_opcionestop;
-        private System.Windows.Forms.Panel panel_contenedor;
-        private System.Windows.Forms.Button btn_minimisar;
-        private System.Windows.Forms.Button btn_restaurar;
-        private System.Windows.Forms.Button btn_maximisar;
-        private System.Windows.Forms.Button btn_menuboton;
-        private System.Windows.Forms.PictureBox picturebox_logo;
-        private System.Windows.Forms.Button btn_Agregar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_consulta;
+        private System.Windows.Forms.Panel panel_agregar;
+        private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.Button btn_consulta;
-        private System.Windows.Forms.Button btn_regresar;
-        private System.Windows.Forms.Panel panel_agregar;
-        private System.Windows.Forms.Panel panel_consulta;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_Agregar;
+        private System.Windows.Forms.PictureBox picturebox_logo;
+        private System.Windows.Forms.Panel panel_opcionestop;
+        private System.Windows.Forms.Button btn_menuboton;
+        private System.Windows.Forms.Button btn_restaurar;
+        private System.Windows.Forms.Button btn_minimisar;
+        private System.Windows.Forms.Button btn_maximisar;
+        private System.Windows.Forms.Panel panel_contenedor;
     }
 }
