@@ -318,7 +318,7 @@
             this.btn_venta.Name = "btn_venta";
             this.btn_venta.Size = new System.Drawing.Size(378, 65);
             this.btn_venta.TabIndex = 2;
-            this.btn_venta.Text = "Ventas";
+            this.btn_venta.Text = "Venta";
             this.btn_venta.UseVisualStyleBackColor = true;
             this.btn_venta.Click += new System.EventHandler(this.btn_venta_Click);
             // 
@@ -338,7 +338,7 @@
             this.btn_cliente.Name = "btn_cliente";
             this.btn_cliente.Size = new System.Drawing.Size(378, 65);
             this.btn_cliente.TabIndex = 1;
-            this.btn_cliente.Text = "Clientes";
+            this.btn_cliente.Text = "Cliente";
             this.btn_cliente.UseVisualStyleBackColor = true;
             this.btn_cliente.Click += new System.EventHandler(this.btn_cliente_Click);
             // 
@@ -358,7 +358,7 @@
             this.btn_productos.Name = "btn_productos";
             this.btn_productos.Size = new System.Drawing.Size(378, 65);
             this.btn_productos.TabIndex = 0;
-            this.btn_productos.Text = "Productos";
+            this.btn_productos.Text = "Producto";
             this.btn_productos.UseVisualStyleBackColor = true;
             this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
             // 
