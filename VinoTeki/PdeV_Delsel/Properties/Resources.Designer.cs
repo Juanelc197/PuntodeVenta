@@ -113,9 +113,29 @@ namespace PdeV_Delsel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap consulta_icono_mini_new {
+            get {
+                object obj = ResourceManager.GetObject("consulta icono mini new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap consultar_super_mini {
             get {
                 object obj = ResourceManager.GetObject("consultar super mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap consultar_super_mini1 {
+            get {
+                object obj = ResourceManager.GetObject("consultar super mini1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

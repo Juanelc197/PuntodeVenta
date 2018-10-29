@@ -55,6 +55,12 @@
     <Compile Include="Form_Altaproductos.Designer.cs">
       <DependentUpon>Form_Altaproductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Consultaproductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Consultaproductos.Designer.cs">
+      <DependentUpon>Form_Consultaproductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Altaproductos.resx">
       <DependentUpon>Form_Altaproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Consultaproductos.resx">
+      <DependentUpon>Form_Consultaproductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_menu.resx">
       <DependentUpon>Form_menu.cs</DependentUpon>
@@ -190,6 +199,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\guardar super mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consulta icono mini new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultar super mini1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
