@@ -16,7 +16,7 @@ namespace PdeV_Delsel
         {
             InitializeComponent();
         }
-
+        #region diseño para los combobox para que muestre info cuando esta vasio
         private void txt_nombre_Enter(object sender, EventArgs e)
         {
             if (txt_nombre.Text == "NOMBRE")
@@ -106,5 +106,6 @@ namespace PdeV_Delsel
                 txt_email.ForeColor = Color.SeaGreen;
             }
         }
+        #endregion
     }
 }

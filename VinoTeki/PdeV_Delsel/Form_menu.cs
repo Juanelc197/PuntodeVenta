@@ -96,6 +96,8 @@ namespace PdeV_Delsel
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
         #endregion
+
+        #region codigo de los principales votones para abrir las otras interfaces
         private void btn_productos_Click(object sender, EventArgs e)
         {
             Form_menu_productos form_Menu_Productos = new Form_menu_productos();
@@ -116,5 +118,6 @@ namespace PdeV_Delsel
             this.Hide();
             form_Menu_Ventas.Show();
         }
+        #endregion
     }
 }

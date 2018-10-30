@@ -17,12 +17,20 @@ namespace PdeV_Delsel
         {
             InitializeComponent();
         }
-
+        #region codigo para mover la interfac son el mouse
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+        private void panel_opcionestop_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        #endregion
+
+        #region codigos del panel de arriva y del logo
         private void btn_menuboton_Click(object sender, EventArgs e)
         {
             if (panel_opciones.Width == 250)
@@ -58,6 +66,7 @@ namespace PdeV_Delsel
             this.Close();
             form_Menu.Show();
         }
+        #endregion
 
         private void btn_regresar_Click(object sender, EventArgs e)
         {
@@ -66,10 +75,6 @@ namespace PdeV_Delsel
             form_Menu.Show();
         }
 
-        private void panel_opcionestop_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+        
     }
 }

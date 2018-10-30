@@ -17,12 +17,20 @@ namespace PdeV_Delsel
         {
             InitializeComponent();
         }
-
+        #region codigo para mover el form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+        private void panel_opcionestop_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        #endregion
+
+        #region botnes del panel TOP y logo
         private void btn_maximisar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -59,12 +67,8 @@ namespace PdeV_Delsel
             this.Close();
             form_Menu.Show();
         }
+        #endregion
 
-        private void panel_opcionestop_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
 
         private void btn_regresar_Click(object sender, EventArgs e)
         {
@@ -73,6 +77,7 @@ namespace PdeV_Delsel
             form_Menu.Show();
         }
 
+        #region codigo para ocultar y mostrar panel y abrir form dentro del mismo form
         private void AbrirFormInPanel(object Formson)
         {
             if (this.panel_contenedor.Controls.Count > 0)
@@ -94,5 +99,6 @@ namespace PdeV_Delsel
         {
             AbrirFormInPanel(new Form_Consultaproductos());
         }
+        #endregion
     }
 }
