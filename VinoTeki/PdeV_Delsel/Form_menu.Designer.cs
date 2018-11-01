@@ -36,12 +36,14 @@
             this.btn_maximisar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.panel_Contenedor = new System.Windows.Forms.Panel();
-            this.lbl_delsel = new System.Windows.Forms.Label();
-            this.lbl_a = new System.Windows.Forms.Label();
-            this.lbl_titulo = new System.Windows.Forms.Label();
-            this.lbl_fecha = new System.Windows.Forms.Label();
-            this.lbl_hora = new System.Windows.Forms.Label();
+            this.tableLayoutPanel_imagen = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox_galeria = new System.Windows.Forms.PictureBox();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.tableLayoutPanel_titulo = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_delsel = new System.Windows.Forms.Label();
+            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.lbl_a = new System.Windows.Forms.Label();
             this.panel_cotizacion = new System.Windows.Forms.Panel();
             this.panel_ventas = new System.Windows.Forms.Panel();
             this.panel_cliente = new System.Windows.Forms.Panel();
@@ -53,7 +55,9 @@
             this.timer_horafecha = new System.Windows.Forms.Timer(this.components);
             this.panel_barraT.SuspendLayout();
             this.panel_Contenedor.SuspendLayout();
+            this.tableLayoutPanel_imagen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_galeria)).BeginInit();
+            this.tableLayoutPanel_titulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_barraT
@@ -149,12 +153,10 @@
             // panel_Contenedor
             // 
             this.panel_Contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.panel_Contenedor.Controls.Add(this.lbl_delsel);
-            this.panel_Contenedor.Controls.Add(this.lbl_a);
-            this.panel_Contenedor.Controls.Add(this.lbl_titulo);
-            this.panel_Contenedor.Controls.Add(this.lbl_fecha);
             this.panel_Contenedor.Controls.Add(this.lbl_hora);
-            this.panel_Contenedor.Controls.Add(this.pictureBox_galeria);
+            this.panel_Contenedor.Controls.Add(this.tableLayoutPanel_imagen);
+            this.panel_Contenedor.Controls.Add(this.lbl_fecha);
+            this.panel_Contenedor.Controls.Add(this.tableLayoutPanel_titulo);
             this.panel_Contenedor.Controls.Add(this.panel_cotizacion);
             this.panel_Contenedor.Controls.Add(this.panel_ventas);
             this.panel_Contenedor.Controls.Add(this.panel_cliente);
@@ -170,85 +172,123 @@
             this.panel_Contenedor.Size = new System.Drawing.Size(1300, 650);
             this.panel_Contenedor.TabIndex = 1;
             // 
-            // lbl_delsel
+            // tableLayoutPanel_imagen
             // 
-            this.lbl_delsel.AutoSize = true;
-            this.lbl_delsel.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_delsel.Font = new System.Drawing.Font("Lithos Pro Regular", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_delsel.ForeColor = System.Drawing.Color.White;
-            this.lbl_delsel.Location = new System.Drawing.Point(844, 205);
-            this.lbl_delsel.Name = "lbl_delsel";
-            this.lbl_delsel.Size = new System.Drawing.Size(152, 48);
-            this.lbl_delsel.TabIndex = 13;
-            this.lbl_delsel.Text = "Delsel";
-            // 
-            // lbl_a
-            // 
-            this.lbl_a.AutoSize = true;
-            this.lbl_a.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_a.Font = new System.Drawing.Font("Lithos Pro Regular", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_a.ForeColor = System.Drawing.Color.White;
-            this.lbl_a.Location = new System.Drawing.Point(892, 154);
-            this.lbl_a.Name = "lbl_a";
-            this.lbl_a.Size = new System.Drawing.Size(64, 62);
-            this.lbl_a.TabIndex = 12;
-            this.lbl_a.Text = "a";
-            // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_titulo.Font = new System.Drawing.Font("Lithos Pro Regular", 71.99999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(555, 51);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(733, 124);
-            this.lbl_titulo.TabIndex = 11;
-            this.lbl_titulo.Text = "Bienvenidos";
-            // 
-            // lbl_fecha
-            // 
-            this.lbl_fecha.AutoSize = true;
-            this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_fecha.Font = new System.Drawing.Font("Consolas", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lbl_fecha.Location = new System.Drawing.Point(0, 519);
-            this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(102, 56);
-            this.lbl_fecha.TabIndex = 10;
-            this.lbl_fecha.Text = "...";
-            // 
-            // lbl_hora
-            // 
-            this.lbl_hora.AutoSize = true;
-            this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_hora.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_hora.Font = new System.Drawing.Font("Consolas", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.lbl_hora.Location = new System.Drawing.Point(0, 575);
-            this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(137, 75);
-            this.lbl_hora.TabIndex = 9;
-            this.lbl_hora.Text = "...";
+            this.tableLayoutPanel_imagen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel_imagen.ColumnCount = 1;
+            this.tableLayoutPanel_imagen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel_imagen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel_imagen.Controls.Add(this.pictureBox_galeria, 0, 0);
+            this.tableLayoutPanel_imagen.Location = new System.Drawing.Point(884, 335);
+            this.tableLayoutPanel_imagen.Name = "tableLayoutPanel_imagen";
+            this.tableLayoutPanel_imagen.RowCount = 1;
+            this.tableLayoutPanel_imagen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel_imagen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 303F));
+            this.tableLayoutPanel_imagen.Size = new System.Drawing.Size(404, 303);
+            this.tableLayoutPanel_imagen.TabIndex = 16;
             // 
             // pictureBox_galeria
             // 
             this.pictureBox_galeria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_galeria.Image = global::PdeV_Delsel.Properties.Resources.fondo;
-            this.pictureBox_galeria.Location = new System.Drawing.Point(884, 335);
+            this.pictureBox_galeria.Location = new System.Drawing.Point(3, 3);
             this.pictureBox_galeria.Name = "pictureBox_galeria";
-            this.pictureBox_galeria.Size = new System.Drawing.Size(404, 303);
+            this.pictureBox_galeria.Size = new System.Drawing.Size(398, 297);
             this.pictureBox_galeria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_galeria.TabIndex = 8;
             this.pictureBox_galeria.TabStop = false;
+            // 
+            // lbl_hora
+            // 
+            this.lbl_hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_hora.Font = new System.Drawing.Font("Consolas", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.lbl_hora.Location = new System.Drawing.Point(12, 548);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(487, 75);
+            this.lbl_hora.TabIndex = 12;
+            this.lbl_hora.Text = "01:50:00 p.m.";
+            // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_fecha.Font = new System.Drawing.Font("Consolas", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lbl_fecha.Location = new System.Drawing.Point(15, 471);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(804, 56);
+            this.lbl_fecha.TabIndex = 11;
+            this.lbl_fecha.Text = "jueves, 1 de noviembre de 2018";
+            // 
+            // tableLayoutPanel_titulo
+            // 
+            this.tableLayoutPanel_titulo.ColumnCount = 1;
+            this.tableLayoutPanel_titulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel_titulo.Controls.Add(this.lbl_delsel, 0, 3);
+            this.tableLayoutPanel_titulo.Controls.Add(this.lbl_titulo, 0, 1);
+            this.tableLayoutPanel_titulo.Controls.Add(this.lbl_a, 0, 2);
+            this.tableLayoutPanel_titulo.Location = new System.Drawing.Point(544, 44);
+            this.tableLayoutPanel_titulo.Name = "tableLayoutPanel_titulo";
+            this.tableLayoutPanel_titulo.RowCount = 4;
+            this.tableLayoutPanel_titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.12121F));
+            this.tableLayoutPanel_titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.31818F));
+            this.tableLayoutPanel_titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.37879F));
+            this.tableLayoutPanel_titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.80303F));
+            this.tableLayoutPanel_titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel_titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel_titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel_titulo.Size = new System.Drawing.Size(744, 264);
+            this.tableLayoutPanel_titulo.TabIndex = 14;
+            // 
+            // lbl_delsel
+            // 
+            this.lbl_delsel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_delsel.AutoSize = true;
+            this.lbl_delsel.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_delsel.Font = new System.Drawing.Font("Lithos Pro Regular", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_delsel.ForeColor = System.Drawing.Color.White;
+            this.lbl_delsel.Location = new System.Drawing.Point(296, 216);
+            this.lbl_delsel.Name = "lbl_delsel";
+            this.lbl_delsel.Size = new System.Drawing.Size(152, 48);
+            this.lbl_delsel.TabIndex = 13;
+            this.lbl_delsel.Text = "Delsel";
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_titulo.Font = new System.Drawing.Font("Lithos Pro Regular", 71.99999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_titulo.Location = new System.Drawing.Point(5, 32);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(733, 117);
+            this.lbl_titulo.TabIndex = 11;
+            this.lbl_titulo.Text = "Bienvenidos";
+            // 
+            // lbl_a
+            // 
+            this.lbl_a.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_a.AutoSize = true;
+            this.lbl_a.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_a.Font = new System.Drawing.Font("Lithos Pro Regular", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_a.ForeColor = System.Drawing.Color.White;
+            this.lbl_a.Location = new System.Drawing.Point(340, 149);
+            this.lbl_a.Name = "lbl_a";
+            this.lbl_a.Size = new System.Drawing.Size(64, 62);
+            this.lbl_a.TabIndex = 12;
+            this.lbl_a.Text = "a";
             // 
             // panel_cotizacion
             // 
             this.panel_cotizacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel_cotizacion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_cotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_cotizacion.Location = new System.Drawing.Point(380, 417);
+            this.panel_cotizacion.Location = new System.Drawing.Point(382, 394);
             this.panel_cotizacion.Name = "panel_cotizacion";
             this.panel_cotizacion.Size = new System.Drawing.Size(8, 65);
             this.panel_cotizacion.TabIndex = 7;
@@ -258,7 +298,7 @@
             this.panel_ventas.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel_ventas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_ventas.Location = new System.Drawing.Point(380, 316);
+            this.panel_ventas.Location = new System.Drawing.Point(382, 293);
             this.panel_ventas.Name = "panel_ventas";
             this.panel_ventas.Size = new System.Drawing.Size(8, 65);
             this.panel_ventas.TabIndex = 6;
@@ -268,7 +308,7 @@
             this.panel_cliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel_cliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_cliente.Location = new System.Drawing.Point(380, 211);
+            this.panel_cliente.Location = new System.Drawing.Point(382, 188);
             this.panel_cliente.Name = "panel_cliente";
             this.panel_cliente.Size = new System.Drawing.Size(8, 65);
             this.panel_cliente.TabIndex = 5;
@@ -278,7 +318,7 @@
             this.panel_productos.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel_productos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_productos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_productos.Location = new System.Drawing.Point(380, 110);
+            this.panel_productos.Location = new System.Drawing.Point(382, 87);
             this.panel_productos.Name = "panel_productos";
             this.panel_productos.Size = new System.Drawing.Size(8, 65);
             this.panel_productos.TabIndex = 4;
@@ -295,7 +335,7 @@
             this.btn_cotisar.ForeColor = System.Drawing.Color.White;
             this.btn_cotisar.Image = global::PdeV_Delsel.Properties.Resources.cotizacion_mini;
             this.btn_cotisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cotisar.Location = new System.Drawing.Point(10, 417);
+            this.btn_cotisar.Location = new System.Drawing.Point(12, 394);
             this.btn_cotisar.Name = "btn_cotisar";
             this.btn_cotisar.Size = new System.Drawing.Size(378, 65);
             this.btn_cotisar.TabIndex = 3;
@@ -314,7 +354,7 @@
             this.btn_venta.ForeColor = System.Drawing.Color.White;
             this.btn_venta.Image = global::PdeV_Delsel.Properties.Resources.venta_mini;
             this.btn_venta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_venta.Location = new System.Drawing.Point(10, 316);
+            this.btn_venta.Location = new System.Drawing.Point(12, 293);
             this.btn_venta.Name = "btn_venta";
             this.btn_venta.Size = new System.Drawing.Size(378, 65);
             this.btn_venta.TabIndex = 2;
@@ -334,7 +374,7 @@
             this.btn_cliente.ForeColor = System.Drawing.Color.White;
             this.btn_cliente.Image = global::PdeV_Delsel.Properties.Resources.cliente_mini;
             this.btn_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cliente.Location = new System.Drawing.Point(10, 211);
+            this.btn_cliente.Location = new System.Drawing.Point(12, 188);
             this.btn_cliente.Name = "btn_cliente";
             this.btn_cliente.Size = new System.Drawing.Size(378, 65);
             this.btn_cliente.TabIndex = 1;
@@ -354,7 +394,7 @@
             this.btn_productos.ForeColor = System.Drawing.Color.White;
             this.btn_productos.Image = global::PdeV_Delsel.Properties.Resources.producto_mini;
             this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_productos.Location = new System.Drawing.Point(10, 110);
+            this.btn_productos.Location = new System.Drawing.Point(12, 87);
             this.btn_productos.Name = "btn_productos";
             this.btn_productos.Size = new System.Drawing.Size(378, 65);
             this.btn_productos.TabIndex = 0;
@@ -383,7 +423,10 @@
             this.panel_barraT.PerformLayout();
             this.panel_Contenedor.ResumeLayout(false);
             this.panel_Contenedor.PerformLayout();
+            this.tableLayoutPanel_imagen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_galeria)).EndInit();
+            this.tableLayoutPanel_titulo.ResumeLayout(false);
+            this.tableLayoutPanel_titulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -406,12 +449,14 @@
         private System.Windows.Forms.Panel panel_cliente;
         private System.Windows.Forms.PictureBox pictureBox_galeria;
         private System.Windows.Forms.Label lbl_menu;
-        private System.Windows.Forms.Label lbl_fecha;
-        private System.Windows.Forms.Label lbl_hora;
         private System.Windows.Forms.Timer timer_horafecha;
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.Label lbl_delsel;
         private System.Windows.Forms.Label lbl_a;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_titulo;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_imagen;
+        private System.Windows.Forms.Label lbl_hora;
+        private System.Windows.Forms.Label lbl_fecha;
     }
 }
 
