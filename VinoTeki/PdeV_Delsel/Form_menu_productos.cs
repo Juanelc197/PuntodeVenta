@@ -78,7 +78,7 @@ namespace PdeV_Delsel
         }
 
         #region codigo para ocultar y mostrar panel y abrir form dentro del mismo form
-        private void AbrirFormInPanel(object Formson)
+        /* private void AbrirFormInPanel(object Formson)
         {
             if (this.panel_contenedor.Controls.Count > 0)
                 this.panel_contenedor.Controls.RemoveAt(0);
@@ -88,16 +88,40 @@ namespace PdeV_Delsel
             this.panel_contenedor.Controls.Add(fh);
             this.panel_contenedor.Tag = fh;
             fh.Show();
+        } */
+
+            private void AbrirFormulario<MiForm>() where MiForm : Form, new() {
+            Form formulario;
+            formulario = panel_contenedor.Controls.OfType<MiForm>().FirstOrDefault(); //busca en la colecion de formulario
+            //si el formulario no existe
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.FixedSingle;
+                formulario.Dock = DockStyle.Fill;
+                panel_contenedor.Controls.Add(formulario);
+                panel_contenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            //si el formulario existe
+            else
+            {
+                formulario.BringToFront();
+            }
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new Form_Altaproductos());
+            //AbrirFormInPanel(new Form_Altaproductos());
+            AbrirFormulario<Form_Altaproductos>();
         }
 
         private void btn_consulta_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new Form_Consultaproductos());
+            //AbrirFormInPanel(new Form_Consultaproductos());
+            AbrirFormulario<Form_Consultaproductos>();
         }
         #endregion
     }
