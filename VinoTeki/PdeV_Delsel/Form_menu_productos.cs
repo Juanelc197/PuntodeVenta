@@ -66,6 +66,8 @@ namespace PdeV_Delsel
             Form_menu form_Menu = new Form_menu();
             this.Close();
             form_Menu.Show();
+
+           
         }
         #endregion
 
@@ -98,7 +100,7 @@ namespace PdeV_Delsel
             {
                 formulario = new MiForm();
                 formulario.TopLevel = false;
-                formulario.FormBorderStyle = FormBorderStyle.FixedSingle;
+                //formulario.FormBorderStyle = FormBorderStyle.FixedSingle;
                 formulario.Dock = DockStyle.Fill;
                 panel_contenedor.Controls.Add(formulario);
                 panel_contenedor.Tag = formulario;
