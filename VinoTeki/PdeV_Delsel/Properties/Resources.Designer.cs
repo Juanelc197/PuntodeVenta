@@ -63,6 +63,16 @@ namespace PdeV_Delsel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_super_mini {
+            get {
+                object obj = ResourceManager.GetObject("agregar super mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap altaproductomasperomasmini {
             get {
                 object obj = ResourceManager.GetObject("altaproductomasperomasmini", resourceCulture);
@@ -396,6 +406,16 @@ namespace PdeV_Delsel.Properties {
         internal static System.Drawing.Bitmap venta_mini {
             get {
                 object obj = ResourceManager.GetObject("venta_mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ver_super_mini {
+            get {
+                object obj = ResourceManager.GetObject("ver super mini", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

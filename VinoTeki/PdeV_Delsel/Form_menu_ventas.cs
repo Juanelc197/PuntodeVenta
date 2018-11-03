@@ -75,6 +75,33 @@ namespace PdeV_Delsel
             form_Menu.Show();
         }
 
-        
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = panel_contenedor.Controls.OfType<MiForm>().FirstOrDefault(); //busca en la colecion de formulario
+            //si el formulario no existe
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                //formulario.FormBorderStyle = FormBorderStyle.FixedSingle;
+                formulario.Dock = DockStyle.Fill;
+                panel_contenedor.Controls.Add(formulario);
+                panel_contenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            //si el formulario existe
+            else
+            {
+                formulario.BringToFront();
+            }
+
+        }
+
+        private void btn_ventas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Form_venta>();
+        }
     }
 }

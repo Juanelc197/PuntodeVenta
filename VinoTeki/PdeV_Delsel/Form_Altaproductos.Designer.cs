@@ -39,8 +39,6 @@
             this.lbl_cantidad = new System.Windows.Forms.Label();
             this.lbl_costo = new System.Windows.Forms.Label();
             this.lbl_presio = new System.Windows.Forms.Label();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.panel_agregar = new System.Windows.Forms.Panel();
             this.txt_producto = new System.Windows.Forms.TextBox();
             this.txt_tipo = new System.Windows.Forms.TextBox();
             this.txt_marca = new System.Windows.Forms.TextBox();
@@ -49,6 +47,8 @@
             this.txt_cantidad = new System.Windows.Forms.TextBox();
             this.txt_costo = new System.Windows.Forms.TextBox();
             this.txt_precio = new System.Windows.Forms.TextBox();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.panel_agregar = new System.Windows.Forms.Panel();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_ContenedorGlobal.SuspendLayout();
             this.SuspendLayout();
@@ -224,34 +224,6 @@
             this.lbl_presio.TabIndex = 11;
             this.lbl_presio.Text = "Precio:";
             // 
-            // btn_guardar
-            // 
-            this.btn_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_guardar.FlatAppearance.BorderSize = 0;
-            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_guardar.Image = global::PdeV_Delsel.Properties.Resources.guardar_super_mini;
-            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar.Location = new System.Drawing.Point(1065, 594);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(223, 44);
-            this.btn_guardar.TabIndex = 1;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            // 
-            // panel_agregar
-            // 
-            this.panel_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_agregar.Location = new System.Drawing.Point(1280, 594);
-            this.panel_agregar.Name = "panel_agregar";
-            this.panel_agregar.Size = new System.Drawing.Size(8, 44);
-            this.panel_agregar.TabIndex = 6;
-            // 
             // txt_producto
             // 
             this.txt_producto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -379,6 +351,34 @@
             this.txt_precio.Text = "PRECIO";
             this.txt_precio.Enter += new System.EventHandler(this.txt_precio_Enter);
             this.txt_precio.Leave += new System.EventHandler(this.txt_precio_Leave);
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_guardar.Image = global::PdeV_Delsel.Properties.Resources.guardar_super_mini;
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar.Location = new System.Drawing.Point(1065, 594);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(223, 44);
+            this.btn_guardar.TabIndex = 1;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            // 
+            // panel_agregar
+            // 
+            this.panel_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_agregar.Location = new System.Drawing.Point(1280, 594);
+            this.panel_agregar.Name = "panel_agregar";
+            this.panel_agregar.Size = new System.Drawing.Size(8, 44);
+            this.panel_agregar.TabIndex = 6;
             // 
             // Form_Altaproductos
             // 
