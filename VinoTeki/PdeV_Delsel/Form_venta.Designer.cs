@@ -70,6 +70,7 @@
             this.lbl_total = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_venta = new System.Windows.Forms.Button();
+            this.lbl_numerodeventa = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_contenedorTop.SuspendLayout();
             this.tableLayoutPanel_con2.SuspendLayout();
@@ -120,6 +121,7 @@
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_Ultimacotizacion, 4, 0);
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_cliente, 0, 0);
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.comboBox_cliente, 1, 0);
+            this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_numerodeventa, 3, 1);
             this.tableLayoutPanel_contenedorTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_contenedorTop.Location = new System.Drawing.Point(0, 62);
             this.tableLayoutPanel_contenedorTop.Name = "tableLayoutPanel_contenedorTop";
@@ -693,6 +695,18 @@
             this.btn_venta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_venta.UseVisualStyleBackColor = true;
             // 
+            // lbl_numerodeventa
+            // 
+            this.lbl_numerodeventa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_numerodeventa.AutoSize = true;
+            this.lbl_numerodeventa.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numerodeventa.ForeColor = System.Drawing.Color.White;
+            this.lbl_numerodeventa.Location = new System.Drawing.Point(973, 36);
+            this.lbl_numerodeventa.Name = "lbl_numerodeventa";
+            this.lbl_numerodeventa.Size = new System.Drawing.Size(30, 32);
+            this.lbl_numerodeventa.TabIndex = 23;
+            this.lbl_numerodeventa.Text = "#";
+            // 
             // Form_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,5 +783,6 @@
         private System.Windows.Forms.CheckBox checkBox_efectivo;
         private System.Windows.Forms.CheckBox checkBox_tarjeta;
         private System.Windows.Forms.Label lbl_formaPago;
+        private System.Windows.Forms.Label lbl_numerodeventa;
     }
 }
