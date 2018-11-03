@@ -121,14 +121,20 @@
   <data name="fondo4delsel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo4delsel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="consultar super mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultar super mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DELSEL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DELSEL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="producto_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\producto_mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flecha atras super mini blanca" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flecha atras super mini blanca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="agregar super mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar super mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cliente mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cliente mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ver super mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ver super mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -138,6 +144,9 @@
   </data>
   <data name="venta_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\venta_mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="consultar super mini1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consultar super mini1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,14 +163,11 @@
   <data name="botonmenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botonmenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="altaproductomasperomasmini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\altaproductomasperomasmini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nuevo producto mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevo producto mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo3delsel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo3delsel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new cliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new cliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +175,11 @@
   <data name="Altaproductosupersupersupermini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Altaproductosupersupersupermini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondo3delsel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo3delsel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="consulta icono mini new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consulta icono mini new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="estesiesalta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\estesiesalta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,9 +189,6 @@
   </data>
   <data name="maximisar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximisar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cliente mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cliente mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new consulta venta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new consulta venta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,8 +205,8 @@
   <data name="Logo(delsel)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo(delsel)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="consultar super mini1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\consultar super mini1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flecha atras super mini blanca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha atras super mini blanca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cotizacion mini1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cotizacion mini1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,11 +214,8 @@
   <data name="flecha atras super mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flecha atras super mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new venta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new venta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="consultar super mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\consultar super mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="altaproductomasperomasmini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\altaproductomasperomasmini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo2delsel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo2delsel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,13 +223,13 @@
   <data name="minimisar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimisar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="consulta icono mini new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\consulta icono mini new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new venta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new venta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo(delsel)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo(delsel).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar super mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar super mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lupita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lupita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

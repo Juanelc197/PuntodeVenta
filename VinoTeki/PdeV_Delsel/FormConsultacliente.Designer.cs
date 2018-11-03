@@ -43,6 +43,8 @@
             this.txt_email = new System.Windows.Forms.TextBox();
             this.comboBox_consultaC = new System.Windows.Forms.ComboBox();
             this.lbl_consultaP = new System.Windows.Forms.Label();
+            this.lbl_rasonsocial = new System.Windows.Forms.Label();
+            this.txt_rasonsocial = new System.Windows.Forms.TextBox();
             this.panel_agregar = new System.Windows.Forms.Panel();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.tableLayoutPanel_Titulo.SuspendLayout();
@@ -95,7 +97,9 @@
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_email, 1, 4);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.comboBox_consultaC, 2, 1);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_consultaP, 2, 0);
-            this.tableLayoutPanel_ContenedorGlobal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_rasonsocial, 0, 5);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_rasonsocial, 1, 5);
+            this.tableLayoutPanel_ContenedorGlobal.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_ContenedorGlobal.Location = new System.Drawing.Point(0, 62);
             this.tableLayoutPanel_ContenedorGlobal.Name = "tableLayoutPanel_ContenedorGlobal";
             this.tableLayoutPanel_ContenedorGlobal.RowCount = 6;
@@ -105,7 +109,7 @@
             this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel_ContenedorGlobal.Size = new System.Drawing.Size(1300, 588);
+            this.tableLayoutPanel_ContenedorGlobal.Size = new System.Drawing.Size(1300, 420);
             this.tableLayoutPanel_ContenedorGlobal.TabIndex = 15;
             // 
             // lbl_nombre
@@ -115,7 +119,7 @@
             this.lbl_nombre.BackColor = System.Drawing.Color.Transparent;
             this.lbl_nombre.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombre.ForeColor = System.Drawing.Color.Black;
-            this.lbl_nombre.Location = new System.Drawing.Point(169, 60);
+            this.lbl_nombre.Location = new System.Drawing.Point(97, 33);
             this.lbl_nombre.Name = "lbl_nombre";
             this.lbl_nombre.Size = new System.Drawing.Size(143, 37);
             this.lbl_nombre.TabIndex = 4;
@@ -128,7 +132,7 @@
             this.lbl_rfc.BackColor = System.Drawing.Color.Transparent;
             this.lbl_rfc.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_rfc.ForeColor = System.Drawing.Color.Black;
-            this.lbl_rfc.Location = new System.Drawing.Point(223, 157);
+            this.lbl_rfc.Location = new System.Drawing.Point(151, 103);
             this.lbl_rfc.Name = "lbl_rfc";
             this.lbl_rfc.Size = new System.Drawing.Size(89, 37);
             this.lbl_rfc.TabIndex = 5;
@@ -141,7 +145,7 @@
             this.lbl_direccion.BackColor = System.Drawing.Color.Transparent;
             this.lbl_direccion.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_direccion.ForeColor = System.Drawing.Color.Black;
-            this.lbl_direccion.Location = new System.Drawing.Point(115, 254);
+            this.lbl_direccion.Location = new System.Drawing.Point(43, 173);
             this.lbl_direccion.Name = "lbl_direccion";
             this.lbl_direccion.Size = new System.Drawing.Size(197, 37);
             this.lbl_direccion.TabIndex = 6;
@@ -154,7 +158,7 @@
             this.lbl_telefono.BackColor = System.Drawing.Color.Transparent;
             this.lbl_telefono.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_telefono.ForeColor = System.Drawing.Color.Black;
-            this.lbl_telefono.Location = new System.Drawing.Point(133, 351);
+            this.lbl_telefono.Location = new System.Drawing.Point(61, 243);
             this.lbl_telefono.Name = "lbl_telefono";
             this.lbl_telefono.Size = new System.Drawing.Size(179, 37);
             this.lbl_telefono.TabIndex = 7;
@@ -167,7 +171,7 @@
             this.lbl_email.BackColor = System.Drawing.Color.Transparent;
             this.lbl_email.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_email.ForeColor = System.Drawing.Color.Black;
-            this.lbl_email.Location = new System.Drawing.Point(169, 448);
+            this.lbl_email.Location = new System.Drawing.Point(97, 313);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(143, 37);
             this.lbl_email.TabIndex = 8;
@@ -180,10 +184,10 @@
             this.txt_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_nombre.Location = new System.Drawing.Point(318, 64);
+            this.txt_nombre.Location = new System.Drawing.Point(246, 37);
             this.txt_nombre.Multiline = true;
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(731, 30);
+            this.txt_nombre.Size = new System.Drawing.Size(563, 30);
             this.txt_nombre.TabIndex = 12;
             this.txt_nombre.Text = "NOMBRE";
             // 
@@ -194,10 +198,10 @@
             this.txt_rfc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_rfc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_rfc.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_rfc.Location = new System.Drawing.Point(318, 161);
+            this.txt_rfc.Location = new System.Drawing.Point(246, 107);
             this.txt_rfc.Multiline = true;
             this.txt_rfc.Name = "txt_rfc";
-            this.txt_rfc.Size = new System.Drawing.Size(731, 30);
+            this.txt_rfc.Size = new System.Drawing.Size(563, 30);
             this.txt_rfc.TabIndex = 13;
             this.txt_rfc.Text = "RFC";
             // 
@@ -208,10 +212,10 @@
             this.txt_direccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_direccion.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_direccion.Location = new System.Drawing.Point(318, 258);
+            this.txt_direccion.Location = new System.Drawing.Point(246, 177);
             this.txt_direccion.Multiline = true;
             this.txt_direccion.Name = "txt_direccion";
-            this.txt_direccion.Size = new System.Drawing.Size(731, 30);
+            this.txt_direccion.Size = new System.Drawing.Size(563, 30);
             this.txt_direccion.TabIndex = 14;
             this.txt_direccion.Text = "DIRECCION";
             // 
@@ -222,10 +226,10 @@
             this.txt_telefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefono.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_telefono.Location = new System.Drawing.Point(318, 355);
+            this.txt_telefono.Location = new System.Drawing.Point(246, 247);
             this.txt_telefono.Multiline = true;
             this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(731, 30);
+            this.txt_telefono.Size = new System.Drawing.Size(563, 30);
             this.txt_telefono.TabIndex = 15;
             this.txt_telefono.Text = "TELEFONO";
             // 
@@ -236,10 +240,10 @@
             this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_email.Location = new System.Drawing.Point(318, 452);
+            this.txt_email.Location = new System.Drawing.Point(246, 317);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(731, 30);
+            this.txt_email.Size = new System.Drawing.Size(563, 30);
             this.txt_email.TabIndex = 16;
             this.txt_email.Text = "E-MAIL";
             // 
@@ -251,9 +255,9 @@
             this.comboBox_consultaC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_consultaC.ForeColor = System.Drawing.Color.White;
             this.comboBox_consultaC.FormattingEnabled = true;
-            this.comboBox_consultaC.Location = new System.Drawing.Point(1055, 100);
+            this.comboBox_consultaC.Location = new System.Drawing.Point(815, 73);
             this.comboBox_consultaC.Name = "comboBox_consultaC";
-            this.comboBox_consultaC.Size = new System.Drawing.Size(242, 28);
+            this.comboBox_consultaC.Size = new System.Drawing.Size(186, 28);
             this.comboBox_consultaC.TabIndex = 21;
             // 
             // lbl_consultaP
@@ -264,11 +268,38 @@
             this.lbl_consultaP.BackColor = System.Drawing.Color.Transparent;
             this.lbl_consultaP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_consultaP.ForeColor = System.Drawing.Color.Black;
-            this.lbl_consultaP.Location = new System.Drawing.Point(1055, 73);
+            this.lbl_consultaP.Location = new System.Drawing.Point(815, 22);
             this.lbl_consultaP.Name = "lbl_consultaP";
-            this.lbl_consultaP.Size = new System.Drawing.Size(242, 24);
+            this.lbl_consultaP.Size = new System.Drawing.Size(186, 48);
             this.lbl_consultaP.TabIndex = 22;
             this.lbl_consultaP.Text = "Consulta de productos";
+            // 
+            // lbl_rasonsocial
+            // 
+            this.lbl_rasonsocial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_rasonsocial.AutoSize = true;
+            this.lbl_rasonsocial.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_rasonsocial.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rasonsocial.ForeColor = System.Drawing.Color.Black;
+            this.lbl_rasonsocial.Location = new System.Drawing.Point(97, 350);
+            this.lbl_rasonsocial.Name = "lbl_rasonsocial";
+            this.lbl_rasonsocial.Size = new System.Drawing.Size(143, 70);
+            this.lbl_rasonsocial.TabIndex = 8;
+            this.lbl_rasonsocial.Text = "Razón social:";
+            // 
+            // txt_rasonsocial
+            // 
+            this.txt_rasonsocial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_rasonsocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.txt_rasonsocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_rasonsocial.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txt_rasonsocial.Location = new System.Drawing.Point(246, 387);
+            this.txt_rasonsocial.Multiline = true;
+            this.txt_rasonsocial.Name = "txt_rasonsocial";
+            this.txt_rasonsocial.Size = new System.Drawing.Size(563, 30);
+            this.txt_rasonsocial.TabIndex = 16;
+            this.txt_rasonsocial.Text = "RAZON SOCIAL";
             // 
             // panel_agregar
             // 
@@ -339,5 +370,7 @@
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.ComboBox comboBox_consultaC;
         private System.Windows.Forms.Label lbl_consultaP;
+        private System.Windows.Forms.Label lbl_rasonsocial;
+        private System.Windows.Forms.TextBox txt_rasonsocial;
     }
 }

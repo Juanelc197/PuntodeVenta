@@ -103,5 +103,10 @@ namespace PdeV_Delsel
         {
             AbrirFormulario<Form_venta>();
         }
+
+        private void btn_consulta_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Form_detalledeV>();
+        }
     }
 }

@@ -106,6 +106,25 @@ namespace PdeV_Delsel
                 txt_email.ForeColor = Color.SeaGreen;
             }
         }
+        
+
+        private void txt_razonsocial_Enter(object sender, EventArgs e)
+        {
+            if (txt_razonsocial.Text == "RAZON SOCIAL")
+            {
+                txt_razonsocial.Text = "";
+                txt_razonsocial.ForeColor = Color.White;
+            }
+        }
+
+        private void txt_razonsocial_Leave(object sender, EventArgs e)
+        {
+            if (txt_razonsocial.Text == "")
+            {
+                txt_razonsocial.Text = "RAZON SOCIAL";
+                txt_razonsocial.ForeColor = Color.SeaGreen;
+            }
+        }
         #endregion
     }
 }

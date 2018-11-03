@@ -73,6 +73,12 @@
     <Compile Include="Form_Consultaproductos.Designer.cs">
       <DependentUpon>Form_Consultaproductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_detalledeV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_detalledeV.Designer.cs">
+      <DependentUpon>Form_detalledeV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Consultaproductos.resx">
       <DependentUpon>Form_Consultaproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_detalledeV.resx">
+      <DependentUpon>Form_detalledeV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_menu.resx">
       <DependentUpon>Form_menu.cs</DependentUpon>
@@ -265,6 +274,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\agregar super mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupita.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
