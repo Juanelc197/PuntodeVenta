@@ -31,7 +31,6 @@
             this.tableLayoutPanel_Titulo = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel_contenedorTop = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_ver = new System.Windows.Forms.Button();
             this.lbl_Ucotizacion = new System.Windows.Forms.Label();
             this.lbl_Ultimacotizacion = new System.Windows.Forms.Label();
             this.lbl_cliente = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_domicilio = new System.Windows.Forms.Label();
             this.tableLayoutPanel_con3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_agregar = new System.Windows.Forms.Button();
             this.comboBox_productos = new System.Windows.Forms.ComboBox();
             this.lbl_cantidad = new System.Windows.Forms.Label();
             this.lbl_producto = new System.Windows.Forms.Label();
@@ -61,7 +59,6 @@
             this.dataGridView_verdatos = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel_con4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_final = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_venta = new System.Windows.Forms.Button();
             this.lbl_iva = new System.Windows.Forms.Label();
             this.lbl_subtotal = new System.Windows.Forms.Label();
             this.txt_subtotal = new System.Windows.Forms.TextBox();
@@ -71,6 +68,9 @@
             this.checkBox_efectivo = new System.Windows.Forms.CheckBox();
             this.checkBox_tarjeta = new System.Windows.Forms.CheckBox();
             this.lbl_formaPago = new System.Windows.Forms.Label();
+            this.btn_venta = new System.Windows.Forms.Button();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.btn_ver = new System.Windows.Forms.Button();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_contenedorTop.SuspendLayout();
             this.tableLayoutPanel_con2.SuspendLayout();
@@ -131,24 +131,6 @@
             this.tableLayoutPanel_contenedorTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.27273F));
             this.tableLayoutPanel_contenedorTop.Size = new System.Drawing.Size(1263, 110);
             this.tableLayoutPanel_contenedorTop.TabIndex = 4;
-            // 
-            // btn_ver
-            // 
-            this.btn_ver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ver.BackgroundImage = global::PdeV_Delsel.Properties.Resources.ver_super_mini;
-            this.btn_ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_ver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_ver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ver.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ver.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_ver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ver.Location = new System.Drawing.Point(1127, 34);
-            this.btn_ver.Name = "btn_ver";
-            this.btn_ver.Size = new System.Drawing.Size(133, 31);
-            this.btn_ver.TabIndex = 8;
-            this.btn_ver.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ver.UseVisualStyleBackColor = true;
             // 
             // lbl_Ucotizacion
             // 
@@ -425,24 +407,6 @@
             this.tableLayoutPanel_con3.Size = new System.Drawing.Size(1263, 115);
             this.tableLayoutPanel_con3.TabIndex = 6;
             // 
-            // btn_agregar
-            // 
-            this.btn_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_agregar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.agregar_super_mini;
-            this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(1127, 81);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(133, 31);
-            this.btn_agregar.TabIndex = 9;
-            this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            // 
             // comboBox_productos
             // 
             this.comboBox_productos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -576,25 +540,6 @@
             this.tableLayoutPanel_final.Size = new System.Drawing.Size(1263, 127);
             this.tableLayoutPanel_final.TabIndex = 9;
             // 
-            // btn_venta
-            // 
-            this.btn_venta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_venta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_venta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_venta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_venta.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_venta.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_venta.Image = global::PdeV_Delsel.Properties.Resources.new_venta;
-            this.btn_venta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_venta.Location = new System.Drawing.Point(3, 73);
-            this.btn_venta.Name = "btn_venta";
-            this.btn_venta.Size = new System.Drawing.Size(146, 51);
-            this.btn_venta.TabIndex = 9;
-            this.btn_venta.Text = "Venta";
-            this.btn_venta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_venta.UseVisualStyleBackColor = true;
-            // 
             // lbl_iva
             // 
             this.lbl_iva.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -706,6 +651,61 @@
             this.lbl_formaPago.Size = new System.Drawing.Size(159, 24);
             this.lbl_formaPago.TabIndex = 24;
             this.lbl_formaPago.Text = "Forma de pago:";
+            // 
+            // btn_venta
+            // 
+            this.btn_venta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_venta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_venta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_venta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_venta.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_venta.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_venta.Image = global::PdeV_Delsel.Properties.Resources.new_venta;
+            this.btn_venta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_venta.Location = new System.Drawing.Point(3, 73);
+            this.btn_venta.Name = "btn_venta";
+            this.btn_venta.Size = new System.Drawing.Size(146, 51);
+            this.btn_venta.TabIndex = 9;
+            this.btn_venta.Text = "Venta";
+            this.btn_venta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_venta.UseVisualStyleBackColor = true;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_agregar.BackgroundImage = global::PdeV_Delsel.Properties.Resources.agregar_super_mini;
+            this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_agregar.Location = new System.Drawing.Point(1127, 81);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(133, 31);
+            this.btn_agregar.TabIndex = 9;
+            this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            // 
+            // btn_ver
+            // 
+            this.btn_ver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ver.BackgroundImage = global::PdeV_Delsel.Properties.Resources.ver_super_mini;
+            this.btn_ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_ver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_ver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ver.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ver.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_ver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ver.Location = new System.Drawing.Point(1127, 34);
+            this.btn_ver.Name = "btn_ver";
+            this.btn_ver.Size = new System.Drawing.Size(133, 31);
+            this.btn_ver.TabIndex = 8;
+            this.btn_ver.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ver.UseVisualStyleBackColor = true;
             // 
             // Form_venta
             // 

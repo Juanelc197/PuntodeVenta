@@ -118,6 +118,14 @@ namespace PdeV_Delsel
             this.Hide();
             form_Menu_Ventas.Show();
         }
+        
+
+        private void btn_cotisar_Click(object sender, EventArgs e)
+        {
+            Form_Cotizacion form_Cotizacion = new Form_Cotizacion();
+            this.Hide();
+            form_Cotizacion.Show();
+        }
         #endregion
     }
 }
