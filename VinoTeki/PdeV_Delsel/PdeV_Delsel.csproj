@@ -293,5 +293,8 @@
   <ItemGroup>
     <None Include="Resources\inicio super mini.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar super pequeño.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

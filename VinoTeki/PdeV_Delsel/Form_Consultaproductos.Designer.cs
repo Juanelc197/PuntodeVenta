@@ -49,8 +49,10 @@
             this.txt_costo = new System.Windows.Forms.TextBox();
             this.txt_precio = new System.Windows.Forms.TextBox();
             this.comboBox_consulta = new System.Windows.Forms.ComboBox();
-            this.btn_modificar = new System.Windows.Forms.Button();
             this.panel_agregar = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_ContenedorGlobal.SuspendLayout();
             this.SuspendLayout();
@@ -108,7 +110,7 @@
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_costo, 1, 6);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_precio, 1, 7);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.comboBox_consulta, 2, 1);
-            this.tableLayoutPanel_ContenedorGlobal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel_ContenedorGlobal.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_ContenedorGlobal.Location = new System.Drawing.Point(0, 62);
             this.tableLayoutPanel_ContenedorGlobal.Name = "tableLayoutPanel_ContenedorGlobal";
             this.tableLayoutPanel_ContenedorGlobal.RowCount = 9;
@@ -121,7 +123,7 @@
             this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel_ContenedorGlobal.Size = new System.Drawing.Size(1300, 588);
+            this.tableLayoutPanel_ContenedorGlobal.Size = new System.Drawing.Size(1300, 492);
             this.tableLayoutPanel_ContenedorGlobal.TabIndex = 10;
             // 
             // lbl_consultaP
@@ -132,7 +134,7 @@
             this.lbl_consultaP.BackColor = System.Drawing.Color.Transparent;
             this.lbl_consultaP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_consultaP.ForeColor = System.Drawing.Color.Black;
-            this.lbl_consultaP.Location = new System.Drawing.Point(1055, 41);
+            this.lbl_consultaP.Location = new System.Drawing.Point(1055, 30);
             this.lbl_consultaP.Name = "lbl_consultaP";
             this.lbl_consultaP.Size = new System.Drawing.Size(242, 24);
             this.lbl_consultaP.TabIndex = 21;
@@ -145,7 +147,7 @@
             this.lbl_Producto.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Producto.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Producto.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Producto.Location = new System.Drawing.Point(133, 28);
+            this.lbl_Producto.Location = new System.Drawing.Point(133, 17);
             this.lbl_Producto.Name = "lbl_Producto";
             this.lbl_Producto.Size = new System.Drawing.Size(179, 37);
             this.lbl_Producto.TabIndex = 4;
@@ -158,7 +160,7 @@
             this.lbl_tipo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_tipo.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tipo.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tipo.Location = new System.Drawing.Point(205, 93);
+            this.lbl_tipo.Location = new System.Drawing.Point(205, 71);
             this.lbl_tipo.Name = "lbl_tipo";
             this.lbl_tipo.Size = new System.Drawing.Size(107, 37);
             this.lbl_tipo.TabIndex = 5;
@@ -171,7 +173,7 @@
             this.lbl_marca.BackColor = System.Drawing.Color.Transparent;
             this.lbl_marca.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_marca.ForeColor = System.Drawing.Color.Black;
-            this.lbl_marca.Location = new System.Drawing.Point(187, 158);
+            this.lbl_marca.Location = new System.Drawing.Point(187, 125);
             this.lbl_marca.Name = "lbl_marca";
             this.lbl_marca.Size = new System.Drawing.Size(125, 37);
             this.lbl_marca.TabIndex = 6;
@@ -184,7 +186,7 @@
             this.lbl_modelo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_modelo.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_modelo.ForeColor = System.Drawing.Color.Black;
-            this.lbl_modelo.Location = new System.Drawing.Point(169, 223);
+            this.lbl_modelo.Location = new System.Drawing.Point(169, 179);
             this.lbl_modelo.Name = "lbl_modelo";
             this.lbl_modelo.Size = new System.Drawing.Size(143, 37);
             this.lbl_modelo.TabIndex = 7;
@@ -197,7 +199,7 @@
             this.lbl_descripcion.BackColor = System.Drawing.Color.Transparent;
             this.lbl_descripcion.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_descripcion.ForeColor = System.Drawing.Color.Black;
-            this.lbl_descripcion.Location = new System.Drawing.Point(79, 288);
+            this.lbl_descripcion.Location = new System.Drawing.Point(79, 233);
             this.lbl_descripcion.Name = "lbl_descripcion";
             this.lbl_descripcion.Size = new System.Drawing.Size(233, 37);
             this.lbl_descripcion.TabIndex = 8;
@@ -210,7 +212,7 @@
             this.lbl_cantidad.BackColor = System.Drawing.Color.Transparent;
             this.lbl_cantidad.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cantidad.ForeColor = System.Drawing.Color.Black;
-            this.lbl_cantidad.Location = new System.Drawing.Point(133, 353);
+            this.lbl_cantidad.Location = new System.Drawing.Point(133, 287);
             this.lbl_cantidad.Name = "lbl_cantidad";
             this.lbl_cantidad.Size = new System.Drawing.Size(179, 37);
             this.lbl_cantidad.TabIndex = 9;
@@ -223,7 +225,7 @@
             this.lbl_costo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_costo.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_costo.ForeColor = System.Drawing.Color.Black;
-            this.lbl_costo.Location = new System.Drawing.Point(187, 418);
+            this.lbl_costo.Location = new System.Drawing.Point(187, 341);
             this.lbl_costo.Name = "lbl_costo";
             this.lbl_costo.Size = new System.Drawing.Size(125, 37);
             this.lbl_costo.TabIndex = 10;
@@ -236,7 +238,7 @@
             this.lbl_presio.BackColor = System.Drawing.Color.Transparent;
             this.lbl_presio.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_presio.ForeColor = System.Drawing.Color.Black;
-            this.lbl_presio.Location = new System.Drawing.Point(169, 483);
+            this.lbl_presio.Location = new System.Drawing.Point(169, 395);
             this.lbl_presio.Name = "lbl_presio";
             this.lbl_presio.Size = new System.Drawing.Size(143, 37);
             this.lbl_presio.TabIndex = 11;
@@ -249,7 +251,7 @@
             this.txt_producto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_producto.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_producto.Location = new System.Drawing.Point(318, 32);
+            this.txt_producto.Location = new System.Drawing.Point(318, 21);
             this.txt_producto.Multiline = true;
             this.txt_producto.Name = "txt_producto";
             this.txt_producto.Size = new System.Drawing.Size(731, 30);
@@ -265,7 +267,7 @@
             this.txt_tipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tipo.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_tipo.Location = new System.Drawing.Point(318, 97);
+            this.txt_tipo.Location = new System.Drawing.Point(318, 75);
             this.txt_tipo.Multiline = true;
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(731, 30);
@@ -281,7 +283,7 @@
             this.txt_marca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_marca.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_marca.Location = new System.Drawing.Point(318, 162);
+            this.txt_marca.Location = new System.Drawing.Point(318, 129);
             this.txt_marca.Multiline = true;
             this.txt_marca.Name = "txt_marca";
             this.txt_marca.Size = new System.Drawing.Size(731, 30);
@@ -297,7 +299,7 @@
             this.txt_modelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_modelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_modelo.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_modelo.Location = new System.Drawing.Point(318, 227);
+            this.txt_modelo.Location = new System.Drawing.Point(318, 183);
             this.txt_modelo.Multiline = true;
             this.txt_modelo.Name = "txt_modelo";
             this.txt_modelo.Size = new System.Drawing.Size(731, 30);
@@ -313,7 +315,7 @@
             this.txt_descrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_descrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_descrip.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_descrip.Location = new System.Drawing.Point(318, 292);
+            this.txt_descrip.Location = new System.Drawing.Point(318, 237);
             this.txt_descrip.Multiline = true;
             this.txt_descrip.Name = "txt_descrip";
             this.txt_descrip.Size = new System.Drawing.Size(731, 30);
@@ -329,7 +331,7 @@
             this.txt_cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cantidad.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_cantidad.Location = new System.Drawing.Point(318, 357);
+            this.txt_cantidad.Location = new System.Drawing.Point(318, 291);
             this.txt_cantidad.Multiline = true;
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(731, 30);
@@ -345,7 +347,7 @@
             this.txt_costo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_costo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_costo.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_costo.Location = new System.Drawing.Point(318, 422);
+            this.txt_costo.Location = new System.Drawing.Point(318, 345);
             this.txt_costo.Multiline = true;
             this.txt_costo.Name = "txt_costo";
             this.txt_costo.Size = new System.Drawing.Size(731, 30);
@@ -361,7 +363,7 @@
             this.txt_precio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_precio.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txt_precio.Location = new System.Drawing.Point(318, 487);
+            this.txt_precio.Location = new System.Drawing.Point(318, 399);
             this.txt_precio.Multiline = true;
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(731, 30);
@@ -378,10 +380,49 @@
             this.comboBox_consulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_consulta.ForeColor = System.Drawing.Color.White;
             this.comboBox_consulta.FormattingEnabled = true;
-            this.comboBox_consulta.Location = new System.Drawing.Point(1055, 68);
+            this.comboBox_consulta.Location = new System.Drawing.Point(1055, 57);
             this.comboBox_consulta.Name = "comboBox_consulta";
             this.comboBox_consulta.Size = new System.Drawing.Size(242, 28);
             this.comboBox_consulta.TabIndex = 20;
+            // 
+            // panel_agregar
+            // 
+            this.panel_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel_agregar.Location = new System.Drawing.Point(1280, 600);
+            this.panel_agregar.Name = "panel_agregar";
+            this.panel_agregar.Size = new System.Drawing.Size(8, 44);
+            this.panel_agregar.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.panel1.Location = new System.Drawing.Point(227, 600);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(8, 44);
+            this.panel1.TabIndex = 11;
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_eliminar.FlatAppearance.BorderSize = 0;
+            this.btn_eliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
+            this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_eliminar.Image = global::PdeV_Delsel.Properties.Resources.eliminar_super_pequeño;
+            this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_eliminar.Location = new System.Drawing.Point(12, 600);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(223, 44);
+            this.btn_eliminar.TabIndex = 7;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_eliminar.UseVisualStyleBackColor = true;
             // 
             // btn_modificar
             // 
@@ -401,23 +442,15 @@
             this.btn_modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_modificar.UseVisualStyleBackColor = true;
             // 
-            // panel_agregar
-            // 
-            this.panel_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_agregar.Location = new System.Drawing.Point(1280, 600);
-            this.panel_agregar.Name = "panel_agregar";
-            this.panel_agregar.Size = new System.Drawing.Size(8, 44);
-            this.panel_agregar.TabIndex = 11;
-            // 
             // Form_Consultaproductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_agregar);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.tableLayoutPanel_ContenedorGlobal);
             this.Controls.Add(this.tableLayoutPanel_Titulo);
@@ -458,5 +491,7 @@
         private System.Windows.Forms.Panel panel_agregar;
         private System.Windows.Forms.Label lbl_consultaP;
         private System.Windows.Forms.ComboBox comboBox_consulta;
+        private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.Panel panel1;
     }
 }
