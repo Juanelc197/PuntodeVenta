@@ -49,6 +49,7 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_eliminar = new System.Windows.Forms.Button();
+            this.lbl_idcliente = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_ContenedorGlobal.SuspendLayout();
             this.SuspendLayout();
@@ -97,10 +98,11 @@
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_direccion, 1, 2);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_telefono, 1, 3);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_email, 1, 4);
-            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.comboBox_consultaC, 2, 1);
-            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_consultaP, 2, 0);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_rasonsocial, 0, 5);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_rasonsocial, 1, 5);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.comboBox_consultaC, 2, 3);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_consultaP, 2, 2);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_idcliente, 2, 0);
             this.tableLayoutPanel_ContenedorGlobal.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_ContenedorGlobal.Location = new System.Drawing.Point(0, 62);
             this.tableLayoutPanel_ContenedorGlobal.Name = "tableLayoutPanel_ContenedorGlobal";
@@ -257,7 +259,7 @@
             this.comboBox_consultaC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_consultaC.ForeColor = System.Drawing.Color.White;
             this.comboBox_consultaC.FormattingEnabled = true;
-            this.comboBox_consultaC.Location = new System.Drawing.Point(1055, 72);
+            this.comboBox_consultaC.Location = new System.Drawing.Point(1055, 210);
             this.comboBox_consultaC.Name = "comboBox_consultaC";
             this.comboBox_consultaC.Size = new System.Drawing.Size(242, 28);
             this.comboBox_consultaC.TabIndex = 21;
@@ -270,7 +272,7 @@
             this.lbl_consultaP.BackColor = System.Drawing.Color.Transparent;
             this.lbl_consultaP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_consultaP.ForeColor = System.Drawing.Color.Black;
-            this.lbl_consultaP.Location = new System.Drawing.Point(1055, 45);
+            this.lbl_consultaP.Location = new System.Drawing.Point(1055, 183);
             this.lbl_consultaP.Name = "lbl_consultaP";
             this.lbl_consultaP.Size = new System.Drawing.Size(242, 24);
             this.lbl_consultaP.TabIndex = 22;
@@ -330,6 +332,7 @@
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // panel1
             // 
@@ -359,6 +362,20 @@
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
+            // lbl_idcliente
+            // 
+            this.lbl_idcliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_idcliente.AutoSize = true;
+            this.lbl_idcliente.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_idcliente.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_idcliente.ForeColor = System.Drawing.Color.White;
+            this.lbl_idcliente.Location = new System.Drawing.Point(1262, 32);
+            this.lbl_idcliente.Name = "lbl_idcliente";
+            this.lbl_idcliente.Size = new System.Drawing.Size(35, 37);
+            this.lbl_idcliente.TabIndex = 4;
+            this.lbl_idcliente.Text = "#";
             // 
             // FormConsultacliente
             // 
@@ -376,6 +393,7 @@
             this.Name = "FormConsultacliente";
             this.Opacity = 0.98D;
             this.Text = "FormConsultacliente";
+            this.Load += new System.EventHandler(this.FormConsultacliente_Load);
             this.tableLayoutPanel_Titulo.ResumeLayout(false);
             this.tableLayoutPanel_Titulo.PerformLayout();
             this.tableLayoutPanel_ContenedorGlobal.ResumeLayout(false);
@@ -407,5 +425,6 @@
         private System.Windows.Forms.TextBox txt_rasonsocial;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.Label lbl_idcliente;
     }
 }

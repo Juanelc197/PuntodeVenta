@@ -53,6 +53,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
+            this.lbl_idproducto = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_ContenedorGlobal.SuspendLayout();
             this.SuspendLayout();
@@ -92,7 +93,6 @@
             this.tableLayoutPanel_ContenedorGlobal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.69231F));
             this.tableLayoutPanel_ContenedorGlobal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19F));
             this.tableLayoutPanel_ContenedorGlobal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_consultaP, 2, 0);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_Producto, 0, 0);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_tipo, 0, 1);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_marca, 0, 2);
@@ -109,7 +109,9 @@
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_cantidad, 1, 5);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_costo, 1, 6);
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.txt_precio, 1, 7);
-            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.comboBox_consulta, 2, 1);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.comboBox_consulta, 2, 4);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_consultaP, 2, 3);
+            this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_idproducto, 2, 0);
             this.tableLayoutPanel_ContenedorGlobal.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_ContenedorGlobal.Location = new System.Drawing.Point(0, 62);
             this.tableLayoutPanel_ContenedorGlobal.Name = "tableLayoutPanel_ContenedorGlobal";
@@ -134,7 +136,7 @@
             this.lbl_consultaP.BackColor = System.Drawing.Color.Transparent;
             this.lbl_consultaP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_consultaP.ForeColor = System.Drawing.Color.Black;
-            this.lbl_consultaP.Location = new System.Drawing.Point(1055, 30);
+            this.lbl_consultaP.Location = new System.Drawing.Point(1055, 192);
             this.lbl_consultaP.Name = "lbl_consultaP";
             this.lbl_consultaP.Size = new System.Drawing.Size(242, 24);
             this.lbl_consultaP.TabIndex = 21;
@@ -380,7 +382,7 @@
             this.comboBox_consulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_consulta.ForeColor = System.Drawing.Color.White;
             this.comboBox_consulta.FormattingEnabled = true;
-            this.comboBox_consulta.Location = new System.Drawing.Point(1055, 57);
+            this.comboBox_consulta.Location = new System.Drawing.Point(1055, 219);
             this.comboBox_consulta.Name = "comboBox_consulta";
             this.comboBox_consulta.Size = new System.Drawing.Size(242, 28);
             this.comboBox_consulta.TabIndex = 20;
@@ -423,6 +425,7 @@
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
@@ -441,6 +444,20 @@
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
+            // 
+            // lbl_idproducto
+            // 
+            this.lbl_idproducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_idproducto.AutoSize = true;
+            this.lbl_idproducto.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_idproducto.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_idproducto.ForeColor = System.Drawing.Color.White;
+            this.lbl_idproducto.Location = new System.Drawing.Point(1262, 17);
+            this.lbl_idproducto.Name = "lbl_idproducto";
+            this.lbl_idproducto.Size = new System.Drawing.Size(35, 37);
+            this.lbl_idproducto.TabIndex = 4;
+            this.lbl_idproducto.Text = "#";
             // 
             // Form_Consultaproductos
             // 
@@ -458,6 +475,7 @@
             this.Name = "Form_Consultaproductos";
             this.Opacity = 0.98D;
             this.Text = "Form_Consultaproductos";
+            this.Load += new System.EventHandler(this.Form_Consultaproductos_Load);
             this.tableLayoutPanel_Titulo.ResumeLayout(false);
             this.tableLayoutPanel_Titulo.PerformLayout();
             this.tableLayoutPanel_ContenedorGlobal.ResumeLayout(false);
@@ -493,5 +511,6 @@
         private System.Windows.Forms.ComboBox comboBox_consulta;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_idproducto;
     }
 }

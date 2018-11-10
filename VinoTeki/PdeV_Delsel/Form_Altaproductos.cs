@@ -16,7 +16,7 @@ namespace PdeV_Delsel
         {
             InitializeComponent();
         }
-
+        Class_ProductoTB P = new Class_ProductoTB();
         //Ocultar fragmebtos de codigo #region y para cerrar #endregion y listo
 
         #region Diseño para los combo box, que muestre info y al momento de escribir se borre
@@ -164,5 +164,18 @@ namespace PdeV_Delsel
             }
         }
         #endregion
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            P.Producto1 = txt_producto.Text;
+            P.Tipo1 = txt_tipo.Text;
+            P.Marca1 = txt_marca.Text;
+            P.Modelo1 = txt_modelo.Text;
+            P.Descripcion1 = txt_descrip.Text;
+            P.Cantidad1 = int.Parse(txt_cantidad.Text);
+            P.Costo1 = int.Parse(txt_costo.Text);
+            P.Precio1 = int.Parse(txt_precio.Text);
+            Class_BasedeDatos.GuardarP(P);
+        }
     }
 }

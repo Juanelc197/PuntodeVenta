@@ -16,6 +16,9 @@ namespace PdeV_Delsel
         {
             InitializeComponent();
         }
+
+        Class_ClienteTB C = new Class_ClienteTB();
+
         #region diseño para los combobox para que muestre info cuando esta vasio
         private void txt_nombre_Enter(object sender, EventArgs e)
         {
@@ -126,5 +129,16 @@ namespace PdeV_Delsel
             }
         }
         #endregion
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            C.Nombre1 = txt_nombre.Text;
+            C.RFC1 = txt_rfc.Text;
+            C.Direccion1 = txt_direccion.Text;
+            C.Telefono1 = txt_telefono.Text;
+            C.Email1 = txt_email.Text;
+            C.Razonsocial1 = txt_razonsocial.Text;
+            Class_BasedeDatos.GuardarC(C);
+        }
     }
 }

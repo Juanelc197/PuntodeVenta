@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class_BasedeDatos.cs" />
+    <Compile Include="Class_ClienteTB.cs" />
+    <Compile Include="Class_ProductoTB.cs" />
     <Compile Include="FormConsultacliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +118,7 @@
     <Compile Include="Form_venta.Designer.cs">
       <DependentUpon>Form_venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="LlenarCombo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormConsultacliente.resx">
