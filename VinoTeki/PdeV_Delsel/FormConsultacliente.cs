@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,36 @@ namespace PdeV_Delsel
 
             comboBox_consultaC.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox_consultaC.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+
+        private void comboBox_consultaC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cadena = "Select * from Table_Cliente where Nombre = '" + comboBox_consultaC.Text + "' ";
+            OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+            OleDbCommand comando = new OleDbCommand(cadena, cnn);
+            cnn.Open();
+
+            OleDbDataReader leer = comando.ExecuteReader();
+            if (leer.Read() == true)
+            {
+                txt_nombre.Text = leer["Nombre"].ToString();
+                txt_rfc.Text = leer["RFC"].ToString();
+                txt_direccion.Text = leer["Direccion"].ToString();
+                txt_telefono.Text = leer["Telefono"].ToString();
+                txt_email.Text = leer["Email"].ToString();
+                txt_rasonsocial.Text = leer["Razonsocial"].ToString();
+                lbl_idcliente.Text = leer["IdCliente"].ToString();
+            }
+            else
+            {
+                txt_nombre.Text = "";
+                txt_rfc.Text = "";
+                txt_direccion.Text = "";
+                txt_telefono.Text = "";
+                txt_email.Text = "";
+                txt_rasonsocial.Text = "";
+            }
+            cnn.Close();
         }
     }
 }

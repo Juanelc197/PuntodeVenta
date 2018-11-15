@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -188,10 +189,44 @@ namespace PdeV_Delsel
         private void Form_Consultaproductos_Load(object sender, EventArgs e)
         {
             LlenarCombo p = new LlenarCombo();
-            p.ItemLlenarP(comboBox_consulta);
+            p.ItemLlenarP(comboBox_consultaP);
 
-            comboBox_consulta.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            comboBox_consulta.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBox_consultaP.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBox_consultaP.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+
+        private void comboBox_consultaP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cadena = "Select * from Table_Producto where Producto = '" + comboBox_consultaP.Text + "' ";
+            OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+            OleDbCommand comando = new OleDbCommand(cadena, cnn);
+            cnn.Open();
+
+            OleDbDataReader leer = comando.ExecuteReader();
+            if (leer.Read() == true)
+            {
+                txt_producto.Text = leer["Producto"].ToString();
+                txt_tipo.Text = leer["Tipo"].ToString();
+                txt_marca.Text = leer["Marca"].ToString();
+                txt_modelo.Text = leer["Modelo"].ToString();
+                txt_descrip.Text = leer["Descripcion"].ToString();
+                txt_cantidad.Text = leer["Cantidad"].ToString();
+                txt_costo.Text = leer["Costo"].ToString();
+                txt_precio.Text = leer["Precio"].ToString();
+                lbl_idproducto.Text = leer["IdProducto"].ToString();
+            }
+            else
+            {
+                txt_producto.Text = "";
+                txt_tipo.Text = "";
+                txt_marca.Text = "";
+                txt_modelo.Text = "";
+                txt_descrip.Text = "";
+                txt_cantidad.Text = "";
+                txt_costo.Text = "";
+                txt_precio.Text = "";
+            }
+            cnn.Close();
         }
     }
 }
