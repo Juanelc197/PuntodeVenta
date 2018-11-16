@@ -145,6 +145,7 @@ namespace PdeV_Delsel
 
         #endregion
 
+        #region Cliente
         public static DataTable MostrarCliente()
         {
             OleDbCommand comando = new OleDbCommand(string.Format("select * from Table_Cliente where IdCliente "), cnn);
@@ -196,7 +197,7 @@ namespace PdeV_Delsel
 
         public static void EliminarC(Class_ClienteTB C)
         {
-            OleDbCommand comando = new OleDbCommand(string.Format("Delete from Table_Cliente where IdCliente='{0}'", C.Nombre1), cnn);
+            OleDbCommand comando = new OleDbCommand(string.Format("Delete from Table_Cliente where IdCliente='{0}'", C.IdCliente1), cnn);
 
 
             try
@@ -271,5 +272,6 @@ namespace PdeV_Delsel
 
 
         }
+        #endregion
     }
 }

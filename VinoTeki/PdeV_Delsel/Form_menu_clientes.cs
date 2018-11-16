@@ -118,7 +118,9 @@ namespace PdeV_Delsel
             else
             {
                 formulario.BringToFront();
+                //formulario.Close();
             }
+            
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
