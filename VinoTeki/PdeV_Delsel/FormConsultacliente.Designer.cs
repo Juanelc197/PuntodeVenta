@@ -62,7 +62,7 @@
             this.tableLayoutPanel_Titulo.Controls.Add(this.lbl_titulo, 0, 0);
             this.tableLayoutPanel_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_Titulo.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_Titulo.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_Titulo.Name = "tableLayoutPanel_Titulo";
             this.tableLayoutPanel_Titulo.RowCount = 1;
             this.tableLayoutPanel_Titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -107,7 +107,7 @@
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_idcliente, 2, 0);
             this.tableLayoutPanel_ContenedorGlobal.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_ContenedorGlobal.Location = new System.Drawing.Point(0, 76);
-            this.tableLayoutPanel_ContenedorGlobal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_ContenedorGlobal.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_ContenedorGlobal.Name = "tableLayoutPanel_ContenedorGlobal";
             this.tableLayoutPanel_ContenedorGlobal.RowCount = 6;
             this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -197,7 +197,7 @@
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_nombre.Location = new System.Drawing.Point(424, 46);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre.Multiline = true;
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(975, 36);
@@ -211,7 +211,7 @@
             this.txt_rfc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_rfc.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_rfc.Location = new System.Drawing.Point(424, 132);
-            this.txt_rfc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_rfc.Margin = new System.Windows.Forms.Padding(4);
             this.txt_rfc.Multiline = true;
             this.txt_rfc.Name = "txt_rfc";
             this.txt_rfc.Size = new System.Drawing.Size(975, 36);
@@ -225,7 +225,7 @@
             this.txt_direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_direccion.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_direccion.Location = new System.Drawing.Point(424, 218);
-            this.txt_direccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_direccion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_direccion.Multiline = true;
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(975, 36);
@@ -239,7 +239,7 @@
             this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefono.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_telefono.Location = new System.Drawing.Point(424, 304);
-            this.txt_telefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_telefono.Margin = new System.Windows.Forms.Padding(4);
             this.txt_telefono.Multiline = true;
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(975, 36);
@@ -253,7 +253,7 @@
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_email.Location = new System.Drawing.Point(424, 390);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(4);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(975, 36);
@@ -281,7 +281,7 @@
             this.txt_rasonsocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_rasonsocial.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_rasonsocial.Location = new System.Drawing.Point(424, 477);
-            this.txt_rasonsocial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_rasonsocial.Margin = new System.Windows.Forms.Padding(4);
             this.txt_rasonsocial.Multiline = true;
             this.txt_rasonsocial.Name = "txt_rasonsocial";
             this.txt_rasonsocial.Size = new System.Drawing.Size(975, 36);
@@ -296,7 +296,7 @@
             this.comboBox_consultaC.ForeColor = System.Drawing.Color.White;
             this.comboBox_consultaC.FormattingEnabled = true;
             this.comboBox_consultaC.Location = new System.Drawing.Point(1407, 262);
-            this.comboBox_consultaC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_consultaC.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_consultaC.Name = "comboBox_consultaC";
             this.comboBox_consultaC.Size = new System.Drawing.Size(322, 33);
             this.comboBox_consultaC.TabIndex = 21;
@@ -336,8 +336,8 @@
             this.panel_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_agregar.Location = new System.Drawing.Point(1707, 731);
-            this.panel_agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_agregar.Location = new System.Drawing.Point(1388, 735);
+            this.panel_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.panel_agregar.Name = "panel_agregar";
             this.panel_agregar.Size = new System.Drawing.Size(11, 54);
             this.panel_agregar.TabIndex = 17;
@@ -352,8 +352,8 @@
             this.btn_modificar.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_modificar.Image = global::PdeV_Delsel.Properties.Resources.consultar_super_mini1;
             this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificar.Location = new System.Drawing.Point(1420, 731);
-            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_modificar.Location = new System.Drawing.Point(1102, 733);
+            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(297, 54);
             this.btn_modificar.TabIndex = 16;
@@ -368,7 +368,7 @@
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
             this.panel1.Location = new System.Drawing.Point(303, 731);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(11, 54);
             this.panel1.TabIndex = 19;
@@ -385,7 +385,7 @@
             this.btn_eliminar.Image = global::PdeV_Delsel.Properties.Resources.eliminar_super_pequeño;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_eliminar.Location = new System.Drawing.Point(16, 731);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(297, 54);
             this.btn_eliminar.TabIndex = 18;
@@ -407,7 +407,7 @@
             this.Controls.Add(this.tableLayoutPanel_ContenedorGlobal);
             this.Controls.Add(this.tableLayoutPanel_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormConsultacliente";
             this.Opacity = 0.98D;
             this.Text = "FormConsultacliente";

@@ -80,7 +80,7 @@
             this.tableLayoutPanel_Titulo.Controls.Add(this.lbl_titulo, 0, 0);
             this.tableLayoutPanel_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_Titulo.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_Titulo.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_Titulo.Name = "tableLayoutPanel_Titulo";
             this.tableLayoutPanel_Titulo.RowCount = 1;
             this.tableLayoutPanel_Titulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -116,7 +116,7 @@
             this.tableLayoutPanel_ContenedorGlobal.Controls.Add(this.lbl_idproducto, 2, 0);
             this.tableLayoutPanel_ContenedorGlobal.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_ContenedorGlobal.Location = new System.Drawing.Point(0, 76);
-            this.tableLayoutPanel_ContenedorGlobal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_ContenedorGlobal.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_ContenedorGlobal.Name = "tableLayoutPanel_ContenedorGlobal";
             this.tableLayoutPanel_ContenedorGlobal.RowCount = 9;
             this.tableLayoutPanel_ContenedorGlobal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -251,7 +251,7 @@
             this.txt_producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_producto.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_producto.Location = new System.Drawing.Point(424, 27);
-            this.txt_producto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_producto.Margin = new System.Windows.Forms.Padding(4);
             this.txt_producto.Multiline = true;
             this.txt_producto.Name = "txt_producto";
             this.txt_producto.Size = new System.Drawing.Size(975, 36);
@@ -267,7 +267,7 @@
             this.txt_tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tipo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_tipo.Location = new System.Drawing.Point(424, 94);
-            this.txt_tipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_tipo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_tipo.Multiline = true;
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(975, 36);
@@ -283,7 +283,7 @@
             this.txt_marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_marca.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_marca.Location = new System.Drawing.Point(424, 161);
-            this.txt_marca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_marca.Margin = new System.Windows.Forms.Padding(4);
             this.txt_marca.Multiline = true;
             this.txt_marca.Name = "txt_marca";
             this.txt_marca.Size = new System.Drawing.Size(975, 36);
@@ -299,7 +299,7 @@
             this.txt_modelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_modelo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_modelo.Location = new System.Drawing.Point(424, 228);
-            this.txt_modelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_modelo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_modelo.Multiline = true;
             this.txt_modelo.Name = "txt_modelo";
             this.txt_modelo.Size = new System.Drawing.Size(975, 36);
@@ -315,7 +315,7 @@
             this.txt_descrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_descrip.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_descrip.Location = new System.Drawing.Point(424, 295);
-            this.txt_descrip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_descrip.Margin = new System.Windows.Forms.Padding(4);
             this.txt_descrip.Multiline = true;
             this.txt_descrip.Name = "txt_descrip";
             this.txt_descrip.Size = new System.Drawing.Size(975, 36);
@@ -331,7 +331,7 @@
             this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cantidad.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_cantidad.Location = new System.Drawing.Point(424, 362);
-            this.txt_cantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cantidad.Multiline = true;
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(975, 36);
@@ -347,7 +347,7 @@
             this.txt_costo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_costo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_costo.Location = new System.Drawing.Point(424, 429);
-            this.txt_costo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_costo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_costo.Multiline = true;
             this.txt_costo.Name = "txt_costo";
             this.txt_costo.Size = new System.Drawing.Size(975, 36);
@@ -363,7 +363,7 @@
             this.txt_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_precio.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_precio.Location = new System.Drawing.Point(424, 496);
-            this.txt_precio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_precio.Margin = new System.Windows.Forms.Padding(4);
             this.txt_precio.Multiline = true;
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(975, 36);
@@ -380,7 +380,7 @@
             this.comboBox_consultaP.ForeColor = System.Drawing.Color.White;
             this.comboBox_consultaP.FormattingEnabled = true;
             this.comboBox_consultaP.Location = new System.Drawing.Point(1407, 272);
-            this.comboBox_consultaP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_consultaP.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_consultaP.Name = "comboBox_consultaP";
             this.comboBox_consultaP.Size = new System.Drawing.Size(322, 33);
             this.comboBox_consultaP.TabIndex = 20;
@@ -420,8 +420,8 @@
             this.panel_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.panel_agregar.Location = new System.Drawing.Point(1707, 738);
-            this.panel_agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_agregar.Location = new System.Drawing.Point(1389, 738);
+            this.panel_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.panel_agregar.Name = "panel_agregar";
             this.panel_agregar.Size = new System.Drawing.Size(11, 54);
             this.panel_agregar.TabIndex = 11;
@@ -432,7 +432,7 @@
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
             this.panel1.Location = new System.Drawing.Point(303, 738);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(11, 54);
             this.panel1.TabIndex = 11;
@@ -449,7 +449,7 @@
             this.btn_eliminar.Image = global::PdeV_Delsel.Properties.Resources.eliminar_super_pequeño;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_eliminar.Location = new System.Drawing.Point(16, 738);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(297, 54);
             this.btn_eliminar.TabIndex = 7;
@@ -468,8 +468,8 @@
             this.btn_modificar.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_modificar.Image = global::PdeV_Delsel.Properties.Resources.consultar_super_mini1;
             this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificar.Location = new System.Drawing.Point(1420, 738);
-            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_modificar.Location = new System.Drawing.Point(1102, 738);
+            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(297, 54);
             this.btn_modificar.TabIndex = 7;
@@ -491,7 +491,7 @@
             this.Controls.Add(this.tableLayoutPanel_ContenedorGlobal);
             this.Controls.Add(this.tableLayoutPanel_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Consultaproductos";
             this.Opacity = 0.98D;
             this.Text = "Form_Consultaproductos";

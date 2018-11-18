@@ -178,21 +178,55 @@ namespace PdeV_Delsel
             P.Costo1 = int.Parse(txt_costo.Text);
             P.Precio1 = int.Parse(txt_precio.Text);
             Class_BasedeDatos.ActualisarP(P);
+            //comboBox_consultaP.Refresh();
+
+            txt_producto.Text = "";
+            txt_tipo.Text = "";
+            txt_marca.Text = "";
+            txt_modelo.Text = "";
+            txt_descrip.Text = "";
+            txt_cantidad.Text = "";
+            txt_costo.Text = "";
+            txt_precio.Text = "";
+            comboBox_consultaP.Text = "";
+
+            //Actualizar combobox producto
+            LlenarCombo p = new LlenarCombo();
+            p.ItemLlenarP(comboBox_consultaP );
+
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             P.IdProducto1 = int.Parse(lbl_idproducto.Text);
             Class_BasedeDatos.EliminarP(P);
+            lbl_idproducto.Text = "#";
+            txt_producto.Text = "";
+            txt_tipo.Text = "";
+            txt_marca.Text = "";
+            txt_modelo.Text = "";
+            txt_descrip.Text = "";
+            txt_cantidad.Text = "";
+            txt_costo.Text = "";
+            txt_precio.Text = "";
+            
+            comboBox_consultaP.Text = "";
+
+            //Actualizar combobox producto
+            LlenarCombo p = new LlenarCombo();
+            p.ItemLlenarP(comboBox_consultaP);
+
         }
+
 
         private void Form_Consultaproductos_Load(object sender, EventArgs e)
         {
             LlenarCombo p = new LlenarCombo();
             p.ItemLlenarP(comboBox_consultaP);
-
+            
             comboBox_consultaP.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox_consultaP.AutoCompleteSource = AutoCompleteSource.ListItems;
+
         }
 
         private void comboBox_consultaP_SelectedIndexChanged(object sender, EventArgs e)

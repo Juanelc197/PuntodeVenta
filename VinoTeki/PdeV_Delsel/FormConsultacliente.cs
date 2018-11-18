@@ -27,14 +27,40 @@ namespace PdeV_Delsel
             C.Direccion1 = txt_direccion.Text;
             C.Telefono1 = txt_telefono.Text;
             C.Email1 = txt_email.Text;
-            C.Razonsocial1 = txt_email.Text;
+            C.Razonsocial1 = txt_rasonsocial.Text;
             Class_BasedeDatos.ActualisarC(C);
+
+            txt_nombre.Text = "";
+            txt_rfc.Text = "";
+            txt_direccion.Text = "";
+            txt_telefono.Text = "";
+            txt_email.Text = "";
+            txt_rasonsocial.Text = "";
+            lbl_idcliente.Text = "#";
+            comboBox_consultaC.Text = "";
+
+            //Actualizar combobox cliente
+            LlenarCombo c = new LlenarCombo();
+            c.ItemLlenarC(comboBox_consultaC);
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             C.IdCliente1 = int.Parse(lbl_idcliente.Text);
             Class_BasedeDatos.EliminarC(C);
+
+            txt_nombre.Text = "";
+            txt_rfc.Text = "";
+            txt_direccion.Text = "";
+            txt_telefono.Text = "";
+            txt_email.Text = "";
+            txt_rasonsocial.Text = "";
+            lbl_idcliente.Text = "#";
+            comboBox_consultaC.Text = "";
+
+            //Actualizar combobox cliente
+            LlenarCombo c = new LlenarCombo();
+            c.ItemLlenarC(comboBox_consultaC);
         }
 
         private void FormConsultacliente_Load(object sender, EventArgs e)

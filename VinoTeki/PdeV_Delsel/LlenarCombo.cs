@@ -33,6 +33,8 @@ namespace PdeV_Delsel
             {
                 com = new OleDbCommand("select Producto from Table_Producto", cnn);
                 dr = com.ExecuteReader();
+                //parte de aztualizar comboboxproductoo
+                cb.Items.Clear();
                 while (dr.Read())
                 {
                     cb.Items.Add(dr["Producto"].ToString());
@@ -51,6 +53,8 @@ namespace PdeV_Delsel
             {
                 com = new OleDbCommand("select Nombre from Table_Cliente", cnn);
                 dr = com.ExecuteReader();
+                //parte de aztualizar combobox cliente
+                cb.Items.Clear();
                 while (dr.Read())
                 {
                     cb.Items.Add(dr["Nombre"].ToString());
