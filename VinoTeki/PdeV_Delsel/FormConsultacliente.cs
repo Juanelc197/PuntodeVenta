@@ -74,6 +74,7 @@ namespace PdeV_Delsel
 
         private void comboBox_consultaC_SelectedIndexChanged(object sender, EventArgs e)
         {
+            #region busqueda de combobox y selecion
             string cadena = "Select * from Table_Cliente where Nombre = '" + comboBox_consultaC.Text + "' ";
             OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
             OleDbCommand comando = new OleDbCommand(cadena, cnn);
@@ -100,6 +101,7 @@ namespace PdeV_Delsel
                 txt_rasonsocial.Text = "";
             }
             cnn.Close();
+            #endregion
         }
     }
 }
