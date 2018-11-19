@@ -142,10 +142,11 @@ namespace PdeV_Delsel
                 //txt_marca.Text = leer["Marca"].ToString();
                 //txt_modelo.Text = leer["Modelo"].ToString();
                 //txt_descrip.Text = leer["Descripcion"].ToString();
-                txt_cantidad.Text = leer["Cantidad"].ToString();
+                lbl_conCant.Text = leer["Cantidad"].ToString();
                 //txt_costo.Text = leer["Costo"].ToString();
                 txt_precioU.Text = leer["Precio"].ToString();
-                //lbl_idproducto.Text = leer["IdProducto"].ToString();
+                lbl_precioP.Text = leer["Precio"].ToString();
+                lbl_idP.Text = leer["IdProducto"].ToString();
             }
             else
             {
@@ -154,9 +155,12 @@ namespace PdeV_Delsel
                 //txt_marca.Text = "";
                 //txt_modelo.Text = "";
                 //txt_descrip.Text = "";
-                txt_cantidad.Text = "";
+                //txt_cantidad.Text = "";
                 //txt_costo.Text = "";
                 txt_precioU.Text = "";
+                lbl_precioP.Text = "";
+                lbl_idP.Text = "#";
+                lbl_conCant.Text = "...";
             }
             cnn.Close();
             #endregion
@@ -171,7 +175,7 @@ namespace PdeV_Delsel
                 OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 cnn.Open();
                 com.Connection = cnn;
-                com.CommandText = "Insert into VentasTemporalesTB (Producto, Cantidad, Precio) VALUES ('" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + txt_precioU.Text + "')";
+                com.CommandText = "Insert into Table_VentasTemporales (Producto, Cantidad, Precio) VALUES ('" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + txt_precioU.Text + "')";
                 //com.CommandText = "insert into CotizacionTB (Producto, Cantidad, PrecioUnitario) VALUES ('" + comboProducto.Text + "','" + numericCont.Value + "','" + txt_valorU.Text + "')";
                 com.ExecuteNonQuery();
                 //MessageBox.Show("Cliente guardado exitosamente");
@@ -189,7 +193,7 @@ namespace PdeV_Delsel
                 OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 cnn.Open();
                 com.Connection = cnn;
-                string query = "select Producto, Cantidad, Precio from VentasTemporalesTB";
+                string query = "select Producto, Cantidad, Precio from Table_VentasTemporales";
                 com.CommandText = query;
 
                 OleDbDataAdapter da = new OleDbDataAdapter(com);
@@ -212,9 +216,9 @@ namespace PdeV_Delsel
                 cnn.Open();
                 com.Connection = cnn;
                 //string IdProducto = Convert.ToString(txtIdProducto.Text);
-                com.CommandText = "insert into DetalleVentaTB (Cantidad, Precio) VALUES ('" + txt_cantidad.Text + "','" + txt_precioU.Text + "')";
+                com.CommandText = "insert into Table_DetalledeVenta (Cantidad, PrecioUnitario) VALUES ('" + txt_cantidad.Text + "','" + txt_precioU.Text + "')";
                 com.ExecuteNonQuery();
-                MessageBox.Show("Venta guardada exitosamente");
+                //MessageBox.Show("Venta guardada exitosamente");
                 cnn.Close();
             }
             catch (Exception ex)
