@@ -165,13 +165,13 @@ namespace PdeV_Delsel
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             #region code prueba
-            /*try
+            try
             {
                 OleDbCommand com = new OleDbCommand();
-                OleDbConnection cnn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PuntodeVentaBD.accdb");
+                OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 cnn.Open();
                 com.Connection = cnn;
-                com.CommandText = "insert into VentasTemporalesTB (Producto, Cantidad, Precio) VALUES ('" + comboProducto.Text + "','" + numericCont.Value + "','" + txt_valorU.Text + "')";
+                com.CommandText = "Insert into VentasTemporalesTB (Producto, Cantidad, Precio) VALUES ('" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + txt_precioU.Text + "')";
                 //com.CommandText = "insert into CotizacionTB (Producto, Cantidad, PrecioUnitario) VALUES ('" + comboProducto.Text + "','" + numericCont.Value + "','" + txt_valorU.Text + "')";
                 com.ExecuteNonQuery();
                 //MessageBox.Show("Cliente guardado exitosamente");
@@ -186,7 +186,7 @@ namespace PdeV_Delsel
             try
             {
                 OleDbCommand com = new OleDbCommand();
-                OleDbConnection cnn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PuntodeVentaBD.accdb");
+                OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 cnn.Open();
                 com.Connection = cnn;
                 string query = "select Producto, Cantidad, Precio from VentasTemporalesTB";
@@ -195,7 +195,7 @@ namespace PdeV_Delsel
                 OleDbDataAdapter da = new OleDbDataAdapter(com);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                dataMostrarInfo.DataSource = dt;
+                dataGridView_verdatos.DataSource = dt;
                 com.Clone();
                 cnn.Close();
             }
@@ -208,11 +208,11 @@ namespace PdeV_Delsel
             try
             {
                 OleDbCommand com = new OleDbCommand();
-                OleDbConnection cnn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PuntodeVentaBD.accdb");
+                OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 cnn.Open();
                 com.Connection = cnn;
                 //string IdProducto = Convert.ToString(txtIdProducto.Text);
-                com.CommandText = "insert into DetalleVentaTB (Cantidad, Precio) VALUES ('" + numericCont.Text + "','" + txt_valorU.Text + "')";
+                com.CommandText = "insert into DetalleVentaTB (Cantidad, Precio) VALUES ('" + txt_cantidad.Text + "','" + txt_precioU.Text + "')";
                 com.ExecuteNonQuery();
                 MessageBox.Show("Venta guardada exitosamente");
                 cnn.Close();
@@ -226,13 +226,13 @@ namespace PdeV_Delsel
             double subtotal = 0;
             double iva = 0;
 
-            foreach (DataGridViewRow row in dataMostrarInfo.Rows)
+            foreach (DataGridViewRow row in dataGridView_verdatos.Rows)
             {
                 subtotal += Convert.ToDouble(row.Cells["Precio"].Value);
             }
             txt_subtotal.Text = Convert.ToString(subtotal);
 
-            if (checkB_iva.Checked == true)
+            if (checkBox_iva.Checked == true)
             {
                 iva += Convert.ToDouble(subtotal * 0.16);
                 txt_total.Text = Convert.ToString(iva + subtotal);
@@ -240,8 +240,30 @@ namespace PdeV_Delsel
             else
             {
                 txt_total.Text = Convert.ToString(subtotal);
-            } */
+            } 
             #endregion
+        }
+
+        private void checkBox_iva_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_iva.Checked == false)
+            {
+                double subtotal = Convert.ToDouble(txt_subtotal.Text);
+                lbl_iva.Text = "0";
+                txt_total.Text = Convert.ToString(subtotal);
+            }
+            else if (txt_subtotal.Text != "")
+            {
+                double subtotal = Convert.ToDouble(txt_subtotal.Text);
+                double iva = 0;
+                lbl_iva.Text = "16";
+                iva += Convert.ToDouble(subtotal * 0.16);
+                txt_total.Text = Convert.ToString(iva + subtotal);
+            }
+            else
+            {
+                lbl_iva.Text = "16";
+            }
         }
     }
 }

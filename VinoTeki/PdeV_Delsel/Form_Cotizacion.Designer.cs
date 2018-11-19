@@ -232,6 +232,7 @@
             this.checkBox_iva.TabIndex = 26;
             this.checkBox_iva.Text = "I.V.A:";
             this.checkBox_iva.UseVisualStyleBackColor = true;
+            this.checkBox_iva.CheckedChanged += new System.EventHandler(this.checkBox_iva_CheckedChanged);
             // 
             // lbl_total
             // 
