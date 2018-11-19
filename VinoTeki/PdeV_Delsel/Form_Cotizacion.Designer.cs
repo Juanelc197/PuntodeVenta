@@ -403,6 +403,7 @@
             this.btn_agregar.TabIndex = 9;
             this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // comboBox_productos
             // 

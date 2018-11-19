@@ -161,5 +161,87 @@ namespace PdeV_Delsel
             cnn.Close();
             #endregion
         }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            #region code prueba
+            /*try
+            {
+                OleDbCommand com = new OleDbCommand();
+                OleDbConnection cnn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PuntodeVentaBD.accdb");
+                cnn.Open();
+                com.Connection = cnn;
+                com.CommandText = "insert into VentasTemporalesTB (Producto, Cantidad, Precio) VALUES ('" + comboProducto.Text + "','" + numericCont.Value + "','" + txt_valorU.Text + "')";
+                //com.CommandText = "insert into CotizacionTB (Producto, Cantidad, PrecioUnitario) VALUES ('" + comboProducto.Text + "','" + numericCont.Value + "','" + txt_valorU.Text + "')";
+                com.ExecuteNonQuery();
+                //MessageBox.Show("Cliente guardado exitosamente");
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No se pudo guardar " + ex);
+            }
+
+            try
+            {
+                OleDbCommand com = new OleDbCommand();
+                OleDbConnection cnn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PuntodeVentaBD.accdb");
+                cnn.Open();
+                com.Connection = cnn;
+                string query = "select Producto, Cantidad, Precio from VentasTemporalesTB";
+                com.CommandText = query;
+
+                OleDbDataAdapter da = new OleDbDataAdapter(com);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataMostrarInfo.DataSource = dt;
+                com.Clone();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                //connection.Close();
+                MessageBox.Show("No se pudo llenar el Datagridview: " + ex.ToString());
+            }
+
+            try
+            {
+                OleDbCommand com = new OleDbCommand();
+                OleDbConnection cnn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PuntodeVentaBD.accdb");
+                cnn.Open();
+                com.Connection = cnn;
+                //string IdProducto = Convert.ToString(txtIdProducto.Text);
+                com.CommandText = "insert into DetalleVentaTB (Cantidad, Precio) VALUES ('" + numericCont.Text + "','" + txt_valorU.Text + "')";
+                com.ExecuteNonQuery();
+                MessageBox.Show("Venta guardada exitosamente");
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                //connection.Close();
+                MessageBox.Show("error " + ex);
+            }
+
+            double subtotal = 0;
+            double iva = 0;
+
+            foreach (DataGridViewRow row in dataMostrarInfo.Rows)
+            {
+                subtotal += Convert.ToDouble(row.Cells["Precio"].Value);
+            }
+            txt_subtotal.Text = Convert.ToString(subtotal);
+
+            if (checkB_iva.Checked == true)
+            {
+                iva += Convert.ToDouble(subtotal * 0.16);
+                txt_total.Text = Convert.ToString(iva + subtotal);
+            }
+            else
+            {
+                txt_total.Text = Convert.ToString(subtotal);
+            } */
+            #endregion
+        }
     }
 }
