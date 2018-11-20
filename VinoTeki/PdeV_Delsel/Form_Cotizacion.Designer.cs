@@ -44,6 +44,10 @@
             this.btn_inicio = new System.Windows.Forms.Button();
             this.tableLayoutPanel_con4 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView_verdatos = new System.Windows.Forms.DataGridView();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostoT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel_con3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_idP = new System.Windows.Forms.Label();
             this.lbl_conCant = new System.Windows.Forms.Label();
@@ -72,10 +76,6 @@
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.comboBox_cliente = new System.Windows.Forms.ComboBox();
             this.lbl_numerodeventa = new System.Windows.Forms.Label();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CostoT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_barraT.SuspendLayout();
             this.tableLayoutPanel_final.SuspendLayout();
             this.tableLayoutPanel_con4.SuspendLayout();
@@ -346,6 +346,26 @@
             this.dataGridView_verdatos.Name = "dataGridView_verdatos";
             this.dataGridView_verdatos.Size = new System.Drawing.Size(1016, 259);
             this.dataGridView_verdatos.TabIndex = 7;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // CostoT
+            // 
+            this.CostoT.HeaderText = "Costo Total";
+            this.CostoT.Name = "CostoT";
             // 
             // tableLayoutPanel_con3
             // 
@@ -786,26 +806,6 @@
             this.lbl_numerodeventa.Size = new System.Drawing.Size(36, 38);
             this.lbl_numerodeventa.TabIndex = 23;
             this.lbl_numerodeventa.Text = "#";
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // CostoT
-            // 
-            this.CostoT.HeaderText = "Costo Total";
-            this.CostoT.Name = "CostoT";
             // 
             // Form_Cotizacion
             // 
