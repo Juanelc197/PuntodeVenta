@@ -144,8 +144,8 @@ namespace PdeV_Delsel
                 //txt_descrip.Text = leer["Descripcion"].ToString();
                 lbl_conCant.Text = leer["Cantidad"].ToString();
                 //txt_costo.Text = leer["Costo"].ToString();
-                txt_precioU.Text = leer["Precio"].ToString();
-                lbl_precioP.Text = leer["Precio"].ToString();
+                lbl_preciosolo.Text = leer["Precio"].ToString();
+                //lbl_precioP.Text = leer["Precio"].ToString();
                 lbl_idP.Text = leer["IdProducto"].ToString();
             }
             else
@@ -157,8 +157,8 @@ namespace PdeV_Delsel
                 //txt_descrip.Text = "";
                 //txt_cantidad.Text = "";
                 //txt_costo.Text = "";
-                txt_precioU.Text = "";
-                lbl_precioP.Text = "";
+                lbl_preciosolo.Text = "";
+                //lbl_precioP.Text = "";
                 lbl_idP.Text = "#";
                 lbl_conCant.Text = "...";
             }
@@ -168,14 +168,14 @@ namespace PdeV_Delsel
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            #region code prueba
-            try
+            #region guardar info en dos tablas diferentes y mostrarlas en un datagridview
+            /*try
             {
                 OleDbCommand com = new OleDbCommand();
                 OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 cnn.Open();
                 com.Connection = cnn;
-                com.CommandText = "Insert into Table_VentasTemporales (Producto, Cantidad, Precio) VALUES ('" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + txt_precioU.Text + "')";
+                com.CommandText = "Insert into Table_VentasTemporales (Producto, Cantidad, Precio) VALUES ('" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + lbl_preciosolo.Text + "')";
                 //com.CommandText = "insert into CotizacionTB (Producto, Cantidad, PrecioUnitario) VALUES ('" + comboProducto.Text + "','" + numericCont.Value + "','" + txt_valorU.Text + "')";
                 com.ExecuteNonQuery();
                 //MessageBox.Show("Cliente guardado exitosamente");
@@ -216,7 +216,7 @@ namespace PdeV_Delsel
                 cnn.Open();
                 com.Connection = cnn;
                 //string IdProducto = Convert.ToString(txtIdProducto.Text);
-                com.CommandText = "insert into Table_DetalledeVenta (Cantidad, PrecioUnitario) VALUES ('" + txt_cantidad.Text + "','" + txt_precioU.Text + "')";
+                com.CommandText = "insert into Table_DetalledeVenta (Cantidad, PrecioUnitario) VALUES ('" + txt_cantidad.Text + "','" + lbl_preciosolo.Text + "')";
                 com.ExecuteNonQuery();
                 //MessageBox.Show("Venta guardada exitosamente");
                 cnn.Close();
@@ -225,16 +225,35 @@ namespace PdeV_Delsel
             {
                 //connection.Close();
                 MessageBox.Show("error " + ex);
-            }
+            } */
+            #endregion
 
+            #region codigo para realisar una suma en columnas y agregar iva
             double subtotal = 0;
             double iva = 0;
 
-            foreach (DataGridViewRow row in dataGridView_verdatos.Rows)
+            /*foreach (DataGridViewRow row in dataGridView_verdatos.Rows)
             {
                 subtotal += Convert.ToDouble(row.Cells["Precio"].Value);
             }
+            txt_subtotal.Text = Convert.ToString(subtotal); */
+
+            double suma, precio, can;
+            //int can;
+            can = double.Parse(txt_cantidad.Text);
+            precio = double.Parse(lbl_preciosolo.Text);
+
+            suma = can * precio;
+            txt_subtotal.Text = Convert.ToString(suma);
+
+            dataGridView_verdatos.Rows.Add(comboBox_productos.Text, txt_cantidad.Text, lbl_preciosolo.Text, txt_subtotal.Text);
+
+            foreach (DataGridViewRow row in dataGridView_verdatos.Rows)
+            {
+                subtotal += Convert.ToDouble(row.Cells["CostoT"].Value);
+            }
             txt_subtotal.Text = Convert.ToString(subtotal);
+
 
             if (checkBox_iva.Checked == true)
             {
@@ -244,12 +263,13 @@ namespace PdeV_Delsel
             else
             {
                 txt_total.Text = Convert.ToString(subtotal);
-            } 
+            }
             #endregion
         }
 
         private void checkBox_iva_CheckedChanged(object sender, EventArgs e)
         {
+            #region para hacer el iva
             if (checkBox_iva.Checked == false)
             {
                 double subtotal = Convert.ToDouble(txt_subtotal.Text);
@@ -260,14 +280,15 @@ namespace PdeV_Delsel
             {
                 double subtotal = Convert.ToDouble(txt_subtotal.Text);
                 double iva = 0;
-                lbl_iva.Text = "16";
+                lbl_iva.Text = "16%";
                 iva += Convert.ToDouble(subtotal * 0.16);
                 txt_total.Text = Convert.ToString(iva + subtotal);
             }
             else
             {
-                lbl_iva.Text = "16";
+                lbl_iva.Text = "16%";
             }
+            #endregion
         }
     }
 }
