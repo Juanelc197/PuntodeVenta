@@ -290,5 +290,25 @@ namespace PdeV_Delsel
             }
             #endregion
         }
+
+        private void btn_cotizar_Click(object sender, EventArgs e)
+        {
+            /* try
+            {
+                OleDbCommand com = new OleDbCommand();
+                OleDbConnection cnn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PuntodeVentaBD.accdb");
+                cnn.Open();
+                com.CommandText = "INSERT INTO CotizacionTB (Nombre, RFC, Telefono, Email, Direccion, Fecha, Producto, Cantidad, PrecioUnitario, SubTotal, Total) values ('" + comboNombreCli.Text + "','" + txt_rfc.Text + "','" + txt_telefono.Text + "','" + txt_email.Text + "','" + txt_direccion.Text + "','" + dateFecha.Value.Date + "','" + comboProducto.Text + "','" + numericCont.Text + "','" + txt_valorU.Text + "','" + txt_subtotal.Text + "','" + txt_total.Text + "')";
+                com.Connection = cnn;
+
+                com.ExecuteNonQuery();
+                MessageBox.Show("Guardado exitoso");
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hay problemas " + ex);
+            } */
+        }
     }
 }
