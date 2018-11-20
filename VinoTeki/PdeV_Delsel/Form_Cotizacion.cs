@@ -168,7 +168,7 @@ namespace PdeV_Delsel
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            #region guardar info en dos tablas diferentes y mostrarlas en un datagridview
+            #region guardar info en dos tablas diferentes y mostrarlas en un datagridview con base de datos
             /*try
             {
                 OleDbCommand com = new OleDbCommand();
