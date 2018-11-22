@@ -293,22 +293,22 @@ namespace PdeV_Delsel
 
         private void btn_cotizar_Click(object sender, EventArgs e)
         {
-            /* try
+            try
             {
                 OleDbCommand com = new OleDbCommand();
-                OleDbConnection cnn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PuntodeVentaBD.accdb");
+                OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 cnn.Open();
-                com.CommandText = "INSERT INTO CotizacionTB (Nombre, RFC, Telefono, Email, Direccion, Fecha, Producto, Cantidad, PrecioUnitario, SubTotal, Total) values ('" + comboNombreCli.Text + "','" + txt_rfc.Text + "','" + txt_telefono.Text + "','" + txt_email.Text + "','" + txt_direccion.Text + "','" + dateFecha.Value.Date + "','" + comboProducto.Text + "','" + numericCont.Text + "','" + txt_valorU.Text + "','" + txt_subtotal.Text + "','" + txt_total.Text + "')";
+                com.CommandText = "Insert into Table_Cotizacion (Nombre, RFC, RazonSocial, Direccion, Email, Telefono, Producto, Cantidad, Subtotal, Total) values ('" + txt_nombre.Text + "','" + txt_rfc.Text + "','" + txt_razonsocial.Text + "','" + txt_direccion.Text + "','" + txt_email.Text + "','" + txt_telefono.Text + "','" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + txt_subtotal.Text + "','" + txt_total.Text + "')";
                 com.Connection = cnn;
 
                 com.ExecuteNonQuery();
-                MessageBox.Show("Guardado exitoso");
+                MessageBox.Show("Cotizacion creada");
                 cnn.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Hay problemas " + ex);
-            } */
+            } 
         }
     }
 }
