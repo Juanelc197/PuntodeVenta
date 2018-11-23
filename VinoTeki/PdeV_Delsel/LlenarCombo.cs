@@ -66,5 +66,25 @@ namespace PdeV_Delsel
                 MessageBox.Show("Hay problemas..." + ex.ToString());
             }
         }
+
+        public void ItemLlenarCotizacion(ComboBox cb)
+        {
+            try
+            {
+                com = new OleDbCommand("select Nombre from Table_Cotizacion", cnn);
+                dr = com.ExecuteReader();
+                //parte de aztualizar combobox cliente
+                cb.Items.Clear();
+                while (dr.Read())
+                {
+                    cb.Items.Add(dr["Nombre"].ToString());
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hay problemas..." + ex.ToString());
+            }
+        }
     }
 }

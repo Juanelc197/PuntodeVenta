@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel_Titulo = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel_contenedorTop = new System.Windows.Forms.TableLayoutPanel();
@@ -35,7 +38,7 @@
             this.lbl_Ucotizacion = new System.Windows.Forms.Label();
             this.lbl_Ultimacotizacion = new System.Windows.Forms.Label();
             this.lbl_cliente = new System.Windows.Forms.Label();
-            this.comboBox_cliente = new System.Windows.Forms.ComboBox();
+            this.comboBox_clienteCot = new System.Windows.Forms.ComboBox();
             this.lbl_numerodeventa = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
@@ -51,15 +54,20 @@
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_domicilio = new System.Windows.Forms.Label();
             this.tableLayoutPanel_con3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_conCant = new System.Windows.Forms.Label();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.comboBox_productos = new System.Windows.Forms.ComboBox();
             this.lbl_cantidad = new System.Windows.Forms.Label();
             this.lbl_producto = new System.Windows.Forms.Label();
             this.txt_cantidad = new System.Windows.Forms.TextBox();
-            this.txt_precioU = new System.Windows.Forms.TextBox();
             this.lbl_precioU = new System.Windows.Forms.Label();
-            this.dataGridView_verdatos = new System.Windows.Forms.DataGridView();
+            this.lbl_preciosolo = new System.Windows.Forms.Label();
             this.tableLayoutPanel_con4 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridView_verdatos = new System.Windows.Forms.DataGridView();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostoT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel_final = new System.Windows.Forms.TableLayoutPanel();
             this.btn_venta = new System.Windows.Forms.Button();
             this.lbl_iva = new System.Windows.Forms.Label();
@@ -67,7 +75,7 @@
             this.txt_subtotal = new System.Windows.Forms.TextBox();
             this.checkBox_iva = new System.Windows.Forms.CheckBox();
             this.lbl_total = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_total = new System.Windows.Forms.TextBox();
             this.checkBox_efectivo = new System.Windows.Forms.CheckBox();
             this.checkBox_tarjeta = new System.Windows.Forms.CheckBox();
             this.lbl_formaPago = new System.Windows.Forms.Label();
@@ -75,8 +83,8 @@
             this.tableLayoutPanel_contenedorTop.SuspendLayout();
             this.tableLayoutPanel_con2.SuspendLayout();
             this.tableLayoutPanel_con3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_verdatos)).BeginInit();
             this.tableLayoutPanel_con4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_verdatos)).BeginInit();
             this.tableLayoutPanel_final.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,16 +121,16 @@
             // tableLayoutPanel_contenedorTop
             // 
             this.tableLayoutPanel_contenedorTop.ColumnCount = 5;
-            this.tableLayoutPanel_contenedorTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.588365F));
-            this.tableLayoutPanel_contenedorTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.76158F));
-            this.tableLayoutPanel_contenedorTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.24406F));
+            this.tableLayoutPanel_contenedorTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.40855F));
+            this.tableLayoutPanel_contenedorTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.75297F));
+            this.tableLayoutPanel_contenedorTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.35629F));
             this.tableLayoutPanel_contenedorTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.49704F));
             this.tableLayoutPanel_contenedorTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.90895F));
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.btn_ver, 4, 1);
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_Ucotizacion, 3, 0);
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_Ultimacotizacion, 4, 0);
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_cliente, 0, 0);
-            this.tableLayoutPanel_contenedorTop.Controls.Add(this.comboBox_cliente, 1, 0);
+            this.tableLayoutPanel_contenedorTop.Controls.Add(this.comboBox_clienteCot, 1, 0);
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_numerodeventa, 3, 1);
             this.tableLayoutPanel_contenedorTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_contenedorTop.Location = new System.Drawing.Point(0, 76);
@@ -188,26 +196,27 @@
             this.lbl_cliente.BackColor = System.Drawing.Color.Transparent;
             this.lbl_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cliente.ForeColor = System.Drawing.Color.Black;
-            this.lbl_cliente.Location = new System.Drawing.Point(54, 9);
+            this.lbl_cliente.Location = new System.Drawing.Point(42, 9);
             this.lbl_cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_cliente.Name = "lbl_cliente";
-            this.lbl_cliente.Size = new System.Drawing.Size(103, 29);
+            this.lbl_cliente.Size = new System.Drawing.Size(264, 29);
             this.lbl_cliente.TabIndex = 23;
-            this.lbl_cliente.Text = "Cliente:";
+            this.lbl_cliente.Text = "Cotizacion de cliente:";
             // 
-            // comboBox_cliente
+            // comboBox_clienteCot
             // 
-            this.comboBox_cliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBox_clienteCot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.comboBox_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_cliente.ForeColor = System.Drawing.Color.White;
-            this.comboBox_cliente.FormattingEnabled = true;
-            this.comboBox_cliente.Location = new System.Drawing.Point(165, 4);
-            this.comboBox_cliente.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_cliente.Name = "comboBox_cliente";
-            this.comboBox_cliente.Size = new System.Drawing.Size(341, 33);
-            this.comboBox_cliente.TabIndex = 21;
+            this.comboBox_clienteCot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.comboBox_clienteCot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_clienteCot.ForeColor = System.Drawing.Color.White;
+            this.comboBox_clienteCot.FormattingEnabled = true;
+            this.comboBox_clienteCot.Location = new System.Drawing.Point(314, 4);
+            this.comboBox_clienteCot.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_clienteCot.Name = "comboBox_clienteCot";
+            this.comboBox_clienteCot.Size = new System.Drawing.Size(392, 33);
+            this.comboBox_clienteCot.TabIndex = 21;
+            this.comboBox_clienteCot.SelectedIndexChanged += new System.EventHandler(this.comboBox_clienteCot_SelectedIndexChanged);
             // 
             // lbl_numerodeventa
             // 
@@ -428,13 +437,14 @@
             this.tableLayoutPanel_con3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.71474F));
             this.tableLayoutPanel_con3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.7498F));
             this.tableLayoutPanel_con3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.13143F));
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_conCant, 0, 2);
             this.tableLayoutPanel_con3.Controls.Add(this.btn_agregar, 3, 2);
             this.tableLayoutPanel_con3.Controls.Add(this.comboBox_productos, 1, 0);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_cantidad, 2, 0);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_producto, 0, 0);
             this.tableLayoutPanel_con3.Controls.Add(this.txt_cantidad, 3, 0);
-            this.tableLayoutPanel_con3.Controls.Add(this.txt_precioU, 3, 1);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_precioU, 2, 1);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_preciosolo, 3, 1);
             this.tableLayoutPanel_con3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_con3.Location = new System.Drawing.Point(0, 369);
             this.tableLayoutPanel_con3.Margin = new System.Windows.Forms.Padding(4);
@@ -447,6 +457,19 @@
             this.tableLayoutPanel_con3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel_con3.Size = new System.Drawing.Size(1684, 142);
             this.tableLayoutPanel_con3.TabIndex = 6;
+            // 
+            // lbl_conCant
+            // 
+            this.lbl_conCant.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_conCant.AutoSize = true;
+            this.lbl_conCant.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_conCant.ForeColor = System.Drawing.Color.White;
+            this.lbl_conCant.Location = new System.Drawing.Point(116, 102);
+            this.lbl_conCant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_conCant.Name = "lbl_conCant";
+            this.lbl_conCant.Size = new System.Drawing.Size(112, 40);
+            this.lbl_conCant.TabIndex = 27;
+            this.lbl_conCant.Text = "Stock";
             // 
             // btn_agregar
             // 
@@ -466,6 +489,7 @@
             this.btn_agregar.TabIndex = 9;
             this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // comboBox_productos
             // 
@@ -480,6 +504,7 @@
             this.comboBox_productos.Name = "comboBox_productos";
             this.comboBox_productos.Size = new System.Drawing.Size(492, 37);
             this.comboBox_productos.TabIndex = 22;
+            this.comboBox_productos.SelectedIndexChanged += new System.EventHandler(this.comboBox_productos_SelectedIndexChanged);
             // 
             // lbl_cantidad
             // 
@@ -523,20 +548,6 @@
             this.txt_cantidad.Size = new System.Drawing.Size(298, 31);
             this.txt_cantidad.TabIndex = 16;
             // 
-            // txt_precioU
-            // 
-            this.txt_precioU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_precioU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.txt_precioU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_precioU.ForeColor = System.Drawing.Color.White;
-            this.txt_precioU.Location = new System.Drawing.Point(1382, 59);
-            this.txt_precioU.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_precioU.Multiline = true;
-            this.txt_precioU.Name = "txt_precioU";
-            this.txt_precioU.Size = new System.Drawing.Size(298, 31);
-            this.txt_precioU.TabIndex = 14;
-            // 
             // lbl_precioU
             // 
             this.lbl_precioU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -551,17 +562,19 @@
             this.lbl_precioU.TabIndex = 24;
             this.lbl_precioU.Text = "Precio unitario:";
             // 
-            // dataGridView_verdatos
+            // lbl_preciosolo
             // 
-            this.dataGridView_verdatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_verdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_verdatos.Location = new System.Drawing.Point(350, 4);
-            this.dataGridView_verdatos.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView_verdatos.Name = "dataGridView_verdatos";
-            this.dataGridView_verdatos.Size = new System.Drawing.Size(1016, 259);
-            this.dataGridView_verdatos.TabIndex = 7;
+            this.lbl_preciosolo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_preciosolo.AutoSize = true;
+            this.lbl_preciosolo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_preciosolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_preciosolo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_preciosolo.Location = new System.Drawing.Point(1517, 65);
+            this.lbl_preciosolo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_preciosolo.Name = "lbl_preciosolo";
+            this.lbl_preciosolo.Size = new System.Drawing.Size(27, 29);
+            this.lbl_preciosolo.TabIndex = 28;
+            this.lbl_preciosolo.Text = "#";
             // 
             // tableLayoutPanel_con4
             // 
@@ -580,6 +593,77 @@
             this.tableLayoutPanel_con4.Size = new System.Drawing.Size(1684, 267);
             this.tableLayoutPanel_con4.TabIndex = 8;
             // 
+            // dataGridView_verdatos
+            // 
+            this.dataGridView_verdatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_verdatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView_verdatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView_verdatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.dataGridView_verdatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_verdatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_verdatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_verdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_verdatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Producto,
+            this.Cantidad,
+            this.Precio,
+            this.CostoT});
+            this.dataGridView_verdatos.EnableHeadersVisualStyles = false;
+            this.dataGridView_verdatos.GridColor = System.Drawing.Color.LimeGreen;
+            this.dataGridView_verdatos.Location = new System.Drawing.Point(350, 4);
+            this.dataGridView_verdatos.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView_verdatos.Name = "dataGridView_verdatos";
+            this.dataGridView_verdatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_verdatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView_verdatos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_verdatos.Size = new System.Drawing.Size(1016, 259);
+            this.dataGridView_verdatos.TabIndex = 8;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.Width = 162;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 162;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 132;
+            // 
+            // CostoT
+            // 
+            this.CostoT.HeaderText = "Costo Total";
+            this.CostoT.Name = "CostoT";
+            this.CostoT.Width = 207;
+            // 
             // tableLayoutPanel_final
             // 
             this.tableLayoutPanel_final.ColumnCount = 5;
@@ -594,7 +678,7 @@
             this.tableLayoutPanel_final.Controls.Add(this.txt_subtotal, 4, 0);
             this.tableLayoutPanel_final.Controls.Add(this.checkBox_iva, 3, 1);
             this.tableLayoutPanel_final.Controls.Add(this.lbl_total, 3, 2);
-            this.tableLayoutPanel_final.Controls.Add(this.textBox1, 4, 2);
+            this.tableLayoutPanel_final.Controls.Add(this.txt_total, 4, 2);
             this.tableLayoutPanel_final.Controls.Add(this.checkBox_efectivo, 2, 0);
             this.tableLayoutPanel_final.Controls.Add(this.checkBox_tarjeta, 2, 1);
             this.tableLayoutPanel_final.Controls.Add(this.lbl_formaPago, 1, 0);
@@ -682,6 +766,7 @@
             this.checkBox_iva.TabIndex = 26;
             this.checkBox_iva.Text = "I.V.A:";
             this.checkBox_iva.UseVisualStyleBackColor = true;
+            this.checkBox_iva.CheckedChanged += new System.EventHandler(this.checkBox_iva_CheckedChanged);
             // 
             // lbl_total
             // 
@@ -697,19 +782,19 @@
             this.lbl_total.TabIndex = 24;
             this.lbl_total.Text = "Total: $";
             // 
-            // textBox1
+            // txt_total
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_total.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(1428, 86);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 31);
-            this.textBox1.TabIndex = 14;
+            this.txt_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.txt_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total.ForeColor = System.Drawing.Color.White;
+            this.txt_total.Location = new System.Drawing.Point(1428, 86);
+            this.txt_total.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_total.Multiline = true;
+            this.txt_total.Name = "txt_total";
+            this.txt_total.Size = new System.Drawing.Size(252, 31);
+            this.txt_total.TabIndex = 14;
             // 
             // checkBox_efectivo
             // 
@@ -767,6 +852,7 @@
             this.Name = "Form_venta";
             this.Opacity = 0.98D;
             this.Text = "Form_venta";
+            this.Load += new System.EventHandler(this.Form_venta_Load);
             this.tableLayoutPanel_Titulo.ResumeLayout(false);
             this.tableLayoutPanel_Titulo.PerformLayout();
             this.tableLayoutPanel_contenedorTop.ResumeLayout(false);
@@ -775,8 +861,8 @@
             this.tableLayoutPanel_con2.PerformLayout();
             this.tableLayoutPanel_con3.ResumeLayout(false);
             this.tableLayoutPanel_con3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_verdatos)).EndInit();
             this.tableLayoutPanel_con4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_verdatos)).EndInit();
             this.tableLayoutPanel_final.ResumeLayout(false);
             this.tableLayoutPanel_final.PerformLayout();
             this.ResumeLayout(false);
@@ -789,7 +875,7 @@
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_contenedorTop;
         private System.Windows.Forms.Label lbl_cliente;
-        private System.Windows.Forms.ComboBox comboBox_cliente;
+        private System.Windows.Forms.ComboBox comboBox_clienteCot;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.TextBox txt_razonsocial;
         private System.Windows.Forms.Label lbl_razonsocial;
@@ -811,10 +897,8 @@
         private System.Windows.Forms.Label lbl_precioU;
         private System.Windows.Forms.Label lbl_producto;
         private System.Windows.Forms.TextBox txt_cantidad;
-        private System.Windows.Forms.TextBox txt_precioU;
         private System.Windows.Forms.ComboBox comboBox_productos;
         private System.Windows.Forms.Button btn_agregar;
-        private System.Windows.Forms.DataGridView dataGridView_verdatos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_con4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_final;
         private System.Windows.Forms.Button btn_venta;
@@ -823,10 +907,17 @@
         private System.Windows.Forms.TextBox txt_subtotal;
         private System.Windows.Forms.CheckBox checkBox_iva;
         private System.Windows.Forms.Label lbl_total;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_total;
         private System.Windows.Forms.CheckBox checkBox_efectivo;
         private System.Windows.Forms.CheckBox checkBox_tarjeta;
         private System.Windows.Forms.Label lbl_formaPago;
         private System.Windows.Forms.Label lbl_numerodeventa;
+        private System.Windows.Forms.Label lbl_conCant;
+        private System.Windows.Forms.Label lbl_preciosolo;
+        private System.Windows.Forms.DataGridView dataGridView_verdatos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CostoT;
     }
 }
