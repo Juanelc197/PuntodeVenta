@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel_Titulo = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel_contenedorTop = new System.Windows.Forms.TableLayoutPanel();
@@ -76,9 +76,8 @@
             this.checkBox_iva = new System.Windows.Forms.CheckBox();
             this.lbl_total = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
-            this.checkBox_efectivo = new System.Windows.Forms.CheckBox();
-            this.checkBox_tarjeta = new System.Windows.Forms.CheckBox();
             this.lbl_formaPago = new System.Windows.Forms.Label();
+            this.comboBox_FormaPago = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_contenedorTop.SuspendLayout();
             this.tableLayoutPanel_con2.SuspendLayout();
@@ -603,14 +602,14 @@
             this.dataGridView_verdatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.dataGridView_verdatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_verdatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_verdatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_verdatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_verdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_verdatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Producto,
@@ -623,20 +622,20 @@
             this.dataGridView_verdatos.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_verdatos.Name = "dataGridView_verdatos";
             this.dataGridView_verdatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_verdatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView_verdatos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_verdatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView_verdatos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_verdatos.Size = new System.Drawing.Size(1016, 259);
             this.dataGridView_verdatos.TabIndex = 8;
             // 
@@ -668,8 +667,8 @@
             // 
             this.tableLayoutPanel_final.ColumnCount = 5;
             this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.42755F));
-            this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.28028F));
-            this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.87648F));
+            this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.30166F));
+            this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.85511F));
             this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.976247F));
             this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.36025F));
             this.tableLayoutPanel_final.Controls.Add(this.btn_venta, 0, 2);
@@ -679,9 +678,8 @@
             this.tableLayoutPanel_final.Controls.Add(this.checkBox_iva, 3, 1);
             this.tableLayoutPanel_final.Controls.Add(this.lbl_total, 3, 2);
             this.tableLayoutPanel_final.Controls.Add(this.txt_total, 4, 2);
-            this.tableLayoutPanel_final.Controls.Add(this.checkBox_efectivo, 2, 0);
-            this.tableLayoutPanel_final.Controls.Add(this.checkBox_tarjeta, 2, 1);
             this.tableLayoutPanel_final.Controls.Add(this.lbl_formaPago, 1, 0);
+            this.tableLayoutPanel_final.Controls.Add(this.comboBox_FormaPago, 2, 0);
             this.tableLayoutPanel_final.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_final.Location = new System.Drawing.Point(0, 778);
             this.tableLayoutPanel_final.Margin = new System.Windows.Forms.Padding(4);
@@ -796,31 +794,6 @@
             this.txt_total.Size = new System.Drawing.Size(252, 31);
             this.txt_total.TabIndex = 14;
             // 
-            // checkBox_efectivo
-            // 
-            this.checkBox_efectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBox_efectivo.AutoSize = true;
-            this.checkBox_efectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_efectivo.Location = new System.Drawing.Point(1060, 10);
-            this.checkBox_efectivo.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox_efectivo.Name = "checkBox_efectivo";
-            this.checkBox_efectivo.Size = new System.Drawing.Size(111, 29);
-            this.checkBox_efectivo.TabIndex = 25;
-            this.checkBox_efectivo.Text = "Efectivo";
-            this.checkBox_efectivo.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_tarjeta
-            // 
-            this.checkBox_tarjeta.AutoSize = true;
-            this.checkBox_tarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_tarjeta.Location = new System.Drawing.Point(1060, 47);
-            this.checkBox_tarjeta.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox_tarjeta.Name = "checkBox_tarjeta";
-            this.checkBox_tarjeta.Size = new System.Drawing.Size(102, 29);
-            this.checkBox_tarjeta.TabIndex = 26;
-            this.checkBox_tarjeta.Text = "Tarjeta";
-            this.checkBox_tarjeta.UseVisualStyleBackColor = true;
-            // 
             // lbl_formaPago
             // 
             this.lbl_formaPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -828,12 +801,26 @@
             this.lbl_formaPago.BackColor = System.Drawing.Color.Transparent;
             this.lbl_formaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_formaPago.ForeColor = System.Drawing.Color.Black;
-            this.lbl_formaPago.Location = new System.Drawing.Point(854, 14);
+            this.lbl_formaPago.Location = new System.Drawing.Point(787, 14);
             this.lbl_formaPago.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_formaPago.Name = "lbl_formaPago";
             this.lbl_formaPago.Size = new System.Drawing.Size(198, 29);
             this.lbl_formaPago.TabIndex = 24;
             this.lbl_formaPago.Text = "Forma de pago:";
+            // 
+            // comboBox_FormaPago
+            // 
+            this.comboBox_FormaPago.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_FormaPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            this.comboBox_FormaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_FormaPago.ForeColor = System.Drawing.Color.White;
+            this.comboBox_FormaPago.FormattingEnabled = true;
+            this.comboBox_FormaPago.Location = new System.Drawing.Point(993, 4);
+            this.comboBox_FormaPago.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_FormaPago.Name = "comboBox_FormaPago";
+            this.comboBox_FormaPago.Size = new System.Drawing.Size(259, 37);
+            this.comboBox_FormaPago.TabIndex = 27;
             // 
             // Form_venta
             // 
@@ -908,8 +895,6 @@
         private System.Windows.Forms.CheckBox checkBox_iva;
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.TextBox txt_total;
-        private System.Windows.Forms.CheckBox checkBox_efectivo;
-        private System.Windows.Forms.CheckBox checkBox_tarjeta;
         private System.Windows.Forms.Label lbl_formaPago;
         private System.Windows.Forms.Label lbl_numerodeventa;
         private System.Windows.Forms.Label lbl_conCant;
@@ -919,5 +904,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CostoT;
+        private System.Windows.Forms.ComboBox comboBox_FormaPago;
     }
 }

@@ -16,6 +16,9 @@ namespace PdeV_Delsel
         public Form_venta()
         {
             InitializeComponent();
+            comboBox_FormaPago.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_FormaPago.Items.Add("Efectivo");
+            comboBox_FormaPago.Items.Add("Tarjeta de credito");
         }
         Class_ProductoTB P = new Class_ProductoTB();
 
@@ -73,6 +76,8 @@ namespace PdeV_Delsel
 
             comboBox_clienteCot.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox_clienteCot.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            
         }
 
         private void comboBox_clienteCot_SelectedIndexChanged(object sender, EventArgs e)
