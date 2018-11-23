@@ -52,6 +52,7 @@
     <Compile Include="Class_BasedeDatos.cs" />
     <Compile Include="Class_ClienteTB.cs" />
     <Compile Include="Class_ProductoTB.cs" />
+    <Compile Include="Convercion.cs" />
     <Compile Include="FormConsultacliente.cs">
       <SubType>Form</SubType>
     </Compile>
