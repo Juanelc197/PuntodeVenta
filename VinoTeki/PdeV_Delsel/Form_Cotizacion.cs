@@ -81,6 +81,7 @@ namespace PdeV_Delsel
 
         private void Form_Cotizacion_Load(object sender, EventArgs e)
         {
+            #region combobox llenar y autocompletar
             LlenarCombo c = new LlenarCombo();
             c.ItemLlenarC(comboBox_cliente);
 
@@ -92,6 +93,7 @@ namespace PdeV_Delsel
 
             comboBox_productos.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox_productos.AutoCompleteSource = AutoCompleteSource.ListItems;
+            #endregion
         }
 
         private void comboBox_cliente_SelectedIndexChanged(object sender, EventArgs e)
@@ -293,6 +295,7 @@ namespace PdeV_Delsel
 
         private void btn_cotizar_Click(object sender, EventArgs e)
         {
+            #region codigo para generar cotizacion
             try
             {
                 OleDbCommand com = new OleDbCommand();
@@ -308,7 +311,8 @@ namespace PdeV_Delsel
             catch (Exception ex)
             {
                 MessageBox.Show("Hay problemas " + ex);
-            } 
+            }
+            #endregion
         }
     }
 }

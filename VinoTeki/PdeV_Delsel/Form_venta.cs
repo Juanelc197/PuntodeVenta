@@ -225,7 +225,24 @@ namespace PdeV_Delsel
             }
             #endregion
 
+            #region guardar la venta o generar venta
+            try
+            {
+                OleDbCommand com = new OleDbCommand();
+                OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+                cnn.Open();
+                com.CommandText = "Insert into Table_Cotizacion (Nombre, RFC, RazonSocial, Direccion, Email, Telefono, Producto, Cantidad, Subtotal, Total) values ('" + txt_nombre.Text + "','" + txt_rfc.Text + "','" + txt_razonsocial.Text + "','" + txt_direccion.Text + "','" + txt_email.Text + "','" + txt_telefono.Text + "','" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + txt_subtotal.Text + "','" + txt_total.Text + "')";
+                com.Connection = cnn;
 
+                com.ExecuteNonQuery();
+                MessageBox.Show("Cotizacion creada");
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hay problemas " + ex);
+            }
+            #endregion
         }
     }
 }
