@@ -52,6 +52,7 @@ namespace PdeV_Delsel
 
         private void Form_menu_Load(object sender, EventArgs e)
         {
+            #region galeria de imagen
             //galeria de imagen
             //pictureBox_galeria.Image = Properties.Resources.fondo1delsel;
             //pictureBox_galeria.SizeMode = PictureBoxSizeMode.Zoom;
@@ -72,6 +73,7 @@ namespace PdeV_Delsel
         //    int index = DateTime.Now.Second % b1.Count;
         //    pictureBox_galeria.Image = b1[index];
         //}
+        #endregion
         #region codigo para hacer que un Form sin borde se mueva con el mouse
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 

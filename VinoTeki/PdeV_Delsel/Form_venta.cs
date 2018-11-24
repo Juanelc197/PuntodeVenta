@@ -38,7 +38,7 @@ namespace PdeV_Delsel
                 //txt_marca.Text = leer["Marca"].ToString();
                 //txt_modelo.Text = leer["Modelo"].ToString();
                 //txt_descrip.Text = leer["Descripcion"].ToString();
-                lbl_conCant.Text = leer["Cantidad"].ToString();
+                lbl_conCant.Text = leer["IdProducto"].ToString();
                 //txt_costo.Text = leer["Costo"].ToString();
                 lbl_preciosolo.Text = leer["Precio"].ToString();
                 //lbl_precioP.Text = leer["Precio"].ToString();
@@ -76,6 +76,7 @@ namespace PdeV_Delsel
 
             comboBox_clienteCot.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox_clienteCot.AutoCompleteSource = AutoCompleteSource.ListItems;
+
 
             
         }
@@ -124,6 +125,8 @@ namespace PdeV_Delsel
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
+            
+
             #region codigo para realisar una suma en columnas y agregar iva
             double subtotal = 0;
             double iva = 0;
@@ -162,6 +165,7 @@ namespace PdeV_Delsel
             }
             #endregion
 
+
         }
 
         private void checkBox_iva_CheckedChanged(object sender, EventArgs e)
@@ -186,6 +190,41 @@ namespace PdeV_Delsel
                 lbl_iva.Text = "16%";
             }
             #endregion
+
+        }
+
+        private void txt_total_TextChanged(object sender, EventArgs e)
+        {
+            Convercion c = new Convercion();
+            lbl_letras.Text = c.enletras(txt_total.Text).ToLower();
+        }
+
+        private void btn_venta_Click(object sender, EventArgs e)
+        {
+            #region descontar stock
+            try
+            {
+                OleDbConnection con = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("update Table_Producto set Cantidad = Cantidad - '" + txt_cantidad.Text + "' where IdProducto='" + lbl_conCant.Text + "' ", con);
+
+
+
+                // = "@cantidad";
+                //cmd.Parameters.AddWithValue("@cantidad", txt_cantidad.Text);
+                //cmd.Parameters.AddWithValue("@fechac", this.datefechacliente.Text);
+                //cmd.Parameters.AddWithValue("@IdP", lbl_conCant.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se desconto el producto");
+                con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+            #endregion
+
 
         }
     }
