@@ -77,7 +77,13 @@ namespace PdeV_Delsel
             comboBox_clienteCot.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox_clienteCot.AutoCompleteSource = AutoCompleteSource.ListItems;
 
+            /* DateTime hoy = DateTime.Now;
 
+
+             lbl_fechita.Text = hoy.ToString("dd/MM/yy");
+             hoy = Convert.ToDateTime(lbl_fechita.Text); */
+
+            //DateTime mifecha = dateTimePicker_fecha.Value.Date;
             
         }
 
@@ -202,7 +208,7 @@ namespace PdeV_Delsel
         private void btn_venta_Click(object sender, EventArgs e)
         {
             #region descontar stock
-            try
+           try
             {
                 OleDbConnection con = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 con.Open();
@@ -222,27 +228,33 @@ namespace PdeV_Delsel
             catch
             {
                 MessageBox.Show("Error");
-            }
+            } 
             #endregion
 
             #region guardar la venta o generar venta
-            try
+           try
             {
                 OleDbCommand com = new OleDbCommand();
                 OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 cnn.Open();
-                com.CommandText = "Insert into Table_Cotizacion (Nombre, RFC, RazonSocial, Direccion, Email, Telefono, Producto, Cantidad, FormadePago, Subtotal, Total, Fecha) values ('" + txt_nombre.Text + "','" + txt_rfc.Text + "','" + txt_razonsocial.Text + "','" + txt_direccion.Text + "','" + txt_email.Text + "','" + txt_telefono.Text + "','" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + comboBox_FormaPago.Text + "','" + txt_subtotal.Text + "','" + txt_total.Text + "')";
+                com.CommandText = "Insert into Table_Venta (Nombre, RFC, RazonSocial, Direccion, Email, Telefono, Producto, Cantidad, FormadePago, Subtotal, Total, Fecha) values ('" + txt_nombre.Text + "','" + txt_rfc.Text + "','" + txt_razonsocial.Text + "','" + txt_direccion.Text + "','" + txt_email.Text + "','" + txt_telefono.Text + "','" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + comboBox_FormaPago.Text + "','" + txt_subtotal.Text + "','" + txt_total.Text + "','" + this.dateTimePicker_fecha.Text + "')";
                 com.Connection = cnn;
 
                 com.ExecuteNonQuery();
-                MessageBox.Show("Cotizacion creada");
+                MessageBox.Show("Venta realizada");
                 cnn.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Hay problemas " + ex);
-            }
+            } 
             #endregion
         }
+
+        /*private void timer_fecha_Tick(object sender, EventArgs e)
+        {
+            lbl_fechadeahora.Text = DateTime.Now.ToLongDateString();   
+            
+    } */
+        } 
     }
-}
