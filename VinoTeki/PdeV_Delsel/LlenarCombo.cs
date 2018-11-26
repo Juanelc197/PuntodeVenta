@@ -86,5 +86,25 @@ namespace PdeV_Delsel
                 MessageBox.Show("Hay problemas..." + ex.ToString());
             }
         }
+
+        public void ItemLlenarVenta(ComboBox ve)
+        {
+            try
+            {
+                com = new OleDbCommand("select Nombre from Table_Venta", cnn);
+                dr = com.ExecuteReader();
+                //parte de aztualizar combobox cliente
+                ve.Items.Clear();
+                while (dr.Read())
+                {
+                    ve.Items.Add(dr["Nombre"].ToString());
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hay problemas..." + ex.ToString());
+            }
+        }
     }
 }
