@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel_Titulo = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,11 +45,12 @@
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.comboBox_formadepago = new System.Windows.Forms.ComboBox();
             this.comboBox_cliente = new System.Windows.Forms.ComboBox();
-            this.btn_consultar = new System.Windows.Forms.Button();
             this.lbl_precioU = new System.Windows.Forms.Label();
             this.lbl_folio = new System.Windows.Forms.Label();
             this.txt_folio = new System.Windows.Forms.TextBox();
             this.dataGridView_verdatos = new System.Windows.Forms.DataGridView();
+            this.btn_exportarEx = new System.Windows.Forms.Button();
+            this.btn_consultar = new System.Windows.Forms.Button();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -129,13 +130,14 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 5;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.96651F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.70541F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.03122F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.70784F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.35141F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.75303F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.27467F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.58901F));
             this.tableLayoutPanel2.Controls.Add(this.lbl_hasta, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_desde, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_des, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btn_consultar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_has, 3, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 305);
@@ -154,7 +156,7 @@
             this.lbl_hasta.BackColor = System.Drawing.Color.Transparent;
             this.lbl_hasta.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hasta.ForeColor = System.Drawing.Color.Black;
-            this.lbl_hasta.Location = new System.Drawing.Point(1093, 11);
+            this.lbl_hasta.Location = new System.Drawing.Point(1106, 11);
             this.lbl_hasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_hasta.Name = "lbl_hasta";
             this.lbl_hasta.Size = new System.Drawing.Size(152, 47);
@@ -168,7 +170,7 @@
             this.lbl_desde.BackColor = System.Drawing.Color.Transparent;
             this.lbl_desde.Font = new System.Drawing.Font("Consolas", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_desde.ForeColor = System.Drawing.Color.Black;
-            this.lbl_desde.Location = new System.Drawing.Point(382, 11);
+            this.lbl_desde.Location = new System.Drawing.Point(362, 11);
             this.lbl_desde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_desde.Name = "lbl_desde";
             this.lbl_desde.Size = new System.Drawing.Size(130, 47);
@@ -181,7 +183,7 @@
             this.lbl_des.AutoSize = true;
             this.lbl_des.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_des.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_des.Location = new System.Drawing.Point(430, 76);
+            this.lbl_des.Location = new System.Drawing.Point(410, 76);
             this.lbl_des.Name = "lbl_des";
             this.lbl_des.Size = new System.Drawing.Size(34, 29);
             this.lbl_des.TabIndex = 7;
@@ -193,7 +195,7 @@
             this.lbl_has.AutoSize = true;
             this.lbl_has.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_has.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_has.Location = new System.Drawing.Point(1152, 76);
+            this.lbl_has.Location = new System.Drawing.Point(1165, 76);
             this.lbl_has.Name = "lbl_has";
             this.lbl_has.Size = new System.Drawing.Size(34, 29);
             this.lbl_has.TabIndex = 7;
@@ -209,7 +211,7 @@
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_cliente, 0, 1);
             this.tableLayoutPanel_con3.Controls.Add(this.comboBox_formadepago, 3, 2);
             this.tableLayoutPanel_con3.Controls.Add(this.comboBox_cliente, 1, 1);
-            this.tableLayoutPanel_con3.Controls.Add(this.btn_consultar, 0, 2);
+            this.tableLayoutPanel_con3.Controls.Add(this.btn_exportarEx, 0, 2);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_precioU, 2, 2);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_folio, 2, 1);
             this.tableLayoutPanel_con3.Controls.Add(this.txt_folio, 3, 1);
@@ -223,7 +225,7 @@
             this.tableLayoutPanel_con3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.76033F));
             this.tableLayoutPanel_con3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel_con3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel_con3.Size = new System.Drawing.Size(1733, 137);
+            this.tableLayoutPanel_con3.Size = new System.Drawing.Size(1733, 150);
             this.tableLayoutPanel_con3.TabIndex = 7;
             // 
             // lbl_cliente
@@ -233,7 +235,7 @@
             this.lbl_cliente.BackColor = System.Drawing.Color.Transparent;
             this.lbl_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cliente.ForeColor = System.Drawing.Color.Black;
-            this.lbl_cliente.Location = new System.Drawing.Point(247, 41);
+            this.lbl_cliente.Location = new System.Drawing.Point(247, 48);
             this.lbl_cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_cliente.Name = "lbl_cliente";
             this.lbl_cliente.Size = new System.Drawing.Size(103, 29);
@@ -248,7 +250,7 @@
             this.comboBox_formadepago.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_formadepago.ForeColor = System.Drawing.Color.White;
             this.comboBox_formadepago.FormattingEnabled = true;
-            this.comboBox_formadepago.Location = new System.Drawing.Point(1422, 96);
+            this.comboBox_formadepago.Location = new System.Drawing.Point(1422, 109);
             this.comboBox_formadepago.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_formadepago.Name = "comboBox_formadepago";
             this.comboBox_formadepago.Size = new System.Drawing.Size(307, 37);
@@ -263,33 +265,12 @@
             this.comboBox_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_cliente.ForeColor = System.Drawing.Color.White;
             this.comboBox_cliente.FormattingEnabled = true;
-            this.comboBox_cliente.Location = new System.Drawing.Point(358, 29);
+            this.comboBox_cliente.Location = new System.Drawing.Point(358, 36);
             this.comboBox_cliente.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_cliente.Name = "comboBox_cliente";
             this.comboBox_cliente.Size = new System.Drawing.Size(506, 37);
             this.comboBox_cliente.TabIndex = 22;
             this.comboBox_cliente.SelectedIndexChanged += new System.EventHandler(this.comboBox_cliente_SelectedIndexChanged);
-            // 
-            // btn_consultar
-            // 
-            this.btn_consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_consultar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            this.btn_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_consultar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_consultar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_consultar.Image = global::PdeV_Delsel.Properties.Resources.lupita;
-            this.btn_consultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_consultar.Location = new System.Drawing.Point(85, 76);
-            this.btn_consultar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_consultar.Name = "btn_consultar";
-            this.btn_consultar.Size = new System.Drawing.Size(265, 57);
-            this.btn_consultar.TabIndex = 9;
-            this.btn_consultar.Text = "Consultar";
-            this.btn_consultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_consultar.UseVisualStyleBackColor = true;
-            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // lbl_precioU
             // 
@@ -298,7 +279,7 @@
             this.lbl_precioU.BackColor = System.Drawing.Color.Transparent;
             this.lbl_precioU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_precioU.ForeColor = System.Drawing.Color.Black;
-            this.lbl_precioU.Location = new System.Drawing.Point(1209, 108);
+            this.lbl_precioU.Location = new System.Drawing.Point(1209, 121);
             this.lbl_precioU.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_precioU.Name = "lbl_precioU";
             this.lbl_precioU.Size = new System.Drawing.Size(205, 29);
@@ -312,7 +293,7 @@
             this.lbl_folio.BackColor = System.Drawing.Color.Transparent;
             this.lbl_folio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_folio.ForeColor = System.Drawing.Color.Black;
-            this.lbl_folio.Location = new System.Drawing.Point(1306, 41);
+            this.lbl_folio.Location = new System.Drawing.Point(1306, 48);
             this.lbl_folio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_folio.Name = "lbl_folio";
             this.lbl_folio.Size = new System.Drawing.Size(108, 29);
@@ -327,7 +308,7 @@
             this.txt_folio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_folio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_folio.ForeColor = System.Drawing.Color.White;
-            this.txt_folio.Location = new System.Drawing.Point(1422, 35);
+            this.txt_folio.Location = new System.Drawing.Point(1422, 42);
             this.txt_folio.Margin = new System.Windows.Forms.Padding(4);
             this.txt_folio.Multiline = true;
             this.txt_folio.Name = "txt_folio";
@@ -343,37 +324,79 @@
             this.dataGridView_verdatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(101)))), ((int)(((byte)(80)))));
             this.dataGridView_verdatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_verdatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_verdatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Consolas", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_verdatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_verdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_verdatos.EnableHeadersVisualStyles = false;
             this.dataGridView_verdatos.GridColor = System.Drawing.Color.LimeGreen;
-            this.dataGridView_verdatos.Location = new System.Drawing.Point(85, 613);
+            this.dataGridView_verdatos.Location = new System.Drawing.Point(68, 568);
             this.dataGridView_verdatos.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_verdatos.Name = "dataGridView_verdatos";
             this.dataGridView_verdatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_verdatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView_verdatos.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView_verdatos.Size = new System.Drawing.Size(1329, 172);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_verdatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView_verdatos.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView_verdatos.Size = new System.Drawing.Size(1329, 203);
             this.dataGridView_verdatos.TabIndex = 8;
+            // 
+            // btn_exportarEx
+            // 
+            this.btn_exportarEx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_exportarEx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_exportarEx.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_exportarEx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_exportarEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exportarEx.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exportarEx.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_exportarEx.Image = global::PdeV_Delsel.Properties.Resources.ecxel_icono;
+            this.btn_exportarEx.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_exportarEx.Location = new System.Drawing.Point(135, 96);
+            this.btn_exportarEx.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_exportarEx.Name = "btn_exportarEx";
+            this.btn_exportarEx.Size = new System.Drawing.Size(215, 50);
+            this.btn_exportarEx.TabIndex = 9;
+            this.btn_exportarEx.Text = "Exportar";
+            this.btn_exportarEx.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_exportarEx.UseVisualStyleBackColor = true;
+            this.btn_exportarEx.Click += new System.EventHandler(this.btn_exportarEx_Click);
+            // 
+            // btn_consultar
+            // 
+            this.btn_consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_consultar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(162)))), ((int)(((byte)(2)))));
+            this.btn_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_consultar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_consultar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_consultar.Image = global::PdeV_Delsel.Properties.Resources.lupita;
+            this.btn_consultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_consultar.Location = new System.Drawing.Point(674, 4);
+            this.btn_consultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_consultar.Name = "btn_consultar";
+            this.btn_consultar.Size = new System.Drawing.Size(259, 50);
+            this.btn_consultar.TabIndex = 9;
+            this.btn_consultar.Text = "Consultar";
+            this.btn_consultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_consultar.UseVisualStyleBackColor = true;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // Form_detalledeV
             // 
@@ -425,5 +448,6 @@
         private System.Windows.Forms.DataGridView dataGridView_verdatos;
         private System.Windows.Forms.Label lbl_des;
         private System.Windows.Forms.Label lbl_has;
+        private System.Windows.Forms.Button btn_exportarEx;
     }
 }

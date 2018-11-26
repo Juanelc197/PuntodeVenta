@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using Microsoft.Office.Interop.Excel;
 
 namespace PdeV_Delsel
 {
@@ -52,8 +53,10 @@ namespace PdeV_Delsel
             } */
 
             #endregion
-        } 
-        
+
+            
+        }
+
 
         private void monthCalendar_desde_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -126,6 +129,12 @@ namespace PdeV_Delsel
 
             comboBox_cliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox_cliente.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+
+        private void btn_exportarEx_Click(object sender, EventArgs e)
+        {
+            ExcelConexion ex = new ExcelConexion();
+            ex.exportaraexcel(dataGridView_verdatos);
         }
     }
 }

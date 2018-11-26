@@ -193,6 +193,16 @@ namespace PdeV_Delsel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ecxel_icono {
+            get {
+                object obj = ResourceManager.GetObject("ecxel icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eliminar_super_pequeño {
             get {
                 object obj = ResourceManager.GetObject("eliminar super pequeño", resourceCulture);
