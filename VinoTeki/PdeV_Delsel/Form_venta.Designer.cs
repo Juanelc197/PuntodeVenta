@@ -220,7 +220,7 @@
             this.comboBox_clienteCot.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_clienteCot.Name = "comboBox_clienteCot";
             this.comboBox_clienteCot.Size = new System.Drawing.Size(392, 33);
-            this.comboBox_clienteCot.TabIndex = 21;
+            this.comboBox_clienteCot.TabIndex = 0;
             this.comboBox_clienteCot.SelectedIndexChanged += new System.EventHandler(this.comboBox_clienteCot_SelectedIndexChanged);
             // 
             // lbl_numerodeventa
@@ -261,8 +261,9 @@
             this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre.Multiline = true;
             this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.ReadOnly = true;
             this.txt_nombre.Size = new System.Drawing.Size(492, 36);
-            this.txt_nombre.TabIndex = 13;
+            this.txt_nombre.TabIndex = 0;
             // 
             // lbl_rfc
             // 
@@ -289,8 +290,9 @@
             this.txt_rfc.Margin = new System.Windows.Forms.Padding(4);
             this.txt_rfc.Multiline = true;
             this.txt_rfc.Name = "txt_rfc";
+            this.txt_rfc.ReadOnly = true;
             this.txt_rfc.Size = new System.Drawing.Size(492, 36);
-            this.txt_rfc.TabIndex = 14;
+            this.txt_rfc.TabIndex = 1;
             // 
             // lbl_razonsocial
             // 
@@ -317,8 +319,9 @@
             this.txt_razonsocial.Margin = new System.Windows.Forms.Padding(4);
             this.txt_razonsocial.Multiline = true;
             this.txt_razonsocial.Name = "txt_razonsocial";
+            this.txt_razonsocial.ReadOnly = true;
             this.txt_razonsocial.Size = new System.Drawing.Size(492, 36);
-            this.txt_razonsocial.TabIndex = 15;
+            this.txt_razonsocial.TabIndex = 2;
             // 
             // tableLayoutPanel_con2
             // 
@@ -362,8 +365,9 @@
             this.txt_telefono.Margin = new System.Windows.Forms.Padding(4);
             this.txt_telefono.Multiline = true;
             this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.ReadOnly = true;
             this.txt_telefono.Size = new System.Drawing.Size(558, 36);
-            this.txt_telefono.TabIndex = 16;
+            this.txt_telefono.TabIndex = 5;
             // 
             // txt_email
             // 
@@ -376,8 +380,9 @@
             this.txt_email.Margin = new System.Windows.Forms.Padding(4);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
+            this.txt_email.ReadOnly = true;
             this.txt_email.Size = new System.Drawing.Size(558, 36);
-            this.txt_email.TabIndex = 16;
+            this.txt_email.TabIndex = 4;
             // 
             // txt_direccion
             // 
@@ -390,8 +395,9 @@
             this.txt_direccion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_direccion.Multiline = true;
             this.txt_direccion.Name = "txt_direccion";
+            this.txt_direccion.ReadOnly = true;
             this.txt_direccion.Size = new System.Drawing.Size(558, 36);
-            this.txt_direccion.TabIndex = 16;
+            this.txt_direccion.TabIndex = 3;
             // 
             // lbl_telefono
             // 
@@ -492,7 +498,7 @@
             this.btn_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(177, 38);
-            this.btn_agregar.TabIndex = 9;
+            this.btn_agregar.TabIndex = 2;
             this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
@@ -509,7 +515,7 @@
             this.comboBox_productos.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_productos.Name = "comboBox_productos";
             this.comboBox_productos.Size = new System.Drawing.Size(492, 37);
-            this.comboBox_productos.TabIndex = 22;
+            this.comboBox_productos.TabIndex = 0;
             this.comboBox_productos.SelectedIndexChanged += new System.EventHandler(this.comboBox_productos_SelectedIndexChanged);
             // 
             // lbl_cantidad
@@ -552,7 +558,7 @@
             this.txt_cantidad.Multiline = true;
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(298, 31);
-            this.txt_cantidad.TabIndex = 16;
+            this.txt_cantidad.TabIndex = 1;
             // 
             // lbl_precioU
             // 
@@ -730,7 +736,7 @@
             this.btn_venta.Margin = new System.Windows.Forms.Padding(4);
             this.btn_venta.Name = "btn_venta";
             this.btn_venta.Size = new System.Drawing.Size(195, 63);
-            this.btn_venta.TabIndex = 9;
+            this.btn_venta.TabIndex = 2;
             this.btn_venta.Text = "Venta";
             this.btn_venta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_venta.UseVisualStyleBackColor = true;
@@ -774,8 +780,10 @@
             this.txt_subtotal.Margin = new System.Windows.Forms.Padding(4);
             this.txt_subtotal.Multiline = true;
             this.txt_subtotal.Name = "txt_subtotal";
+            this.txt_subtotal.ReadOnly = true;
             this.txt_subtotal.Size = new System.Drawing.Size(252, 31);
             this.txt_subtotal.TabIndex = 14;
+            this.txt_subtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // checkBox_iva
             // 
@@ -816,8 +824,10 @@
             this.txt_total.Margin = new System.Windows.Forms.Padding(4);
             this.txt_total.Multiline = true;
             this.txt_total.Name = "txt_total";
+            this.txt_total.ReadOnly = true;
             this.txt_total.Size = new System.Drawing.Size(252, 31);
             this.txt_total.TabIndex = 14;
+            this.txt_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_total.TextChanged += new System.EventHandler(this.txt_total_TextChanged);
             // 
             // lbl_letras
@@ -844,7 +854,7 @@
             this.comboBox_FormaPago.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_FormaPago.Name = "comboBox_FormaPago";
             this.comboBox_FormaPago.Size = new System.Drawing.Size(259, 37);
-            this.comboBox_FormaPago.TabIndex = 27;
+            this.comboBox_FormaPago.TabIndex = 1;
             // 
             // lbl_formaPago
             // 
@@ -868,7 +878,7 @@
             this.dateTimePicker_fecha.Location = new System.Drawing.Point(576, 6);
             this.dateTimePicker_fecha.Name = "dateTimePicker_fecha";
             this.dateTimePicker_fecha.Size = new System.Drawing.Size(181, 34);
-            this.dateTimePicker_fecha.TabIndex = 29;
+            this.dateTimePicker_fecha.TabIndex = 0;
             // 
             // Form_venta
             // 
