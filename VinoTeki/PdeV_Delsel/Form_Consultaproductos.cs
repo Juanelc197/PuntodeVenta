@@ -413,17 +413,17 @@ namespace PdeV_Delsel
 
         private void txt_descrip_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                errorP.SetError(txt_descrip, "Solo se permiten letras");
-                txt_descrip.Focus();
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                errorP.Clear();
-            }
+            //if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            //{
+            //    errorP.SetError(txt_descrip, "Solo se permiten letras");
+            //    txt_descrip.Focus();
+            //    e.Handled = true;
+            //    return;
+            //}
+            //else
+            //{
+            //    errorP.Clear();
+            //}
         }
 
         private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
