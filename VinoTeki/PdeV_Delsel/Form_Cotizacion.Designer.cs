@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -79,6 +80,7 @@
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.comboBox_cliente = new System.Windows.Forms.ComboBox();
             this.lbl_numerodeventa = new System.Windows.Forms.Label();
+            this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel_barraT.SuspendLayout();
             this.tableLayoutPanel_final.SuspendLayout();
             this.tableLayoutPanel_con4.SuspendLayout();
@@ -86,6 +88,7 @@
             this.tableLayoutPanel_con3.SuspendLayout();
             this.tableLayoutPanel_con2.SuspendLayout();
             this.tableLayoutPanel_contenedorTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_barraT
@@ -560,17 +563,18 @@
             // 
             // txt_cantidad
             // 
-            this.txt_cantidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_cantidad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txt_cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cantidad.ForeColor = System.Drawing.Color.White;
-            this.txt_cantidad.Location = new System.Drawing.Point(1451, 12);
+            this.txt_cantidad.Location = new System.Drawing.Point(1480, 12);
             this.txt_cantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cantidad.Multiline = true;
             this.txt_cantidad.Name = "txt_cantidad";
-            this.txt_cantidad.Size = new System.Drawing.Size(229, 31);
+            this.txt_cantidad.Size = new System.Drawing.Size(170, 31);
             this.txt_cantidad.TabIndex = 1;
+            this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_KeyPress);
+            this.txt_cantidad.Validated += new System.EventHandler(this.txt_cantidad_Validated);
             // 
             // lbl_precioU
             // 
@@ -856,6 +860,10 @@
             this.lbl_numerodeventa.TabIndex = 23;
             this.lbl_numerodeventa.Text = "#";
             // 
+            // errorP
+            // 
+            this.errorP.ContainerControl = this;
+            // 
             // Form_Cotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -886,6 +894,7 @@
             this.tableLayoutPanel_con2.PerformLayout();
             this.tableLayoutPanel_contenedorTop.ResumeLayout(false);
             this.tableLayoutPanel_contenedorTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -940,5 +949,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CostoT;
+        private System.Windows.Forms.ErrorProvider errorP;
     }
 }

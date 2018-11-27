@@ -140,5 +140,65 @@ namespace PdeV_Delsel
             C.Razonsocial1 = txt_razonsocial.Text;
             Class_BasedeDatos.GuardarC(C);
         }
+        
+        private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_nombre, "Solo se permiten letras");
+                txt_nombre.Focus();
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_razonsocial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_razonsocial, "Solo se permiten letras");
+                txt_razonsocial.Focus();
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_telefono, "Caracteres y Letras están prohibidos, solo se permite números, gracias :D");
+                txt_telefono.Focus();
+
+                
+                e.Handled = true;
+                return; 
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_nombre_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_nombre.Text))
+            {
+                errorP.SetError(txt_nombre, "Completa el campo para continuar");
+                txt_nombre.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
     }
 }

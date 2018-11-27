@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel_Titulo = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel_ContenedorGlobal = new System.Windows.Forms.TableLayoutPanel();
@@ -50,8 +51,10 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_eliminar = new System.Windows.Forms.Button();
+            this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_ContenedorGlobal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel_Titulo
@@ -202,6 +205,8 @@
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(975, 36);
             this.txt_nombre.TabIndex = 12;
+            this.txt_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_KeyPress);
+            this.txt_nombre.Validated += new System.EventHandler(this.txt_nombre_Validated);
             // 
             // txt_rfc
             // 
@@ -216,6 +221,7 @@
             this.txt_rfc.Name = "txt_rfc";
             this.txt_rfc.Size = new System.Drawing.Size(975, 36);
             this.txt_rfc.TabIndex = 13;
+            this.txt_rfc.Validated += new System.EventHandler(this.txt_rfc_Validated);
             // 
             // txt_direccion
             // 
@@ -230,6 +236,7 @@
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(975, 36);
             this.txt_direccion.TabIndex = 14;
+            this.txt_direccion.Validated += new System.EventHandler(this.txt_direccion_Validated);
             // 
             // txt_telefono
             // 
@@ -244,6 +251,8 @@
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(975, 36);
             this.txt_telefono.TabIndex = 15;
+            this.txt_telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefono_KeyPress);
+            this.txt_telefono.Validated += new System.EventHandler(this.txt_telefono_Validated);
             // 
             // txt_email
             // 
@@ -258,6 +267,7 @@
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(975, 36);
             this.txt_email.TabIndex = 16;
+            this.txt_email.Validated += new System.EventHandler(this.txt_email_Validated);
             // 
             // lbl_rasonsocial
             // 
@@ -286,6 +296,8 @@
             this.txt_rasonsocial.Name = "txt_rasonsocial";
             this.txt_rasonsocial.Size = new System.Drawing.Size(975, 36);
             this.txt_rasonsocial.TabIndex = 16;
+            this.txt_rasonsocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rasonsocial_KeyPress);
+            this.txt_rasonsocial.Validated += new System.EventHandler(this.txt_rasonsocial_Validated);
             // 
             // comboBox_consultaC
             // 
@@ -394,6 +406,10 @@
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
+            // errorP
+            // 
+            this.errorP.ContainerControl = this;
+            // 
             // FormConsultacliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -416,6 +432,7 @@
             this.tableLayoutPanel_Titulo.PerformLayout();
             this.tableLayoutPanel_ContenedorGlobal.ResumeLayout(false);
             this.tableLayoutPanel_ContenedorGlobal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,5 +461,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Label lbl_idcliente;
+        private System.Windows.Forms.ErrorProvider errorP;
     }
 }

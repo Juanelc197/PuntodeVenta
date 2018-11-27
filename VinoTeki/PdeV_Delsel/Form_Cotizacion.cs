@@ -314,5 +314,36 @@ namespace PdeV_Delsel
             }
             #endregion
         }
+        #region validaciones
+        private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_cantidad, "Caracteres y Letras están prohibidos, solo se permite números, gracias :D");
+                txt_cantidad.Focus();
+
+
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_cantidad_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_cantidad.Text))
+            {
+                errorP.SetError(txt_cantidad, "Completa el campo para continuar");
+                txt_cantidad.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+        #endregion 
     }
 }

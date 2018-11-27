@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -81,6 +82,7 @@
             this.comboBox_FormaPago = new System.Windows.Forms.ComboBox();
             this.lbl_formaPago = new System.Windows.Forms.Label();
             this.dateTimePicker_fecha = new System.Windows.Forms.DateTimePicker();
+            this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_contenedorTop.SuspendLayout();
             this.tableLayoutPanel_con2.SuspendLayout();
@@ -88,6 +90,7 @@
             this.tableLayoutPanel_con4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_verdatos)).BeginInit();
             this.tableLayoutPanel_final.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel_Titulo
@@ -548,17 +551,18 @@
             // 
             // txt_cantidad
             // 
-            this.txt_cantidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_cantidad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txt_cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cantidad.ForeColor = System.Drawing.Color.White;
-            this.txt_cantidad.Location = new System.Drawing.Point(1382, 12);
+            this.txt_cantidad.Location = new System.Drawing.Point(1420, 12);
             this.txt_cantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cantidad.Multiline = true;
             this.txt_cantidad.Name = "txt_cantidad";
-            this.txt_cantidad.Size = new System.Drawing.Size(298, 31);
+            this.txt_cantidad.Size = new System.Drawing.Size(222, 31);
             this.txt_cantidad.TabIndex = 1;
+            this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_KeyPress);
+            this.txt_cantidad.Validated += new System.EventHandler(this.txt_cantidad_Validated);
             // 
             // lbl_precioU
             // 
@@ -880,6 +884,10 @@
             this.dateTimePicker_fecha.Size = new System.Drawing.Size(181, 34);
             this.dateTimePicker_fecha.TabIndex = 0;
             // 
+            // errorP
+            // 
+            this.errorP.ContainerControl = this;
+            // 
             // Form_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -911,6 +919,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_verdatos)).EndInit();
             this.tableLayoutPanel_final.ResumeLayout(false);
             this.tableLayoutPanel_final.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -967,5 +976,6 @@
         private System.Windows.Forms.Label lbl_letras;
         private System.Windows.Forms.Label lbl_fechita;
         private System.Windows.Forms.DateTimePicker dateTimePicker_fecha;
+        private System.Windows.Forms.ErrorProvider errorP;
     }
 }

@@ -103,5 +103,134 @@ namespace PdeV_Delsel
             cnn.Close();
             #endregion
         }
+
+        #region validaciones
+
+        private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_nombre, "Solo se permiten letras");
+                txt_nombre.Focus();
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_rasonsocial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_rasonsocial, "Solo se permiten letras");
+                txt_rasonsocial.Focus();
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_telefono, "Caracteres y Letras están prohibidos, solo se permite números, gracias :D");
+                txt_telefono.Focus();
+
+
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_nombre_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_nombre.Text))
+            {
+                errorP.SetError(txt_nombre, "Completa el campo para continuar");
+                txt_nombre.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_rfc_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_rfc.Text))
+            {
+                errorP.SetError(txt_rfc, "Completa el campo para continuar");
+                txt_rfc.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_direccion_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_direccion.Text))
+            {
+                errorP.SetError(txt_direccion, "Completa el campo para continuar");
+                txt_direccion.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_telefono_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_telefono.Text))
+            {
+                errorP.SetError(txt_telefono, "Completa el campo para continuar");
+                txt_telefono.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_email_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_email.Text))
+            {
+                errorP.SetError(txt_email, "Completa el campo para continuar");
+                txt_email.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_rasonsocial_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_rasonsocial.Text))
+            {
+                errorP.SetError(txt_rasonsocial, "Completa el campo para continuar");
+                txt_rasonsocial.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        #endregion
     }
 }
