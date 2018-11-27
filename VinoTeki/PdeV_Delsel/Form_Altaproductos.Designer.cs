@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel_Titulo = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel_ContenedorGlobal = new System.Windows.Forms.TableLayoutPanel();
@@ -49,8 +50,10 @@
             this.txt_precio = new System.Windows.Forms.TextBox();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.panel_agregar = new System.Windows.Forms.Panel();
+            this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_ContenedorGlobal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel_Titulo
@@ -230,15 +233,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_producto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_producto.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txt_producto.ForeColor = System.Drawing.Color.White;
             this.txt_producto.Location = new System.Drawing.Point(318, 32);
             this.txt_producto.Multiline = true;
             this.txt_producto.Name = "txt_producto";
             this.txt_producto.Size = new System.Drawing.Size(731, 30);
             this.txt_producto.TabIndex = 12;
-            this.txt_producto.Text = "PRODUCTO";
             this.txt_producto.Enter += new System.EventHandler(this.txt_producto_Enter);
             this.txt_producto.Leave += new System.EventHandler(this.txt_producto_Leave);
+            this.txt_producto.Validated += new System.EventHandler(this.txt_producto_Validated);
             // 
             // txt_tipo
             // 
@@ -246,15 +249,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_tipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tipo.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txt_tipo.ForeColor = System.Drawing.Color.White;
             this.txt_tipo.Location = new System.Drawing.Point(318, 97);
             this.txt_tipo.Multiline = true;
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(731, 30);
             this.txt_tipo.TabIndex = 13;
-            this.txt_tipo.Text = "TIPO";
             this.txt_tipo.Enter += new System.EventHandler(this.txt_tipo_Enter);
+            this.txt_tipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_tipo_KeyPress);
             this.txt_tipo.Leave += new System.EventHandler(this.txt_tipo_Leave);
+            this.txt_tipo.Validated += new System.EventHandler(this.txt_tipo_Validated);
             // 
             // txt_marca
             // 
@@ -262,15 +266,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_marca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_marca.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txt_marca.ForeColor = System.Drawing.Color.White;
             this.txt_marca.Location = new System.Drawing.Point(318, 162);
             this.txt_marca.Multiline = true;
             this.txt_marca.Name = "txt_marca";
             this.txt_marca.Size = new System.Drawing.Size(731, 30);
             this.txt_marca.TabIndex = 14;
-            this.txt_marca.Text = "MARCA";
             this.txt_marca.Enter += new System.EventHandler(this.txt_marca_Enter);
+            this.txt_marca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_marca_KeyPress);
             this.txt_marca.Leave += new System.EventHandler(this.txt_marca_Leave);
+            this.txt_marca.Validated += new System.EventHandler(this.txt_marca_Validated);
             // 
             // txt_modelo
             // 
@@ -278,15 +283,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_modelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_modelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_modelo.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txt_modelo.ForeColor = System.Drawing.Color.White;
             this.txt_modelo.Location = new System.Drawing.Point(318, 227);
             this.txt_modelo.Multiline = true;
             this.txt_modelo.Name = "txt_modelo";
             this.txt_modelo.Size = new System.Drawing.Size(731, 30);
             this.txt_modelo.TabIndex = 15;
-            this.txt_modelo.Text = "MODELO";
             this.txt_modelo.Enter += new System.EventHandler(this.txt_modelo_Enter);
             this.txt_modelo.Leave += new System.EventHandler(this.txt_modelo_Leave);
+            this.txt_modelo.Validated += new System.EventHandler(this.txt_modelo_Validated);
             // 
             // txt_descrip
             // 
@@ -294,15 +299,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_descrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_descrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descrip.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txt_descrip.ForeColor = System.Drawing.Color.White;
             this.txt_descrip.Location = new System.Drawing.Point(318, 292);
             this.txt_descrip.Multiline = true;
             this.txt_descrip.Name = "txt_descrip";
             this.txt_descrip.Size = new System.Drawing.Size(731, 30);
             this.txt_descrip.TabIndex = 16;
-            this.txt_descrip.Text = "DESCRIPCION";
             this.txt_descrip.Enter += new System.EventHandler(this.txt_descrip_Enter);
+            this.txt_descrip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_descrip_KeyPress);
             this.txt_descrip.Leave += new System.EventHandler(this.txt_descrip_Leave);
+            this.txt_descrip.Validated += new System.EventHandler(this.txt_descrip_Validated);
             // 
             // txt_cantidad
             // 
@@ -310,15 +316,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidad.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txt_cantidad.ForeColor = System.Drawing.Color.White;
             this.txt_cantidad.Location = new System.Drawing.Point(318, 357);
             this.txt_cantidad.Multiline = true;
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(731, 30);
             this.txt_cantidad.TabIndex = 17;
-            this.txt_cantidad.Text = "CANTIDAD";
             this.txt_cantidad.Enter += new System.EventHandler(this.txt_cantidad_Enter);
+            this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_KeyPress);
             this.txt_cantidad.Leave += new System.EventHandler(this.txt_cantidad_Leave);
+            this.txt_cantidad.Validated += new System.EventHandler(this.txt_cantidad_Validated);
             // 
             // txt_costo
             // 
@@ -326,15 +333,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_costo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_costo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_costo.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txt_costo.ForeColor = System.Drawing.Color.White;
             this.txt_costo.Location = new System.Drawing.Point(318, 422);
             this.txt_costo.Multiline = true;
             this.txt_costo.Name = "txt_costo";
             this.txt_costo.Size = new System.Drawing.Size(731, 30);
             this.txt_costo.TabIndex = 18;
-            this.txt_costo.Text = "COSTO";
             this.txt_costo.Enter += new System.EventHandler(this.txt_costo_Enter);
+            this.txt_costo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_costo_KeyPress);
             this.txt_costo.Leave += new System.EventHandler(this.txt_costo_Leave);
+            this.txt_costo.Validated += new System.EventHandler(this.txt_costo_Validated);
             // 
             // txt_precio
             // 
@@ -342,15 +350,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_precio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.txt_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_precio.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txt_precio.ForeColor = System.Drawing.Color.White;
             this.txt_precio.Location = new System.Drawing.Point(318, 487);
             this.txt_precio.Multiline = true;
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(731, 30);
             this.txt_precio.TabIndex = 19;
-            this.txt_precio.Text = "PRECIO";
             this.txt_precio.Enter += new System.EventHandler(this.txt_precio_Enter);
+            this.txt_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio_KeyPress);
             this.txt_precio.Leave += new System.EventHandler(this.txt_precio_Leave);
+            this.txt_precio.Validated += new System.EventHandler(this.txt_precio_Validated);
             // 
             // btn_guardar
             // 
@@ -381,6 +390,10 @@
             this.panel_agregar.Size = new System.Drawing.Size(8, 44);
             this.panel_agregar.TabIndex = 6;
             // 
+            // errorP
+            // 
+            this.errorP.ContainerControl = this;
+            // 
             // Form_Altaproductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +412,7 @@
             this.tableLayoutPanel_Titulo.PerformLayout();
             this.tableLayoutPanel_ContenedorGlobal.ResumeLayout(false);
             this.tableLayoutPanel_ContenedorGlobal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,5 +439,6 @@
         private System.Windows.Forms.TextBox txt_cantidad;
         private System.Windows.Forms.TextBox txt_costo;
         private System.Windows.Forms.TextBox txt_precio;
+        private System.Windows.Forms.ErrorProvider errorP;
     }
 }

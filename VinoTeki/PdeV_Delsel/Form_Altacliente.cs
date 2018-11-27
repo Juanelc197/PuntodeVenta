@@ -22,114 +22,115 @@ namespace PdeV_Delsel
         #region diseño para los combobox para que muestre info cuando esta vasio
         private void txt_nombre_Enter(object sender, EventArgs e)
         {
-            if (txt_nombre.Text == "NOMBRE")
-            {
-                txt_nombre.Text = "";
-                txt_nombre.ForeColor = Color.White;
-            }
+            //if (txt_nombre.Text == "NOMBRE")
+            //{
+            //    txt_nombre.Text = "";
+            //    txt_nombre.ForeColor = Color.White;
+            //}
         }
 
         private void txt_nombre_Leave(object sender, EventArgs e)
         {
-            if (txt_nombre.Text == "")
-            {
-                txt_nombre.Text = "NOMBRE";
-                txt_nombre.ForeColor = Color.SeaGreen;
-            }
+            //if (txt_nombre.Text == "")
+            //{
+            //    txt_nombre.Text = "NOMBRE";
+            //    txt_nombre.ForeColor = Color.SeaGreen;
+            //}
         }
 
         private void txt_rfc_Enter(object sender, EventArgs e)
         {
-            if (txt_rfc.Text == "RFC")
-            {
-                txt_rfc.Text = "";
-                txt_rfc.ForeColor = Color.White;
-            }
+            //if (txt_rfc.Text == "RFC")
+            //{
+            //    txt_rfc.Text = "";
+            //    txt_rfc.ForeColor = Color.White;
+            //}
         }
 
         private void txt_rfc_Leave(object sender, EventArgs e)
         {
-            if (txt_rfc.Text == "")
-            {
-                txt_rfc.Text = "RFC";
-                txt_rfc.ForeColor = Color.SeaGreen;
-            }
+            //if (txt_rfc.Text == "")
+            //{
+            //    txt_rfc.Text = "RFC";
+            //    txt_rfc.ForeColor = Color.SeaGreen;
+            //}
         }
 
         private void txt_direccion_Enter(object sender, EventArgs e)
         {
-            if (txt_direccion.Text == "DIRECCION")
-            {
-                txt_direccion.Text = "";
-                txt_direccion.ForeColor = Color.White;
-            }
+            //if (txt_direccion.Text == "DIRECCION")
+            //{
+            //    txt_direccion.Text = "";
+            //    txt_direccion.ForeColor = Color.White;
+            //}
         }
 
         private void txt_direccion_Leave(object sender, EventArgs e)
         {
-            if (txt_direccion.Text == "")
-            {
-                txt_direccion.Text = "DIRECCION";
-                txt_direccion.ForeColor = Color.SeaGreen;
-            }
+            //if (txt_direccion.Text == "")
+            //{
+            //    txt_direccion.Text = "DIRECCION";
+            //    txt_direccion.ForeColor = Color.SeaGreen;
+            //}
         }
 
         private void txt_telefono_Enter(object sender, EventArgs e)
         {
-            if (txt_telefono.Text == "TELEFONO")
-            {
-                txt_telefono.Text = "";
-                txt_telefono.ForeColor = Color.White;
-            }
+            //if (txt_telefono.Text == "TELEFONO")
+            //{
+            //    txt_telefono.Text = "";
+            //    txt_telefono.ForeColor = Color.White;
+            //}
         }
 
         private void txt_telefono_Leave(object sender, EventArgs e)
         {
-            if (txt_telefono.Text == "")
-            {
-                txt_telefono.Text = "TELEFONO";
-                txt_telefono.ForeColor = Color.SeaGreen;
-            }
+            //if (txt_telefono.Text == "")
+            //{
+            //    txt_telefono.Text = "TELEFONO";
+            //    txt_telefono.ForeColor = Color.SeaGreen;
+            //}
         }
 
         private void txt_email_Enter(object sender, EventArgs e)
         {
-            if (txt_email.Text == "E-MAIL")
-            {
-                txt_email.Text = "";
-                txt_email.ForeColor = Color.White;
-            }
+            //if (txt_email.Text == "E-MAIL")
+            //{
+            //    txt_email.Text = "";
+            //    txt_email.ForeColor = Color.White;
+            //}
         }
 
         private void txt_email_Leave(object sender, EventArgs e)
         {
-            if (txt_email.Text == "")
-            {
-                txt_email.Text = "E-MAIL";
-                txt_email.ForeColor = Color.SeaGreen;
-            }
+            //if (txt_email.Text == "")
+            //{
+            //    txt_email.Text = "E-MAIL";
+            //    txt_email.ForeColor = Color.SeaGreen;
+            //}
         }
         
 
         private void txt_razonsocial_Enter(object sender, EventArgs e)
         {
-            if (txt_razonsocial.Text == "RAZON SOCIAL")
-            {
-                txt_razonsocial.Text = "";
-                txt_razonsocial.ForeColor = Color.White;
-            }
+            //if (txt_razonsocial.Text == "RAZON SOCIAL")
+            //{
+            //    txt_razonsocial.Text = "";
+            //    txt_razonsocial.ForeColor = Color.White;
+            //}
         }
 
         private void txt_razonsocial_Leave(object sender, EventArgs e)
         {
-            if (txt_razonsocial.Text == "")
-            {
-                txt_razonsocial.Text = "RAZON SOCIAL";
-                txt_razonsocial.ForeColor = Color.SeaGreen;
-            }
+            //if (txt_razonsocial.Text == "")
+            //{
+            //    txt_razonsocial.Text = "RAZON SOCIAL";
+            //    txt_razonsocial.ForeColor = Color.SeaGreen;
+            //}
         }
         #endregion
 
+        
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             C.Nombre1 = txt_nombre.Text;
@@ -140,7 +141,8 @@ namespace PdeV_Delsel
             C.Razonsocial1 = txt_razonsocial.Text;
             Class_BasedeDatos.GuardarC(C);
         }
-        
+
+        #region validaciones
         private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -200,5 +202,73 @@ namespace PdeV_Delsel
                 errorP.Clear();
             }
         }
+        
+
+        private void txt_rfc_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_rfc.Text))
+            {
+                errorP.SetError(txt_rfc, "Completa el campo para continuar");
+                txt_rfc.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_direccion_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_direccion.Text))
+            {
+                errorP.SetError(txt_direccion, "Completa el campo para continuar");
+                txt_direccion.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_telefono_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_telefono.Text))
+            {
+                errorP.SetError(txt_telefono, "Completa el campo para continuar");
+                txt_telefono.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_email_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_email.Text))
+            {
+                errorP.SetError(txt_email, "Completa el campo para continuar");
+                txt_email.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_razonsocial_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_razonsocial.Text))
+            {
+                errorP.SetError(txt_razonsocial, "Completa el campo para continuar");
+                txt_razonsocial.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        #endregion
     }
 }

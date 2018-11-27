@@ -166,6 +166,8 @@ namespace PdeV_Delsel
         }
         #endregion
 
+
+        #region editar
         private void btn_modificar_Click(object sender, EventArgs e)
         {
             P.IdProducto1 = int.Parse(lbl_idproducto.Text);
@@ -196,6 +198,10 @@ namespace PdeV_Delsel
 
         }
 
+        #endregion
+
+        #region eliminar
+
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             P.IdProducto1 = int.Parse(lbl_idproducto.Text);
@@ -218,6 +224,8 @@ namespace PdeV_Delsel
 
         }
 
+        #endregion
+
 
         private void Form_Consultaproductos_Load(object sender, EventArgs e)
         {
@@ -228,6 +236,8 @@ namespace PdeV_Delsel
             comboBox_consultaP.AutoCompleteSource = AutoCompleteSource.ListItems;
 
         }
+
+        #region consulta 
 
         private void comboBox_consultaP_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -262,5 +272,211 @@ namespace PdeV_Delsel
             }
             cnn.Close();
         }
+
+        #endregion
+
+        #region validaciones
+
+        private void txt_producto_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_producto.Text))
+            {
+                errorP.SetError(txt_producto, "Completa el campo para continuar");
+                txt_producto.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_tipo_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_tipo.Text))
+            {
+                errorP.SetError(txt_tipo, "Completa el campo para continuar");
+                txt_tipo.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_marca_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_marca.Text))
+            {
+                errorP.SetError(txt_marca, "Completa el campo para continuar");
+                txt_marca.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_modelo_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_modelo.Text))
+            {
+                errorP.SetError(txt_modelo, "Completa el campo para continuar");
+                txt_modelo.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_descrip_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_descrip.Text))
+            {
+                errorP.SetError(txt_descrip, "Completa el campo para continuar");
+                txt_descrip.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_cantidad_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_cantidad.Text))
+            {
+                errorP.SetError(txt_cantidad, "Completa el campo para continuar");
+                txt_cantidad.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_costo_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_costo.Text))
+            {
+                errorP.SetError(txt_costo, "Completa el campo para continuar");
+                txt_costo.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_precio_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_precio.Text))
+            {
+                errorP.SetError(txt_precio, "Completa el campo para continuar");
+                txt_precio.Focus();
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_tipo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_tipo, "Solo se permiten letras");
+                txt_tipo.Focus();
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_marca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_marca, "Solo se permiten letras");
+                txt_marca.Focus();
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_descrip_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_descrip, "Solo se permiten letras");
+                txt_descrip.Focus();
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_cantidad, "Caracteres y Letras están prohibidos, solo se permite números, gracias :D");
+                txt_cantidad.Focus();
+
+
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_costo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_costo, "Caracteres y Letras están prohibidos, solo se permite números, gracias :D");
+                txt_costo.Focus();
+
+
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                errorP.SetError(txt_precio, "Caracteres y Letras están prohibidos, solo se permite números, gracias :D");
+                txt_precio.Focus();
+
+
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                errorP.Clear();
+            }
+        }
+
+        #endregion
     }
 }
