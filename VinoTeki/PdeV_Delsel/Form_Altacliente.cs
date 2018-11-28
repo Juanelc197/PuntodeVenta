@@ -140,22 +140,23 @@ namespace PdeV_Delsel
             C.Email1 = txt_email.Text;
             C.Razonsocial1 = txt_razonsocial.Text;
             Class_BasedeDatos.GuardarC(C);
+            //lbl_mostrarExito.Visible = true;
         }
 
         #region validaciones
         private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                errorP.SetError(txt_nombre, "Solo se permiten letras");
-                txt_nombre.Focus();
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                errorP.Clear();
-            }
+            //if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            //{
+            //    errorP.SetError(txt_nombre, "Solo se permiten letras");
+            //    txt_nombre.Focus();
+            //    e.Handled = true;
+            //    return;
+            //}
+            //else
+            //{
+            //    errorP.Clear();
+            //}
         }
 
         private void txt_razonsocial_KeyPress(object sender, KeyPressEventArgs e)

@@ -9,6 +9,8 @@ using System.Windows.Forms;
 
 namespace PdeV_Delsel
 {
+    //Form_Altacliente lbl_ = new Form_Altacliente();
+
     class Class_BasedeDatos
     {
         public static OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
@@ -39,7 +41,7 @@ namespace PdeV_Delsel
 
             return ds.Tables["Table_Producto"];
         }
-
+        
         public static void GuardarP(Class_ProductoTB P)
         {
             OleDbCommand comando = new OleDbCommand(string.Format("Insert into Table_Producto (Producto, Tipo, Marca, Modelo, Descripcion, Cantidad, Costo, Precio) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", P.Producto1, P.Tipo1, P.Marca1, P.Modelo1, P.Descripcion1, P.Cantidad1, P.Costo1, P.Precio1), cnn);
@@ -50,8 +52,8 @@ namespace PdeV_Delsel
                 cnn.Open();
                 
                 comando.ExecuteNonQuery();
-               
                 MessageBox.Show("Se guardo exitosamente");
+                
                 cnn.Close();
             }
             catch (Exception)
@@ -180,7 +182,7 @@ namespace PdeV_Delsel
                 cnn.Open();
 
                 comando.ExecuteNonQuery();
-
+                
                 MessageBox.Show("Se guardo exitosamente");
                 cnn.Close();
             }

@@ -19,6 +19,7 @@ namespace PdeV_Delsel
         }
         Class_ClienteTB C = new Class_ClienteTB();
 
+        #region editar
         private void btn_modificar_Click(object sender, EventArgs e)
         {
             C.IdCliente1 = int.Parse(lbl_idcliente.Text);
@@ -43,7 +44,9 @@ namespace PdeV_Delsel
             LlenarCombo c = new LlenarCombo();
             c.ItemLlenarC(comboBox_consultaC);
         }
+        #endregion
 
+        #region eliminar
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             C.IdCliente1 = int.Parse(lbl_idcliente.Text);
@@ -62,6 +65,7 @@ namespace PdeV_Delsel
             LlenarCombo c = new LlenarCombo();
             c.ItemLlenarC(comboBox_consultaC);
         }
+        #endregion
 
         private void FormConsultacliente_Load(object sender, EventArgs e)
         {
@@ -108,17 +112,17 @@ namespace PdeV_Delsel
 
         private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                errorP.SetError(txt_nombre, "Solo se permiten letras");
-                txt_nombre.Focus();
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                errorP.Clear();
-            }
+            //if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            //{
+            //    errorP.SetError(txt_nombre, "Solo se permiten letras");
+            //    txt_nombre.Focus();
+            //    e.Handled = true;
+            //    return;
+            //}
+            //else
+            //{
+            //    errorP.Clear();
+            //}
         }
 
         private void txt_rasonsocial_KeyPress(object sender, KeyPressEventArgs e)
