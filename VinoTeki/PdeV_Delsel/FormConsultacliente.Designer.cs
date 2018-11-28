@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultacliente));
             this.tableLayoutPanel_Titulo = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel_ContenedorGlobal = new System.Windows.Forms.TableLayoutPanel();
@@ -423,6 +424,7 @@
             this.Controls.Add(this.tableLayoutPanel_ContenedorGlobal);
             this.Controls.Add(this.tableLayoutPanel_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormConsultacliente";
             this.Opacity = 0.98D;
