@@ -222,12 +222,14 @@ namespace PdeV_Delsel
                 //cmd.Parameters.AddWithValue("@IdP", lbl_conCant.Text);
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Se desconto el producto");
+                //MessageBox.Show("Se desconto el producto");
+                lbl_stockgood.Visible = true;
                 con.Close();
             }
             catch
             {
-                MessageBox.Show("Error");
+                //MessageBox.Show("Error");
+                lbl_stockbad.Visible = true;
             } 
             #endregion
 
@@ -241,12 +243,14 @@ namespace PdeV_Delsel
                 com.Connection = cnn;
 
                 com.ExecuteNonQuery();
-                MessageBox.Show("Venta realizada");
+                //MessageBox.Show("Venta realizada");
+                lbl_mostrarExito.Visible = true;
                 cnn.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hay problemas " + ex);
+                //MessageBox.Show("Hay problemas " + ex);
+                lbl_ventabad.Visible = true;
             } 
             #endregion
         }

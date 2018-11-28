@@ -305,12 +305,14 @@ namespace PdeV_Delsel
                 com.Connection = cnn;
 
                 com.ExecuteNonQuery();
-                MessageBox.Show("Cotizacion creada");
+                //MessageBox.Show("Cotizacion creada");
+                lbl_mostrarExito.Visible = true;
                 cnn.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hay problemas " + ex);
+                //MessageBox.Show("Hay problemas " + ex);
+                lbl_cotizacionbad.Visible = true;
             }
             #endregion
         }

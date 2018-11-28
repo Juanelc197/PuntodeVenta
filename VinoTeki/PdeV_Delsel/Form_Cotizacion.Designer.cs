@@ -81,6 +81,10 @@
             this.comboBox_cliente = new System.Windows.Forms.ComboBox();
             this.lbl_numerodeventa = new System.Windows.Forms.Label();
             this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbl_mostrarExito = new System.Windows.Forms.Label();
+            this.lbl_stockgood = new System.Windows.Forms.Label();
+            this.lbl_stockbad = new System.Windows.Forms.Label();
+            this.lbl_cotizacionbad = new System.Windows.Forms.Label();
             this.panel_barraT.SuspendLayout();
             this.tableLayoutPanel_final.SuspendLayout();
             this.tableLayoutPanel_con4.SuspendLayout();
@@ -172,6 +176,7 @@
             this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.87648F));
             this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.976247F));
             this.tableLayoutPanel_final.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.36025F));
+            this.tableLayoutPanel_final.Controls.Add(this.lbl_mostrarExito, 1, 0);
             this.tableLayoutPanel_final.Controls.Add(this.lbl_iva, 4, 1);
             this.tableLayoutPanel_final.Controls.Add(this.lbl_subtotal, 3, 0);
             this.tableLayoutPanel_final.Controls.Add(this.txt_subtotal, 4, 0);
@@ -180,6 +185,7 @@
             this.tableLayoutPanel_final.Controls.Add(this.txt_total, 4, 2);
             this.tableLayoutPanel_final.Controls.Add(this.btn_cotizar, 1, 2);
             this.tableLayoutPanel_final.Controls.Add(this.btn_inicio, 0, 2);
+            this.tableLayoutPanel_final.Controls.Add(this.lbl_cotizacionbad, 0, 0);
             this.tableLayoutPanel_final.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_final.Location = new System.Drawing.Point(0, 608);
             this.tableLayoutPanel_final.Name = "tableLayoutPanel_final";
@@ -401,9 +407,6 @@
             this.tableLayoutPanel_con3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.71474F));
             this.tableLayoutPanel_con3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.86698F));
             this.tableLayoutPanel_con3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.01425F));
-            this.tableLayoutPanel_con3.Controls.Add(this.lbl_idP, 0, 2);
-            this.tableLayoutPanel_con3.Controls.Add(this.lbl_conCant, 0, 2);
-            this.tableLayoutPanel_con3.Controls.Add(this.lbl_precioP, 0, 2);
             this.tableLayoutPanel_con3.Controls.Add(this.btn_agregar, 3, 2);
             this.tableLayoutPanel_con3.Controls.Add(this.comboBox_productos, 1, 0);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_cantidad, 2, 0);
@@ -411,6 +414,11 @@
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_producto, 0, 0);
             this.tableLayoutPanel_con3.Controls.Add(this.txt_cantidad, 3, 0);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_precioU, 2, 1);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_precioP, 2, 2);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_idP, 1, 2);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_conCant, 1, 1);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_stockgood, 0, 1);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_stockbad, 0, 2);
             this.tableLayoutPanel_con3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_con3.Location = new System.Drawing.Point(0, 276);
             this.tableLayoutPanel_con3.Name = "tableLayoutPanel_con3";
@@ -442,7 +450,7 @@
             this.lbl_conCant.AutoSize = true;
             this.lbl_conCant.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_conCant.ForeColor = System.Drawing.Color.White;
-            this.lbl_conCant.Location = new System.Drawing.Point(84, 83);
+            this.lbl_conCant.Location = new System.Drawing.Point(400, 44);
             this.lbl_conCant.Name = "lbl_conCant";
             this.lbl_conCant.Size = new System.Drawing.Size(90, 32);
             this.lbl_conCant.TabIndex = 26;
@@ -819,6 +827,66 @@
             // 
             this.errorP.ContainerControl = this;
             // 
+            // lbl_mostrarExito
+            // 
+            this.lbl_mostrarExito.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_mostrarExito.AutoSize = true;
+            this.lbl_mostrarExito.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_mostrarExito.Font = new System.Drawing.Font("Cooper Black", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mostrarExito.ForeColor = System.Drawing.Color.GreenYellow;
+            this.lbl_mostrarExito.Location = new System.Drawing.Point(276, 7);
+            this.lbl_mostrarExito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_mostrarExito.Name = "lbl_mostrarExito";
+            this.lbl_mostrarExito.Size = new System.Drawing.Size(498, 34);
+            this.lbl_mostrarExito.TabIndex = 25;
+            this.lbl_mostrarExito.Text = "Cotizacion creada, ¡exitosamente!";
+            this.lbl_mostrarExito.Visible = false;
+            // 
+            // lbl_stockgood
+            // 
+            this.lbl_stockgood.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_stockgood.AutoSize = true;
+            this.lbl_stockgood.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_stockgood.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stockgood.ForeColor = System.Drawing.Color.GreenYellow;
+            this.lbl_stockgood.Location = new System.Drawing.Point(5, 49);
+            this.lbl_stockgood.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_stockgood.Name = "lbl_stockgood";
+            this.lbl_stockgood.Size = new System.Drawing.Size(248, 27);
+            this.lbl_stockgood.TabIndex = 25;
+            this.lbl_stockgood.Text = "Stock, !descontado¡";
+            this.lbl_stockgood.Visible = false;
+            // 
+            // lbl_stockbad
+            // 
+            this.lbl_stockbad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_stockbad.AutoSize = true;
+            this.lbl_stockbad.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_stockbad.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stockbad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbl_stockbad.Location = new System.Drawing.Point(18, 88);
+            this.lbl_stockbad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_stockbad.Name = "lbl_stockbad";
+            this.lbl_stockbad.Size = new System.Drawing.Size(221, 27);
+            this.lbl_stockbad.TabIndex = 25;
+            this.lbl_stockbad.Text = "Hay problemas... ";
+            this.lbl_stockbad.Visible = false;
+            // 
+            // lbl_cotizacionbad
+            // 
+            this.lbl_cotizacionbad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_cotizacionbad.AutoSize = true;
+            this.lbl_cotizacionbad.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_cotizacionbad.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cotizacionbad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbl_cotizacionbad.Location = new System.Drawing.Point(18, 14);
+            this.lbl_cotizacionbad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_cotizacionbad.Name = "lbl_cotizacionbad";
+            this.lbl_cotizacionbad.Size = new System.Drawing.Size(221, 27);
+            this.lbl_cotizacionbad.TabIndex = 25;
+            this.lbl_cotizacionbad.Text = "Hay problemas... ";
+            this.lbl_cotizacionbad.Visible = false;
+            // 
             // Form_Cotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -904,5 +972,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CostoT;
         private System.Windows.Forms.ErrorProvider errorP;
+        private System.Windows.Forms.Label lbl_mostrarExito;
+        private System.Windows.Forms.Label lbl_cotizacionbad;
+        private System.Windows.Forms.Label lbl_stockgood;
+        private System.Windows.Forms.Label lbl_stockbad;
     }
 }

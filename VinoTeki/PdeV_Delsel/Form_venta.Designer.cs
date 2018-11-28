@@ -83,6 +83,10 @@
             this.lbl_formaPago = new System.Windows.Forms.Label();
             this.dateTimePicker_fecha = new System.Windows.Forms.DateTimePicker();
             this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbl_mostrarExito = new System.Windows.Forms.Label();
+            this.lbl_ventabad = new System.Windows.Forms.Label();
+            this.lbl_stockgood = new System.Windows.Forms.Label();
+            this.lbl_stockbad = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Titulo.SuspendLayout();
             this.tableLayoutPanel_contenedorTop.SuspendLayout();
             this.tableLayoutPanel_con2.SuspendLayout();
@@ -429,7 +433,9 @@
             this.tableLayoutPanel_con3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.71474F));
             this.tableLayoutPanel_con3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.7498F));
             this.tableLayoutPanel_con3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.13143F));
-            this.tableLayoutPanel_con3.Controls.Add(this.lbl_conCant, 0, 2);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_stockbad, 0, 2);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_stockgood, 0, 1);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_fechita, 1, 2);
             this.tableLayoutPanel_con3.Controls.Add(this.btn_agregar, 3, 2);
             this.tableLayoutPanel_con3.Controls.Add(this.comboBox_productos, 1, 0);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_cantidad, 2, 0);
@@ -437,6 +443,7 @@
             this.tableLayoutPanel_con3.Controls.Add(this.txt_cantidad, 3, 0);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_precioU, 2, 1);
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_preciosolo, 3, 1);
+            this.tableLayoutPanel_con3.Controls.Add(this.lbl_conCant, 1, 1);
             this.tableLayoutPanel_con3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_con3.Location = new System.Drawing.Point(0, 300);
             this.tableLayoutPanel_con3.Name = "tableLayoutPanel_con3";
@@ -455,7 +462,7 @@
             this.lbl_conCant.AutoSize = true;
             this.lbl_conCant.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_conCant.ForeColor = System.Drawing.Color.White;
-            this.lbl_conCant.Location = new System.Drawing.Point(84, 83);
+            this.lbl_conCant.Location = new System.Drawing.Point(400, 44);
             this.lbl_conCant.Name = "lbl_conCant";
             this.lbl_conCant.Size = new System.Drawing.Size(90, 32);
             this.lbl_conCant.TabIndex = 27;
@@ -568,7 +575,6 @@
             this.tableLayoutPanel_con4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.58591F));
             this.tableLayoutPanel_con4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.88678F));
             this.tableLayoutPanel_con4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.60649F));
-            this.tableLayoutPanel_con4.Controls.Add(this.lbl_fechita, 0, 0);
             this.tableLayoutPanel_con4.Controls.Add(this.dataGridView_verdatos, 1, 0);
             this.tableLayoutPanel_con4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_con4.Location = new System.Drawing.Point(0, 415);
@@ -585,7 +591,7 @@
             this.lbl_fechita.AutoSize = true;
             this.lbl_fechita.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fechita.ForeColor = System.Drawing.Color.White;
-            this.lbl_fechita.Location = new System.Drawing.Point(99, 185);
+            this.lbl_fechita.Location = new System.Drawing.Point(415, 83);
             this.lbl_fechita.Name = "lbl_fechita";
             this.lbl_fechita.Size = new System.Drawing.Size(60, 32);
             this.lbl_fechita.TabIndex = 27;
@@ -680,7 +686,9 @@
             this.tableLayoutPanel_final.Controls.Add(this.lbl_letras, 1, 2);
             this.tableLayoutPanel_final.Controls.Add(this.comboBox_FormaPago, 2, 1);
             this.tableLayoutPanel_final.Controls.Add(this.lbl_formaPago, 2, 0);
-            this.tableLayoutPanel_final.Controls.Add(this.dateTimePicker_fecha, 1, 0);
+            this.tableLayoutPanel_final.Controls.Add(this.dateTimePicker_fecha, 0, 0);
+            this.tableLayoutPanel_final.Controls.Add(this.lbl_mostrarExito, 1, 0);
+            this.tableLayoutPanel_final.Controls.Add(this.lbl_ventabad, 1, 1);
             this.tableLayoutPanel_final.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_final.Location = new System.Drawing.Point(0, 632);
             this.tableLayoutPanel_final.Name = "tableLayoutPanel_final";
@@ -835,7 +843,7 @@
             this.dateTimePicker_fecha.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dateTimePicker_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_fecha.Location = new System.Drawing.Point(431, 5);
+            this.dateTimePicker_fecha.Location = new System.Drawing.Point(60, 5);
             this.dateTimePicker_fecha.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker_fecha.Name = "dateTimePicker_fecha";
             this.dateTimePicker_fecha.Size = new System.Drawing.Size(137, 28);
@@ -844,6 +852,66 @@
             // errorP
             // 
             this.errorP.ContainerControl = this;
+            // 
+            // lbl_mostrarExito
+            // 
+            this.lbl_mostrarExito.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_mostrarExito.AutoSize = true;
+            this.lbl_mostrarExito.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_mostrarExito.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mostrarExito.ForeColor = System.Drawing.Color.GreenYellow;
+            this.lbl_mostrarExito.Location = new System.Drawing.Point(318, 8);
+            this.lbl_mostrarExito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_mostrarExito.Name = "lbl_mostrarExito";
+            this.lbl_mostrarExito.Size = new System.Drawing.Size(363, 27);
+            this.lbl_mostrarExito.TabIndex = 29;
+            this.lbl_mostrarExito.Text = "Venta creada, ¡exitosamente!";
+            this.lbl_mostrarExito.Visible = false;
+            // 
+            // lbl_ventabad
+            // 
+            this.lbl_ventabad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_ventabad.AutoSize = true;
+            this.lbl_ventabad.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ventabad.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ventabad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbl_ventabad.Location = new System.Drawing.Point(389, 40);
+            this.lbl_ventabad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ventabad.Name = "lbl_ventabad";
+            this.lbl_ventabad.Size = new System.Drawing.Size(221, 27);
+            this.lbl_ventabad.TabIndex = 30;
+            this.lbl_ventabad.Text = "Hay problemas... ";
+            this.lbl_ventabad.Visible = false;
+            // 
+            // lbl_stockgood
+            // 
+            this.lbl_stockgood.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_stockgood.AutoSize = true;
+            this.lbl_stockgood.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_stockgood.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stockgood.ForeColor = System.Drawing.Color.GreenYellow;
+            this.lbl_stockgood.Location = new System.Drawing.Point(5, 49);
+            this.lbl_stockgood.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_stockgood.Name = "lbl_stockgood";
+            this.lbl_stockgood.Size = new System.Drawing.Size(248, 27);
+            this.lbl_stockgood.TabIndex = 29;
+            this.lbl_stockgood.Text = "Stock, !descontado¡";
+            this.lbl_stockgood.Visible = false;
+            // 
+            // lbl_stockbad
+            // 
+            this.lbl_stockbad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_stockbad.AutoSize = true;
+            this.lbl_stockbad.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_stockbad.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stockbad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbl_stockbad.Location = new System.Drawing.Point(18, 88);
+            this.lbl_stockbad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_stockbad.Name = "lbl_stockbad";
+            this.lbl_stockbad.Size = new System.Drawing.Size(221, 27);
+            this.lbl_stockbad.TabIndex = 30;
+            this.lbl_stockbad.Text = "Hay problemas... ";
+            this.lbl_stockbad.Visible = false;
             // 
             // Form_venta
             // 
@@ -871,7 +939,6 @@
             this.tableLayoutPanel_con3.ResumeLayout(false);
             this.tableLayoutPanel_con3.PerformLayout();
             this.tableLayoutPanel_con4.ResumeLayout(false);
-            this.tableLayoutPanel_con4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_verdatos)).EndInit();
             this.tableLayoutPanel_final.ResumeLayout(false);
             this.tableLayoutPanel_final.PerformLayout();
@@ -933,5 +1000,9 @@
         private System.Windows.Forms.Label lbl_fechita;
         private System.Windows.Forms.DateTimePicker dateTimePicker_fecha;
         private System.Windows.Forms.ErrorProvider errorP;
+        private System.Windows.Forms.Label lbl_mostrarExito;
+        private System.Windows.Forms.Label lbl_ventabad;
+        private System.Windows.Forms.Label lbl_stockgood;
+        private System.Windows.Forms.Label lbl_stockbad;
     }
 }
