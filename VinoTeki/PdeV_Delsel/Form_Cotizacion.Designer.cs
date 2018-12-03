@@ -51,6 +51,12 @@
             this.lbl_cotizacionbad = new System.Windows.Forms.Label();
             this.tableLayoutPanel_con4 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView_verdatos = new System.Windows.Forms.DataGridView();
+            this.ProductoTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostoTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel_con3 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.comboBox_productos = new System.Windows.Forms.ComboBox();
@@ -83,12 +89,6 @@
             this.lbl_numerodeventa = new System.Windows.Forms.Label();
             this.lbl_folioCoti = new System.Windows.Forms.Label();
             this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ProductoTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CostoTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_barraT.SuspendLayout();
             this.tableLayoutPanel_final.SuspendLayout();
             this.tableLayoutPanel_con4.SuspendLayout();
@@ -425,6 +425,44 @@
             this.dataGridView_verdatos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_verdatos.Size = new System.Drawing.Size(1016, 259);
             this.dataGridView_verdatos.TabIndex = 7;
+            // 
+            // ProductoTB
+            // 
+            this.ProductoTB.HeaderText = "Producto";
+            this.ProductoTB.Name = "ProductoTB";
+            this.ProductoTB.Width = 162;
+            // 
+            // CantidadTB
+            // 
+            this.CantidadTB.HeaderText = "Cantidad";
+            this.CantidadTB.Name = "CantidadTB";
+            this.CantidadTB.Width = 162;
+            // 
+            // PrecioTB
+            // 
+            this.PrecioTB.HeaderText = "Precio";
+            this.PrecioTB.Name = "PrecioTB";
+            this.PrecioTB.Width = 132;
+            // 
+            // CostoTB
+            // 
+            this.CostoTB.HeaderText = "Costo Total";
+            this.CostoTB.Name = "CostoTB";
+            this.CostoTB.Width = 207;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            this.Column1.Width = 72;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "idCoVe";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            this.Column2.Width = 132;
             // 
             // tableLayoutPanel_con3
             // 
@@ -923,44 +961,6 @@
             // errorP
             // 
             this.errorP.ContainerControl = this;
-            // 
-            // ProductoTB
-            // 
-            this.ProductoTB.HeaderText = "Producto";
-            this.ProductoTB.Name = "ProductoTB";
-            this.ProductoTB.Width = 162;
-            // 
-            // CantidadTB
-            // 
-            this.CantidadTB.HeaderText = "Cantidad";
-            this.CantidadTB.Name = "CantidadTB";
-            this.CantidadTB.Width = 162;
-            // 
-            // PrecioTB
-            // 
-            this.PrecioTB.HeaderText = "Precio";
-            this.PrecioTB.Name = "PrecioTB";
-            this.PrecioTB.Width = 132;
-            // 
-            // CostoTB
-            // 
-            this.CostoTB.HeaderText = "Costo Total";
-            this.CostoTB.Name = "CostoTB";
-            this.CostoTB.Width = 207;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
-            this.Column1.Width = 72;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "idCoVe";
-            this.Column2.Name = "Column2";
-            this.Column2.Visible = false;
-            this.Column2.Width = 132;
             // 
             // Form_Cotizacion
             // 

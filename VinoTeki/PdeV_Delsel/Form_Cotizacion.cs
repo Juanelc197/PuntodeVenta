@@ -403,14 +403,14 @@ namespace PdeV_Delsel
                 //cmd.Parameters.AddWithValue("@IdP", lbl_conCant.Text);
 
                 cmda.ExecuteNonQuery();
-                MessageBox.Show("Se desconto el producto");
-                //lbl_stockgood.Visible = true;
+                //MessageBox.Show("Se desconto el producto");
+                lbl_stockgood.Visible = true;
                 conexion.Close();
             }
             catch
             {
-                MessageBox.Show("Error");
-                //lbl_stockbad.Visible = true;
+                //MessageBox.Show("Error");
+                lbl_stockbad.Visible = true;
             }
             #endregion
 

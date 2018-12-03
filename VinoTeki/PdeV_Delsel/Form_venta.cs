@@ -145,6 +145,7 @@ namespace PdeV_Delsel
                 //lbl_mostrarExito.Visible = true;
                 OleDbDataAdapter da = new OleDbDataAdapter(coma);
                 DataTable dt = new DataTable();
+               
                 da.Fill(dt);
                 dataGridView_verdatos.DataSource = dt;
                 coma.Clone();
@@ -157,41 +158,14 @@ namespace PdeV_Delsel
             }
             #endregion
 
-        }
-
-        private void btn_agregar_Click(object sender, EventArgs e)
-        {
-            
-
-            #region codigo para realisar una suma en columnas y agregar iva
+            #region suma datagrid
             double subtotal = 0;
             double iva = 0;
 
-            /*foreach (DataGridViewRow row in dataGridView_verdatos.Rows)
-            {
-                subtotal += Convert.ToDouble(row.Cells["Precio"].Value);
-            }
-            txt_subtotal.Text = Convert.ToString(subtotal); */
-
-            double suma, precio, can, sub;
-            string prodo;
-            int idcli;
-            idcli = int.Parse(lbl_numerodeventa.Text);
-            prodo = comboBox_productos.Text;
-            //int can;
-            can = double.Parse(txt_cantidad.Text);
-            precio = double.Parse(lbl_preciosolo.Text);
-
-            suma = can * precio;
-            txt_subtotal.Text = Convert.ToString(suma);
-            sub = double.Parse(txt_subtotal.Text);
-            //dataGridView_verdatos.Rows.Add(comboBox_productos.Text, txt_cantidad.Text, lbl_preciosolo.Text, txt_subtotal.Text);
-            dataGridView_verdatos.Rows.Add(prodo, can, precio, sub);
-
             foreach (DataGridViewRow row in dataGridView_verdatos.Rows)
             {
-                subtotal += Convert.ToDouble(row.Cells["Column4"].Value); 
-                //subtotal += Convert.ToDouble(row.Cells["CostoTo"].Value);
+                //subtotal += Convert.ToDouble(row.Cells["Column4"].Value);
+                subtotal += Convert.ToDouble(row.Cells["CostoTo"].Value);
             }
             txt_subtotal.Text = Convert.ToString(subtotal);
 
@@ -205,6 +179,55 @@ namespace PdeV_Delsel
             {
                 txt_total.Text = Convert.ToString(subtotal);
             }
+            #endregion
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            
+
+            #region codigo para realisar una suma en columnas y agregar iva
+            //double subtotal = 0;
+            //double iva = 0;
+
+            /*foreach (DataGridViewRow row in dataGridView_verdatos.Rows)
+            {
+                subtotal += Convert.ToDouble(row.Cells["Precio"].Value);
+            }
+            txt_subtotal.Text = Convert.ToString(subtotal); */
+
+            //double suma, precio, can, sub;
+            //string prodo;
+            //int idcli;
+            //idcli = int.Parse(lbl_numerodeventa.Text);
+            //prodo = comboBox_productos.Text;
+            ////int can;
+            //can = double.Parse(txt_cantidad.Text);
+            //precio = double.Parse(lbl_preciosolo.Text);
+
+            //suma = can * precio;
+            //txt_subtotal.Text = Convert.ToString(suma);
+            //sub = double.Parse(txt_subtotal.Text);
+            ////dataGridView_verdatos.Rows.Add(comboBox_productos.Text, txt_cantidad.Text, lbl_preciosolo.Text, txt_subtotal.Text);
+            //dataGridView_verdatos.Rows.Add(prodo, can, precio, sub);
+
+            //foreach (DataGridViewRow row in dataGridView_verdatos.Rows)
+            //{
+            //    subtotal += Convert.ToDouble(row.Cells["Column4"].Value); 
+            //    //subtotal += Convert.ToDouble(row.Cells["CostoTo"].Value);
+            //}
+            //txt_subtotal.Text = Convert.ToString(subtotal);
+
+
+            //if (checkBox_iva.Checked == true)
+            //{
+            //    iva += Convert.ToDouble(subtotal * 0.16);
+            //    txt_total.Text = Convert.ToString(iva + subtotal);
+            //}
+            //else
+            //{
+            //    txt_total.Text = Convert.ToString(subtotal);
+            //}
             #endregion
 
 
