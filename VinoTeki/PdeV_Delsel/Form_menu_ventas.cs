@@ -108,5 +108,10 @@ namespace PdeV_Delsel
         {
             AbrirFormulario<Form_detalledeV>();
         }
+
+        private void btn_verDatos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Form_CoVe_view>();
+        }
     }
 }
