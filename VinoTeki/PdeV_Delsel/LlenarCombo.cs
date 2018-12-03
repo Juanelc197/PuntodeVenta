@@ -71,13 +71,13 @@ namespace PdeV_Delsel
         {
             try
             {
-                com = new OleDbCommand("select Nombre from Table_Cotizacion", cnn);
+                com = new OleDbCommand("select FolioCot from Table_Cotizacion", cnn);
                 dr = com.ExecuteReader();
                 //parte de aztualizar combobox cliente
                 cb.Items.Clear();
                 while (dr.Read())
                 {
-                    cb.Items.Add(dr["Nombre"].ToString());
+                    cb.Items.Add(dr["FolioCot"].ToString());
                 }
                 dr.Close();
             }
@@ -98,6 +98,26 @@ namespace PdeV_Delsel
                 while (dr.Read())
                 {
                     ve.Items.Add(dr["Nombre"].ToString());
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hay problemas..." + ex.ToString());
+            }
+        }
+
+        public void ItemLlenarVentafolo(ComboBox fo)
+        {
+            try
+            {
+                com = new OleDbCommand("select FolioVenta from Table_Venta", cnn);
+                dr = com.ExecuteReader();
+                //parte de aztualizar combobox cliente
+                fo.Items.Clear();
+                while (dr.Read())
+                {
+                    fo.Items.Add(dr["FolioVenta"].ToString());
                 }
                 dr.Close();
             }

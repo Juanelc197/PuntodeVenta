@@ -90,7 +90,7 @@ namespace PdeV_Delsel
         private void comboBox_clienteCot_SelectedIndexChanged(object sender, EventArgs e)
         {
             #region busqueda de combobox y seleccion producto
-            string cadena = "Select * from Table_Cotizacion where Nombre = '" + comboBox_clienteCot.Text + "' ";
+            string cadena = "Select * from Table_Cotizacion where FolioCot = '" + comboBox_clienteCot.Text + "' ";
             OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
             OleDbCommand comando = new OleDbCommand(cadena, cnn);
             cnn.Open();
@@ -108,7 +108,8 @@ namespace PdeV_Delsel
                 txt_cantidad.Text = leer["Cantidad"].ToString();
                 txt_subtotal.Text = leer["Subtotal"].ToString();
                 txt_total.Text = leer["Total"].ToString();
-                lbl_numerodeventa.Text = leer["IdCotizacion"].ToString();
+                lbl_numerodeventa.Text = leer["FolioCot"].ToString();
+                lbl_Ultimacotizacion.Text = leer["IDCliente"].ToString();
             }
             else
             {
@@ -123,10 +124,39 @@ namespace PdeV_Delsel
                 txt_subtotal.Text = "$";
                 txt_total.Text = "$";
                 lbl_numerodeventa.Text = "#";
-                //lbl_conCant.Text = "...";
+                lbl_Ultimacotizacion.Text = "#";
             }
             cnn.Close();
             #endregion 
+
+            #region llenar el comobobox
+            try
+            {
+                OleDbCommand coma = new OleDbCommand();
+                OleDbConnection cone = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+                cone.Open();
+                coma.Connection = cone;
+                string query = "select Producto, Cantidad, Precio, CostoTo from Table_VentasTemporales where IDCliente=" + lbl_Ultimacotizacion.Text;
+                //com.Connection = cnn;
+                coma.CommandText = query;
+
+                //com.ExecuteNonQuery();
+                //MessageBox.Show("Venta realizada");
+                //lbl_mostrarExito.Visible = true;
+                OleDbDataAdapter da = new OleDbDataAdapter(coma);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView_verdatos.DataSource = dt;
+                coma.Clone();
+                cone.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hay problemas " + ex);
+                //lbl_ventabad.Visible = true;
+            }
+            #endregion
+
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -143,19 +173,25 @@ namespace PdeV_Delsel
             }
             txt_subtotal.Text = Convert.ToString(subtotal); */
 
-            double suma, precio, can;
+            double suma, precio, can, sub;
+            string prodo;
+            int idcli;
+            idcli = int.Parse(lbl_numerodeventa.Text);
+            prodo = comboBox_productos.Text;
             //int can;
             can = double.Parse(txt_cantidad.Text);
             precio = double.Parse(lbl_preciosolo.Text);
 
             suma = can * precio;
             txt_subtotal.Text = Convert.ToString(suma);
-
-            dataGridView_verdatos.Rows.Add(comboBox_productos.Text, txt_cantidad.Text, lbl_preciosolo.Text, txt_subtotal.Text);
+            sub = double.Parse(txt_subtotal.Text);
+            //dataGridView_verdatos.Rows.Add(comboBox_productos.Text, txt_cantidad.Text, lbl_preciosolo.Text, txt_subtotal.Text);
+            dataGridView_verdatos.Rows.Add(prodo, can, precio, sub);
 
             foreach (DataGridViewRow row in dataGridView_verdatos.Rows)
             {
-                subtotal += Convert.ToDouble(row.Cells["CostoT"].Value);
+                subtotal += Convert.ToDouble(row.Cells["Column4"].Value); 
+                //subtotal += Convert.ToDouble(row.Cells["CostoTo"].Value);
             }
             txt_subtotal.Text = Convert.ToString(subtotal);
 
@@ -208,29 +244,29 @@ namespace PdeV_Delsel
         private void btn_venta_Click(object sender, EventArgs e)
         {
             #region descontar stock
-           try
-            {
-                OleDbConnection con = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand("update Table_Producto set Cantidad = Cantidad - '" + txt_cantidad.Text + "' where IdProducto='" + lbl_conCant.Text + "' ", con);
+           //try
+           // {
+           //     OleDbConnection con = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+           //     con.Open();
+           //     OleDbCommand cmd = new OleDbCommand("update Table_Producto set Cantidad = Cantidad - '" + txt_cantidad.Text + "' where IdProducto='" + lbl_conCant.Text + "' ", con);
 
 
 
-                // = "@cantidad";
-                //cmd.Parameters.AddWithValue("@cantidad", txt_cantidad.Text);
-                //cmd.Parameters.AddWithValue("@fechac", this.datefechacliente.Text);
-                //cmd.Parameters.AddWithValue("@IdP", lbl_conCant.Text);
+           //     // = "@cantidad";
+           //     //cmd.Parameters.AddWithValue("@cantidad", txt_cantidad.Text);
+           //     //cmd.Parameters.AddWithValue("@fechac", this.datefechacliente.Text);
+           //     //cmd.Parameters.AddWithValue("@IdP", lbl_conCant.Text);
 
-                cmd.ExecuteNonQuery();
-                //MessageBox.Show("Se desconto el producto");
-                lbl_stockgood.Visible = true;
-                con.Close();
-            }
-            catch
-            {
-                //MessageBox.Show("Error");
-                lbl_stockbad.Visible = true;
-            } 
+           //     cmd.ExecuteNonQuery();
+           //     //MessageBox.Show("Se desconto el producto");
+           //     lbl_stockgood.Visible = true;
+           //     con.Close();
+           // }
+           // catch
+           // {
+           //     //MessageBox.Show("Error");
+           //     lbl_stockbad.Visible = true;
+           // } 
             #endregion
 
             #region guardar la venta o generar venta
@@ -239,7 +275,9 @@ namespace PdeV_Delsel
                 OleDbCommand com = new OleDbCommand();
                 OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
                 cnn.Open();
-                com.CommandText = "Insert into Table_Venta (Nombre, RFC, RazonSocial, Direccion, Email, Telefono, Producto, Cantidad, FormadePago, Subtotal, Total, Fecha) values ('" + txt_nombre.Text + "','" + txt_rfc.Text + "','" + txt_razonsocial.Text + "','" + txt_direccion.Text + "','" + txt_email.Text + "','" + txt_telefono.Text + "','" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + comboBox_FormaPago.Text + "','" + txt_subtotal.Text + "','" + txt_total.Text + "','" + this.dateTimePicker_fecha.Text + "')";
+                //com.CommandText = "Insert into Table_Venta (Nombre, RFC, RazonSocial, Direccion, Email, Telefono, Producto, Cantidad, FormadePago, Subtotal, Total, Fecha, FolioVenta) values ('" + txt_nombre.Text + "','" + txt_rfc.Text + "','" + txt_razonsocial.Text + "','" + txt_direccion.Text + "','" + txt_email.Text + "','" + txt_telefono.Text + "','" + comboBox_productos.Text + "','" + txt_cantidad.Text + "','" + comboBox_FormaPago.Text + "','" + txt_subtotal.Text + "','" + txt_total.Text + "','" + this.dateTimePicker_fecha.Text + "','" + lbl_numerodeventa.Text + "')";
+                com.CommandText = "Insert into Table_Venta (Nombre, RFC, RazonSocial, Direccion, Email, Telefono, FormadePago, Subtotal, Total, Fecha, FolioVenta) values ('" + txt_nombre.Text + "','" + txt_rfc.Text + "','" + txt_razonsocial.Text + "','" + txt_direccion.Text + "','" + txt_email.Text + "','" + txt_telefono.Text + "','" + comboBox_FormaPago.Text + "','" + txt_subtotal.Text + "','" + txt_total.Text + "','" + this.dateTimePicker_fecha.Text + "','" + lbl_numerodeventa.Text + "')";
+
                 com.Connection = cnn;
 
                 com.ExecuteNonQuery();

@@ -126,15 +126,71 @@ namespace PdeV_Delsel
         {
             LlenarCombo vent = new LlenarCombo();
             vent.ItemLlenarVenta(comboBox_cliente);
+            vent.ItemLlenarVentafolo(combo_folio);
 
             comboBox_cliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox_cliente.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            combo_folio.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            combo_folio.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         private void btn_exportarEx_Click(object sender, EventArgs e)
         {
             ExcelConexion ex = new ExcelConexion();
             ex.exportaraexcel(dataGridView_verdatos);
+        }
+
+        private void combo_folio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            #region busqueda formadepago
+            try
+            {
+                OleDbCommand comando = new OleDbCommand();
+                OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+                comando.Connection = cnn;
+                cnn.Open();
+                string cadena = "Select * from Table_Venta where FolioVenta ='" + combo_folio.Text + "' ";
+
+                comando.CommandText = cadena;
+
+                OleDbDataAdapter adaptador = new OleDbDataAdapter(comando);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                dataGridView_verdatos.DataSource = dt;
+
+                comando.Clone();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Tenemos problemas" + ex.ToString());
+            }
+            #endregion
+
+            #region busqueda formadepago
+            try
+            {
+                OleDbCommand comando = new OleDbCommand();
+                OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+                comando.Connection = cnn;
+                cnn.Open();
+                string cadena = "Select * from Table_VentasTemporales where FolioCoVe ='" + combo_folio.Text + "' ";
+
+                comando.CommandText = cadena;
+
+                OleDbDataAdapter adaptador = new OleDbDataAdapter(comando);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                dataGridView_producto.DataSource = dt;
+
+                comando.Clone();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Tenemos problemas" + ex.ToString());
+            }
+            #endregion
+
         }
     }
 }

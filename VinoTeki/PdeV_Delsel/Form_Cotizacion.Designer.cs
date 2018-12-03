@@ -51,10 +51,6 @@
             this.lbl_cotizacionbad = new System.Windows.Forms.Label();
             this.tableLayoutPanel_con4 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView_verdatos = new System.Windows.Forms.DataGridView();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CostoT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel_con3 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.comboBox_productos = new System.Windows.Forms.ComboBox();
@@ -85,7 +81,14 @@
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.comboBox_cliente = new System.Windows.Forms.ComboBox();
             this.lbl_numerodeventa = new System.Windows.Forms.Label();
+            this.lbl_folioCoti = new System.Windows.Forms.Label();
             this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ProductoTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostoTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_barraT.SuspendLayout();
             this.tableLayoutPanel_final.SuspendLayout();
             this.tableLayoutPanel_con4.SuspendLayout();
@@ -105,7 +108,7 @@
             this.panel_barraT.Controls.Add(this.btn_maximisar);
             this.panel_barraT.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_barraT.Location = new System.Drawing.Point(0, 0);
-            this.panel_barraT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_barraT.Margin = new System.Windows.Forms.Padding(4);
             this.panel_barraT.Name = "panel_barraT";
             this.panel_barraT.Size = new System.Drawing.Size(1684, 47);
             this.panel_barraT.TabIndex = 1;
@@ -132,7 +135,7 @@
             this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_restaurar.Location = new System.Drawing.Point(1635, 9);
-            this.btn_restaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_restaurar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_restaurar.Name = "btn_restaurar";
             this.btn_restaurar.Size = new System.Drawing.Size(33, 31);
             this.btn_restaurar.TabIndex = 1;
@@ -150,7 +153,7 @@
             this.btn_minimisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.btn_minimisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_minimisar.Location = new System.Drawing.Point(1593, 9);
-            this.btn_minimisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_minimisar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimisar.Name = "btn_minimisar";
             this.btn_minimisar.Size = new System.Drawing.Size(33, 31);
             this.btn_minimisar.TabIndex = 2;
@@ -167,7 +170,7 @@
             this.btn_maximisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(101)))), ((int)(((byte)(82)))));
             this.btn_maximisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_maximisar.Location = new System.Drawing.Point(1635, 9);
-            this.btn_maximisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_maximisar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_maximisar.Name = "btn_maximisar";
             this.btn_maximisar.Size = new System.Drawing.Size(33, 31);
             this.btn_maximisar.TabIndex = 2;
@@ -194,7 +197,7 @@
             this.tableLayoutPanel_final.Controls.Add(this.lbl_cotizacionbad, 0, 0);
             this.tableLayoutPanel_final.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_final.Location = new System.Drawing.Point(0, 749);
-            this.tableLayoutPanel_final.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_final.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_final.Name = "tableLayoutPanel_final";
             this.tableLayoutPanel_final.RowCount = 3;
             this.tableLayoutPanel_final.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.55906F));
@@ -251,7 +254,7 @@
             this.txt_subtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_subtotal.ForeColor = System.Drawing.Color.White;
             this.txt_subtotal.Location = new System.Drawing.Point(1474, 16);
-            this.txt_subtotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_subtotal.Margin = new System.Windows.Forms.Padding(4);
             this.txt_subtotal.Multiline = true;
             this.txt_subtotal.Name = "txt_subtotal";
             this.txt_subtotal.ReadOnly = true;
@@ -265,7 +268,7 @@
             this.checkBox_iva.AutoSize = true;
             this.checkBox_iva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_iva.Location = new System.Drawing.Point(1331, 64);
-            this.checkBox_iva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_iva.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_iva.Name = "checkBox_iva";
             this.checkBox_iva.Size = new System.Drawing.Size(89, 29);
             this.checkBox_iva.TabIndex = 0;
@@ -294,7 +297,7 @@
             this.txt_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_total.ForeColor = System.Drawing.Color.White;
             this.txt_total.Location = new System.Drawing.Point(1470, 101);
-            this.txt_total.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_total.Margin = new System.Windows.Forms.Padding(4);
             this.txt_total.Multiline = true;
             this.txt_total.Name = "txt_total";
             this.txt_total.ReadOnly = true;
@@ -314,7 +317,7 @@
             this.btn_cotizar.Image = global::PdeV_Delsel.Properties.Resources.consultar_super_mini2;
             this.btn_cotizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cotizar.Location = new System.Drawing.Point(572, 118);
-            this.btn_cotizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cotizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cotizar.Name = "btn_cotizar";
             this.btn_cotizar.Size = new System.Drawing.Size(256, 63);
             this.btn_cotizar.TabIndex = 1;
@@ -335,7 +338,7 @@
             this.btn_inicio.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_inicio.Location = new System.Drawing.Point(4, 118);
-            this.btn_inicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_inicio.Margin = new System.Windows.Forms.Padding(4);
             this.btn_inicio.Name = "btn_inicio";
             this.btn_inicio.Size = new System.Drawing.Size(113, 63);
             this.btn_inicio.TabIndex = 2;
@@ -366,7 +369,7 @@
             this.tableLayoutPanel_con4.Controls.Add(this.dataGridView_verdatos, 1, 0);
             this.tableLayoutPanel_con4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_con4.Location = new System.Drawing.Point(0, 482);
-            this.tableLayoutPanel_con4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_con4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_con4.Name = "tableLayoutPanel_con4";
             this.tableLayoutPanel_con4.RowCount = 1;
             this.tableLayoutPanel_con4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -394,14 +397,16 @@
             this.dataGridView_verdatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_verdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_verdatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Producto,
-            this.Cantidad,
-            this.Precio,
-            this.CostoT});
+            this.ProductoTB,
+            this.CantidadTB,
+            this.PrecioTB,
+            this.CostoTB,
+            this.Column1,
+            this.Column2});
             this.dataGridView_verdatos.EnableHeadersVisualStyles = false;
             this.dataGridView_verdatos.GridColor = System.Drawing.Color.LimeGreen;
             this.dataGridView_verdatos.Location = new System.Drawing.Point(350, 4);
-            this.dataGridView_verdatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_verdatos.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_verdatos.Name = "dataGridView_verdatos";
             this.dataGridView_verdatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -420,30 +425,6 @@
             this.dataGridView_verdatos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_verdatos.Size = new System.Drawing.Size(1016, 259);
             this.dataGridView_verdatos.TabIndex = 7;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 162;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 162;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 132;
-            // 
-            // CostoT
-            // 
-            this.CostoT.HeaderText = "Costo Total";
-            this.CostoT.Name = "CostoT";
-            this.CostoT.Width = 207;
             // 
             // tableLayoutPanel_con3
             // 
@@ -466,7 +447,7 @@
             this.tableLayoutPanel_con3.Controls.Add(this.lbl_stockbad, 0, 2);
             this.tableLayoutPanel_con3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_con3.Location = new System.Drawing.Point(0, 340);
-            this.tableLayoutPanel_con3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_con3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_con3.Name = "tableLayoutPanel_con3";
             this.tableLayoutPanel_con3.RowCount = 3;
             this.tableLayoutPanel_con3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -489,7 +470,7 @@
             this.btn_agregar.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_agregar.Location = new System.Drawing.Point(1503, 100);
-            this.btn_agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(177, 38);
             this.btn_agregar.TabIndex = 2;
@@ -506,7 +487,7 @@
             this.comboBox_productos.ForeColor = System.Drawing.Color.White;
             this.comboBox_productos.FormattingEnabled = true;
             this.comboBox_productos.Location = new System.Drawing.Point(348, 6);
-            this.comboBox_productos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_productos.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_productos.Name = "comboBox_productos";
             this.comboBox_productos.Size = new System.Drawing.Size(492, 37);
             this.comboBox_productos.TabIndex = 0;
@@ -561,7 +542,7 @@
             this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cantidad.ForeColor = System.Drawing.Color.White;
             this.txt_cantidad.Location = new System.Drawing.Point(1481, 12);
-            this.txt_cantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cantidad.Multiline = true;
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(169, 31);
@@ -675,7 +656,7 @@
             this.tableLayoutPanel_con2.Controls.Add(this.lbl_rfc, 0, 1);
             this.tableLayoutPanel_con2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_con2.Location = new System.Drawing.Point(0, 182);
-            this.tableLayoutPanel_con2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_con2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_con2.Name = "tableLayoutPanel_con2";
             this.tableLayoutPanel_con2.RowCount = 4;
             this.tableLayoutPanel_con2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.125F));
@@ -693,7 +674,7 @@
             this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefono.ForeColor = System.Drawing.Color.White;
             this.txt_telefono.Location = new System.Drawing.Point(1122, 93);
-            this.txt_telefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_telefono.Margin = new System.Windows.Forms.Padding(4);
             this.txt_telefono.Multiline = true;
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.ReadOnly = true;
@@ -708,7 +689,7 @@
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.White;
             this.txt_email.Location = new System.Drawing.Point(1122, 48);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(4);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
             this.txt_email.ReadOnly = true;
@@ -723,7 +704,7 @@
             this.txt_direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_direccion.ForeColor = System.Drawing.Color.White;
             this.txt_direccion.Location = new System.Drawing.Point(1122, 4);
-            this.txt_direccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_direccion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_direccion.Multiline = true;
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.ReadOnly = true;
@@ -780,7 +761,7 @@
             this.txt_rfc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_rfc.ForeColor = System.Drawing.Color.White;
             this.txt_rfc.Location = new System.Drawing.Point(348, 48);
-            this.txt_rfc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_rfc.Margin = new System.Windows.Forms.Padding(4);
             this.txt_rfc.Multiline = true;
             this.txt_rfc.Name = "txt_rfc";
             this.txt_rfc.ReadOnly = true;
@@ -795,7 +776,7 @@
             this.txt_razonsocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_razonsocial.ForeColor = System.Drawing.Color.White;
             this.txt_razonsocial.Location = new System.Drawing.Point(348, 93);
-            this.txt_razonsocial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_razonsocial.Margin = new System.Windows.Forms.Padding(4);
             this.txt_razonsocial.Multiline = true;
             this.txt_razonsocial.Name = "txt_razonsocial";
             this.txt_razonsocial.ReadOnly = true;
@@ -838,7 +819,7 @@
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre.ForeColor = System.Drawing.Color.White;
             this.txt_nombre.Location = new System.Drawing.Point(348, 4);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre.Multiline = true;
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.ReadOnly = true;
@@ -870,9 +851,10 @@
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_cliente, 0, 0);
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.comboBox_cliente, 1, 0);
             this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_numerodeventa, 4, 0);
+            this.tableLayoutPanel_contenedorTop.Controls.Add(this.lbl_folioCoti, 3, 1);
             this.tableLayoutPanel_contenedorTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel_contenedorTop.Location = new System.Drawing.Point(0, 47);
-            this.tableLayoutPanel_contenedorTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel_contenedorTop.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_contenedorTop.Name = "tableLayoutPanel_contenedorTop";
             this.tableLayoutPanel_contenedorTop.RowCount = 3;
             this.tableLayoutPanel_contenedorTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.03226F));
@@ -905,7 +887,7 @@
             this.comboBox_cliente.ForeColor = System.Drawing.Color.White;
             this.comboBox_cliente.FormattingEnabled = true;
             this.comboBox_cliente.Location = new System.Drawing.Point(165, 4);
-            this.comboBox_cliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_cliente.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_cliente.Name = "comboBox_cliente";
             this.comboBox_cliente.Size = new System.Drawing.Size(341, 33);
             this.comboBox_cliente.TabIndex = 0;
@@ -923,10 +905,62 @@
             this.lbl_numerodeventa.Size = new System.Drawing.Size(36, 38);
             this.lbl_numerodeventa.TabIndex = 23;
             this.lbl_numerodeventa.Text = "#";
+            this.lbl_numerodeventa.Visible = false;
+            // 
+            // lbl_folioCoti
+            // 
+            this.lbl_folioCoti.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_folioCoti.AutoSize = true;
+            this.lbl_folioCoti.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_folioCoti.ForeColor = System.Drawing.Color.White;
+            this.lbl_folioCoti.Location = new System.Drawing.Point(1300, 44);
+            this.lbl_folioCoti.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_folioCoti.Name = "lbl_folioCoti";
+            this.lbl_folioCoti.Size = new System.Drawing.Size(36, 40);
+            this.lbl_folioCoti.TabIndex = 26;
+            this.lbl_folioCoti.Text = "#";
             // 
             // errorP
             // 
             this.errorP.ContainerControl = this;
+            // 
+            // ProductoTB
+            // 
+            this.ProductoTB.HeaderText = "Producto";
+            this.ProductoTB.Name = "ProductoTB";
+            this.ProductoTB.Width = 162;
+            // 
+            // CantidadTB
+            // 
+            this.CantidadTB.HeaderText = "Cantidad";
+            this.CantidadTB.Name = "CantidadTB";
+            this.CantidadTB.Width = 162;
+            // 
+            // PrecioTB
+            // 
+            this.PrecioTB.HeaderText = "Precio";
+            this.PrecioTB.Name = "PrecioTB";
+            this.PrecioTB.Width = 132;
+            // 
+            // CostoTB
+            // 
+            this.CostoTB.HeaderText = "Costo Total";
+            this.CostoTB.Name = "CostoTB";
+            this.CostoTB.Width = 207;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            this.Column1.Width = 72;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "idCoVe";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            this.Column2.Width = 132;
             // 
             // Form_Cotizacion
             // 
@@ -942,7 +976,7 @@
             this.Controls.Add(this.panel_barraT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Cotizacion";
             this.Opacity = 0.98D;
             this.Text = "Form_Cotizacion";
@@ -1010,14 +1044,17 @@
         private System.Windows.Forms.Label lbl_conCant;
         private System.Windows.Forms.Label lbl_precioP;
         private System.Windows.Forms.Label lbl_preciosolo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CostoT;
         private System.Windows.Forms.ErrorProvider errorP;
         private System.Windows.Forms.Label lbl_mostrarExito;
         private System.Windows.Forms.Label lbl_cotizacionbad;
         private System.Windows.Forms.Label lbl_stockgood;
         private System.Windows.Forms.Label lbl_stockbad;
+        private System.Windows.Forms.Label lbl_folioCoti;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductoTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CostoTB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

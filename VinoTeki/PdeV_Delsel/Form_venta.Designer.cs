@@ -540,6 +540,7 @@
             this.btn_agregar.TabIndex = 2;
             this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Visible = false;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // comboBox_productos
@@ -555,6 +556,7 @@
             this.comboBox_productos.Name = "comboBox_productos";
             this.comboBox_productos.Size = new System.Drawing.Size(492, 37);
             this.comboBox_productos.TabIndex = 0;
+            this.comboBox_productos.Visible = false;
             this.comboBox_productos.SelectedIndexChanged += new System.EventHandler(this.comboBox_productos_SelectedIndexChanged);
             // 
             // lbl_cantidad
@@ -570,6 +572,7 @@
             this.lbl_cantidad.Size = new System.Drawing.Size(124, 29);
             this.lbl_cantidad.TabIndex = 24;
             this.lbl_cantidad.Text = "Cantidad:";
+            this.lbl_cantidad.Visible = false;
             // 
             // lbl_producto
             // 
@@ -584,6 +587,7 @@
             this.lbl_producto.Size = new System.Drawing.Size(125, 29);
             this.lbl_producto.TabIndex = 24;
             this.lbl_producto.Text = "Producto:";
+            this.lbl_producto.Visible = false;
             // 
             // txt_cantidad
             // 
@@ -598,6 +602,7 @@
             this.txt_cantidad.Size = new System.Drawing.Size(184, 31);
             this.txt_cantidad.TabIndex = 1;
             this.txt_cantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_cantidad.Visible = false;
             this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_KeyPress);
             this.txt_cantidad.Validated += new System.EventHandler(this.txt_cantidad_Validated);
             // 
@@ -614,6 +619,7 @@
             this.lbl_precioU.Size = new System.Drawing.Size(190, 29);
             this.lbl_precioU.TabIndex = 24;
             this.lbl_precioU.Text = "Precio unitario:";
+            this.lbl_precioU.Visible = false;
             // 
             // lbl_preciosolo
             // 
@@ -628,6 +634,7 @@
             this.lbl_preciosolo.Size = new System.Drawing.Size(27, 29);
             this.lbl_preciosolo.TabIndex = 28;
             this.lbl_preciosolo.Text = "#";
+            this.lbl_preciosolo.Visible = false;
             // 
             // lbl_conCant
             // 
@@ -711,24 +718,28 @@
             // 
             this.Producto.HeaderText = "Producto";
             this.Producto.Name = "Producto";
+            this.Producto.Visible = false;
             this.Producto.Width = 162;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Visible = false;
             this.Cantidad.Width = 162;
             // 
             // Precio
             // 
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
+            this.Precio.Visible = false;
             this.Precio.Width = 132;
             // 
             // CostoT
             // 
             this.CostoT.HeaderText = "Costo Total";
             this.CostoT.Name = "CostoT";
+            this.CostoT.Visible = false;
             this.CostoT.Width = 207;
             // 
             // tableLayoutPanel_final
@@ -1033,10 +1044,6 @@
         private System.Windows.Forms.Label lbl_conCant;
         private System.Windows.Forms.Label lbl_preciosolo;
         private System.Windows.Forms.DataGridView dataGridView_verdatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CostoT;
         private System.Windows.Forms.ComboBox comboBox_FormaPago;
         private System.Windows.Forms.Label lbl_letras;
         private System.Windows.Forms.Label lbl_fechita;
@@ -1046,5 +1053,9 @@
         private System.Windows.Forms.Label lbl_ventabad;
         private System.Windows.Forms.Label lbl_stockgood;
         private System.Windows.Forms.Label lbl_stockbad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CostoT;
     }
 }
