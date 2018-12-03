@@ -85,7 +85,7 @@ namespace PdeV_Delsel
             }
             #endregion
 
-            #region busqueda cliente por folio
+            #region busqueda productos por folio
             try
             {
                 OleDbCommand comando = new OleDbCommand();
@@ -109,6 +109,57 @@ namespace PdeV_Delsel
             }
             #endregion
 
+        }
+
+        private void btn_consultar_Click(object sender, EventArgs e)
+        {
+            #region mostrar cliente
+            try
+            {
+                OleDbCommand comando = new OleDbCommand();
+                OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+                comando.Connection = cnn;
+                cnn.Open();
+                string cadena = "Select * from Table_Cotizacion";
+
+                comando.CommandText = cadena;
+
+                OleDbDataAdapter adaptador = new OleDbDataAdapter(comando);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                dGV_CotizacionCliente.DataSource = dt;
+
+                comando.Clone();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Tenemos problemas" + ex.ToString());
+            }
+            #endregion
+
+            #region mostrar productos
+            try
+            {
+                OleDbCommand comando = new OleDbCommand();
+                OleDbConnection cnn = new OleDbConnection("Provider=sqloledb;Data Source=LENOY97;Initial Catalog=ProyectoPdeVDelsel;Integrated Security=SSPI");
+                comando.Connection = cnn;
+                cnn.Open();
+                string cadena = "Select * from Table_VentasTemporales";
+
+                comando.CommandText = cadena;
+
+                OleDbDataAdapter adaptador = new OleDbDataAdapter(comando);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                dGV_CotizacionProducto.DataSource = dt;
+
+                comando.Clone();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Tenemos problemas" + ex.ToString());
+            }
+            #endregion
         }
     }
 }
